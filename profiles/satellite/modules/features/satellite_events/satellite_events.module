@@ -1,0 +1,35 @@
+<?php
+/**
+ * @file
+ * Code for the ESN Events feature.
+ */
+
+include_once 'satellite_events.features.inc';
+
+/**
+ * Implements hook_views_default_views_alter().
+ */
+function satellite_events_views_default_views_alter(&$views) {
+  if (isset($views['events_calendar'])) {
+    $vocabulary = taxonomy_vocabulary_machine_name_load('event_type');
+    $terms = taxonomy_get_tree($vocabulary->vid, 0, NULL, TRUE);
+    $colors = array();
+    foreach ($terms as $term) {
+      $colors[$term->tid] = $term->field_calendar_color[LANGUAGE_NONE][0]['value'];
+    }
+
+    $handler_month =& $views['events_calendar']->display['month']->handler;
+    $handler_month->display->display_options['row_options']['colors']['calendar_colors_taxonomy'] = $colors;
+    
+    $handler_week =& $views['events_calendar']->display['week']->handler;
+    $handler_week->display->display_options['row_options']['colors']['calendar_colors_taxonomy'] = $colors;
+    
+    // fix issue https://drupal.org/node/1397986
+    $handler_week->display->display_options['style_options']['groupby_times'] = 'hour';
+    
+    $handler_day =& $views['events_calendar']->display['day']->handler;
+    // fix issue https://drupal.org/node/1397986
+    $handler_day->display->display_options['style_options']['groupby_times'] = 'hour';
+
+  }
+}

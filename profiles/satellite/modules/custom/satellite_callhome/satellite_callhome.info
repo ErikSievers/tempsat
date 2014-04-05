@@ -1,0 +1,13 @@
+name = Satellite Callhome
+description = Sends satellite usage data to ESN IT Committee.
+package = ESN Satellite
+core = 7.x
+php = 5.2.5
+
+
+; Information added by drush on 2014-04-04
+version = "7.x-4.0"
+core = "7.x"
+project = "satellite"
+datestamp = "1396625311"
+

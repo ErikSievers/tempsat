@@ -1,0 +1,120 @@
+// Satellite 4 Theme
+
+
+// ------------------------------------------------
+//  LEGACY IE SUPPORT
+// ------------------------------------------------
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+
+
+@import "base";
+
+
+
+/* 
+-------------------------------------------------------------- */
+
+#main, #footer {
+	
+}
+
+/* The Calendar settings */
+.multi-day {
+	a {
+		color: #FFF;
+		margin-right: 10px;
+	}
+}
+
+.calendar {
+	width: 100% !important;
+}
+
+.esn-blocks .block {
+	&.esn-blockcolor-blue {
+		div.mini-day-on { 
+			background: $esn-blue;
+			a { color: #FFF; }
+		}
+	}
+
+	&.esn-blockcolor-purple {
+		div.mini-day-on { 
+			background: $esn-pink;
+			a { color: #FFF; }
+		}
+	}
+
+	&.esn-blockcolor-orange {
+		div.mini-day-on { 
+			background: $esn-orange;
+			a { color: #FFF; }
+		}
+	}
+
+	&.esn-blockcolor-green {
+		div.mini-day-on { 
+			background: $esn-green;
+			a { color: #FFF; }
+		}
+	}
+}
+
+/* 
+-------------------------------------------------------------- */
+
+
+/* LAYOUT
+-------------------------------------------------------------- */
+
+@include breakpoint(desktop) {
+
+	$zen-column-count: 3;
+	$zen-gutter-width:  0px;
+
+	#middle {
+		//border-top: 1px dotted #ddd;
+	}
+
+	#middle > .inner {
+		@include zen-grid-item-base();
+		@include zen-grid-container();
+	}
+
+	#middle-main    { @include zen-grid-item(2,1); }
+	#middle-sidebar { @include zen-grid-item(1,3); }
+	
+	#middle-middle {
+		$zen-column-count: 2;
+
+		#middle-first  { @include zen-grid-item(1,1); }
+		#middle-second  { @include zen-grid-item(1,2); }
+	}
+
+
+	
+}
+
+
+/* 
+-------------------------------------------------------------- */
+
+
+/* 
+-------------------------------------------------------------- */
+
+
+/* 
+-------------------------------------------------------------- */
+
+
+/* 
+-------------------------------------------------------------- */
+
+
+/* 
+-------------------------------------------------------------- */
+
+

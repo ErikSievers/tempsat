@@ -1,0 +1,80 @@
+name = Satellite 4 Profile
+core = 7.x
+description = "Satellite - your ESN installation profile."
+
+; Drupal core modules
+dependencies[] = aggregator
+dependencies[] = color
+dependencies[] = comment
+dependencies[] = contact
+dependencies[] = help
+dependencies[] = search
+dependencies[] = shortcut
+
+; Contrib modules
+dependencies[] = colorbox
+dependencies[] = date
+dependencies[] = date_all_day
+dependencies[] = date_views
+dependencies[] = feeds
+dependencies[] = feeds_xpathparser
+dependencies[] = link
+dependencies[] = override_node_options
+
+;-- general enhancement
+; dependencies[] = rules
+; dependencies[] = context
+; dependencies[] = context_ui
+; dependencies[] = context_layouts
+; dependencies[] = menu_block
+; dependencies[] = feature_set
+
+;-- WYSIWYG options
+dependencies[] = entity
+dependencies[] = linkit
+dependencies[] = imce
+dependencies[] = imce_wysiwyg
+
+;-- Security options
+; dependencies[] = paranoia
+; dependencies[] = seckit
+; dependencies[] = security_review
+
+
+; ESN Modules and features
+dependencies[] = esn_base
+dependencies[] = esn_cas
+dependencies[] = esn_galaxy_api
+dependencies[] = esn_wysiwyg
+
+; Satellite Modules
+dependencies[] = satellite_settings
+dependencies[] = satellite_callhome
+dependencies[] = satellite_theme_settings
+dependencies[] = satellite_socialmedia
+
+; Satellite Features
+dependencies[] = satellite_base
+dependencies[] = satellite_events
+dependencies[] = satellite_news
+dependencies[] = satellite_pages
+dependencies[] = satellite_spotlight
+dependencies[] = satellite_partners
+
+
+; essential developer modules
+dependencies[] = coffee
+dependencies[] = devel
+dependencies[] = diff
+dependencies[] = field_ui
+dependencies[] = views_ui
+
+
+
+
+; Information added by drush on 2014-04-04
+version = "7.x-4.0"
+core = "7.x"
+project = "satellite"
+datestamp = "1396625311"
+

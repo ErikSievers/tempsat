@@ -1,0 +1,14 @@
+name = ESN Satellite Settings
+description = Configure your Satellite with this module
+core = 7.x
+package = ESN Satellite
+
+files[] = satellite_settings.esn_cas_regex.class
+
+
+; Information added by drush on 2014-04-04
+version = "7.x-4.0"
+core = "7.x"
+project = "satellite"
+datestamp = "1396625311"
+

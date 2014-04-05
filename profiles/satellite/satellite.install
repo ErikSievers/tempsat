@@ -1,0 +1,116 @@
+<?php
+
+include_once 'satellite.install_steps.inc';
+
+/**
+ * Implements hook_install().
+ */
+function satellite_install() {
+  // set the satellite theme
+  satellite_install_set_theme();
+
+  // fetch the esn international news
+  satellite_install_aggregator();
+
+  // set the "Home" menu item
+  satellite_install_set_menu();
+
+  // place the blocks in the satellite regions
+  satellite_install_place_blocks();
+  
+  // enable caching and set css and js aggregation to speed up websites
+  satellite_install_set_chache_settings();
+
+  // Enable default permissions for system roles.
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'access news feeds', 'access site-wide contact form'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'access news feeds', 'access site-wide contact form'));
+  variable_set('user_register', 0);
+}
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function satellite_form_install_configure_form_alter(&$form, $form_state) {
+  // set the site name later to the Section name
+  $form['site_information']['site_name']['#value'] = 'ESN';
+  $form['site_information']['site_name']['#access'] = FALSE;
+  // set the default admin account to admin
+  $form['admin_account']['account']['name']['#default_value'] = 'admin';
+
+  // Don't check for updates, ESN will tell you!
+  $form['update_notifications']['update_status_module']['#default_value'] = array(1 => FALSE, 2 => FALSE); // no emails please
+  $form['update_notifications']['satellite_disclaimer'] = array(
+    '#markup' => st('You will be informed about Satellite updates even if you choose to not check for Drupal updates. Drupal updates are included in the Satellite updates.'),
+    '#weight' => -10,
+  );
+
+	$esnCountries = _satellite_get_supported_countries();
+	$form['server_settings']['site_default_country']['#options'] = $esnCountries;
+}
+
+/**
+ * Implements hook_install_tasks().
+ */
+function satellite_install_tasks(&$install_state) {
+  $tasks = array();
+
+  $tasks['satellite_configuration'] = array(
+    'display_name' => st('Configure Satellite'),
+    'display' => true,
+    'type' => 'form',
+    'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
+  );
+  $tasks['satellite_final_install'] = array(
+    'display_name' => st('Apply Configuration'),
+    'display' => true,
+    'type' => 'batch',
+    'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
+  );
+
+  return $tasks;
+}
+
+
+/**
+ * Revert all features.
+ */
+function satellite_update_7001() {
+  esn_base_features_revert(array(
+    'esn_base', 'esn_cas', 'esn_wysiwyg',
+    'satellite_base', 'satellite_events', 'satellite_news',
+    'satellite_pages', 'satellite_spotlight' ));
+}
+
+/**
+ * Move the login button to the footer.
+ */
+function satellite_update_7002() {
+  db_update('block')
+    ->fields(array('region' => 'footer_bottom'))
+    ->condition('module', 'satellite_base', '=')
+    ->condition('delta', 'login', '=')
+    ->condition('status', 1, '=')
+    ->condition('region', 'footer_third', '=')
+    ->execute();
+}
+
+/**
+ * Assign all permissions to the administrator role.
+ */
+function satellite_update_7003() {
+  $admin_role = user_role_load_by_name('administrator');
+  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+}
+
+/**
+ * Revert all features and add event types
+ */
+function satellite_update_7004() {
+  esn_base_features_revert(array(
+    'esn_base', 'esn_cas',
+    'satellite_base', 'satellite_events', 'satellite_news',
+    'satellite_pages', 'satellite_spotlight' ));
+  // first revert the event feature then add the terms.
+  satellite_add_event_types();
+}

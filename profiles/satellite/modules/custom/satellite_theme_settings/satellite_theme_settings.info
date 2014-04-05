@@ -1,0 +1,15 @@
+name = Satellite Theme Settings
+description = Simpler option to change your Satellite logo.
+package = ESN Satellite
+core = 7.x
+php = 5.2.5
+
+configure = admin/settings/satellite/theme_settings
+
+
+; Information added by drush on 2014-04-04
+version = "7.x-4.0"
+core = "7.x"
+project = "satellite"
+datestamp = "1396625311"
+

@@ -1,0 +1,19 @@
+<?php
+
+function satellite_callhome_install() {
+  variable_set('satellite_callhome', True);
+  variable_set('satellite_callhome_lastcall', 0);
+}
+
+function satellite_callhome_uninstall() {
+  variable_del('satellite_callhome');
+  variable_del('satellite_callhome_lastcall');
+}
+
+/**
+* remove obsolete variable.
+*/
+function satellite_callhome_update_7000() {
+  variable_del('satellite_callhome_url');
+}
+

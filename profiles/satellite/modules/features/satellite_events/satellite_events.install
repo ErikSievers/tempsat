@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_install()
+ */
+function satellite_events_install() {
+  // set the calendar legend up.
+  variable_set('calendar_legend_view_calendar_legend', 'events_calendar:month');
+  esn_blocktheme_set_icon('calendar', 'calendar_legend', 'calendar');
+}
+
+/**
+ * Configure the calendar legend and enable the calendar module
+ */
+function satellite_events_update_7001() {
+  module_enable(array('calendar'));
+  variable_set('calendar_legend_view_calendar_legend', 'events_calendar:month');
+  esn_blocktheme_set_icon('calendar', 'calendar_legend', 'calendar');
+  
+  // Create a Calendar link in the main menu.
+  $item = array(
+    'link_title' => 'Calendar',
+    'link_path' => 'calendar',
+    'menu_name' => 'main-menu',
+    'weight' => 0,
+  );
+  menu_link_save($item);
+  menu_rebuild();
+}
+
