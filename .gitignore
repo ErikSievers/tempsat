@@ -1,0 +1,27 @@
+# ESN Satellite Release
+############################
+
+# Ignore everything in sites/ except example and default files provided by Drupal Core or ESN ITcom.
+
+sites/*
+
+# Include again 
+# - sites/all/modules/README.txt
+# - sites/all/themes/README.txt
+!sites/all/
+sites/all/modules/*
+!sites/all/modules/README.txt
+sites/all/themes/*
+!sites/all/themes/README.txt
+
+# Include again:
+# - sites/default/default.settings.php
+!sites/default/
+sites/default/*
+!sites/default/default.settings.php
+
+# Include again:
+# - sites/examples.sites.php
+# - sites/README.txt
+!sites/example.sites.php
+!sites/README.txt
