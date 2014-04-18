@@ -114,3 +114,15 @@ function satellite_update_7004() {
   // first revert the event feature then add the terms.
   satellite_add_event_types();
 }
+
+/**
+ * Revert some features to make sure the partners view is reverted
+ */
+function satellite_update_7005() {
+  esn_base_features_revert(array(
+    'esn_base', 'esn_cas',
+    'satellite_base', 'satellite_partners',
+  ));
+  // reset the update message so that update.php does the trick.
+  variable_set('satellite_callhome_message', FALSE);
+}
