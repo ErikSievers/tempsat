@@ -19,12 +19,13 @@ function satellite_install() {
   satellite_install_place_blocks();
   
   // enable caching and set css and js aggregation to speed up websites
-  satellite_install_set_chache_settings();
+  satellite_install_set_cache_settings();
 
   // Enable default permissions for system roles.
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'access news feeds', 'access site-wide contact form'));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'access news feeds', 'access site-wide contact form'));
   variable_set('user_register', 0);
+  variable_set('jquery_update_jquery_version', '1.7');
 }
 
 
@@ -125,4 +126,24 @@ function satellite_update_7005() {
   ));
   // reset the update message so that update.php does the trick.
   variable_set('satellite_callhome_message', FALSE);
+}
+
+/**
+ * Enable multiupload_filefield_widget, multiupload_imagefield_widget and revert features.
+ */
+function satellite_update_7006() {
+  module_enable(array('multiupload_filefield_widget', 'multiupload_imagefield_widget'));
+  esn_base_features_revert(array(
+    'satellite_news', 'satellite_pages', 'satellite_partners', 'satellite_events'
+  ));
+}
+
+/**
+ * Enable custom contextual links.
+ */
+function satellite_update_7007() {
+  module_enable(array('ccl', 'ccl_actions'));
+  esn_base_features_revert(array(
+    'satellite_base'
+  ));
 }

@@ -1,16 +1,30 @@
+; This is the makefile for satellite_base
+; The modules here are hard dependencies for the satellite.
+; Modules that are also a dependency of esn_base are in its makefile,
+; Modules that could be turned off are in satellite.make
 
 api = 2
 core = 7.x
 
 ; Modules
+
+projects[ccl][subdir] = contrib
+projects[ccl][version] = 1.5
+
 projects[colorbox][subdir] = contrib
 projects[colorbox][version] = 1.6
+
+projects[features_override][subdir] = contrib
+projects[features_override][version] = 2.0-rc2
+
+projects[link][subdir] = contrib
+projects[link][version] = 1.2
 
 projects[manualcrop][subdir] = contrib
 projects[manualcrop][version] = 1.x-dev
 
 projects[jquery_update][subdir] = contrib
-projects[jquery_update][version] = 2.3
+projects[jquery_update][version] = 2.4
 
 ; Libraries
 libraries[colorbox][download][type] = "get"

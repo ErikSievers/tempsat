@@ -4,12 +4,10 @@ core = 7.x
 package = ESN Satellite
 dependencies[] = colorbox
 dependencies[] = esn_base
-dependencies[] = features
 dependencies[] = imagecache_canvasactions
 dependencies[] = override_node_options
 dependencies[] = satellite_base
 dependencies[] = views
-dependencies[] = views_slideshow
 dependencies[] = views_slideshow_cycle
 dependencies[] = weight
 features[ctools][] = ds:ds:1
@@ -57,12 +55,13 @@ features_exclude[field_base][body] = body
 features_exclude[field_base][field_file] = field_file
 features_exclude[field_base][field_image] = field_image
 features_exclude[field_base][field_link] = field_link
+features_exclude[dependencies][features] = features
+project path = profiles/satellite/modules/features
 
 
-
-; Information added by drush on 2014-04-19
-version = "7.x-4.1"
+; Information added by drush on 2014-09-03
+version = "7.x-4.2"
 core = "7.x"
 project = "satellite"
-datestamp = "1397912729"
+datestamp = "1409732827"
 

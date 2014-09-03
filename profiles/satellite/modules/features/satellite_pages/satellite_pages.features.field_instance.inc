@@ -94,11 +94,11 @@ function satellite_pages_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'file',
+      'module' => 'multiupload_filefield_widget',
       'settings' => array(
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'file_generic',
+      'type' => 'file_mfw',
       'weight' => 5,
     ),
   );
@@ -223,7 +223,7 @@ function satellite_pages_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'multiupload_imagefield_widget',
       'settings' => array(
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
@@ -240,7 +240,7 @@ function satellite_pages_field_default_field_instances() {
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'image_miw',
       'weight' => 4,
     ),
   );

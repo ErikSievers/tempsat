@@ -113,11 +113,11 @@ function satellite_partners_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'file',
+      'module' => 'multiupload_filefield_widget',
       'settings' => array(
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'file_generic',
+      'type' => 'file_mfw',
       'weight' => 5,
     ),
   );

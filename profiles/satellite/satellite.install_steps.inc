@@ -275,9 +275,15 @@ function satellite_install_set_menu() {
 }
 
 /**
- * set cache settings to cache and aggregate css and js by default
+ * set cache settings to cache and aggregate css and js by default, except when site is installed
+ * in development mode.
+ *
+ * @see esn_base_is_development_install()
  */
-function satellite_install_set_chache_settings() {
+function satellite_install_set_cache_settings() {
+  if (esn_base_is_development_install()){
+    return;
+  }
   variable_set('cache', TRUE);
   variable_set('cache_lifetime', '3600');
   variable_set('page_cache_maximum_age', '86400');

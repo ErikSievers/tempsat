@@ -80,30 +80,27 @@ projects[webform_esncard][download][url] = "git@git.esn.org:common/webform_esnca
 projects[webform_esncard][download][branch] = 7.x-1.x
 projects[webform_esncard][download][full_version] = 7.x-1.x-dev
 
+; Satellite features with makefiles ===========================================
+; The modules in the respective makefiles are required for the feature to work.
+
+includes[satellite_base] = "modules/features/satellite_base/satellite_base.make"
+
+includes[satellite_events] = "modules/features/satellite_events/satellite_events.make"
+
+includes[satellite_spotlight] = "modules/features/satellite_spotlight/satellite_spotlight.make"
+
 ; Modules =====================================================================
+; Modules here can be turned on or off by webmatsers.
+; The default ones are turned on in satellite.info
 
 projects[better_formats][subdir] = contrib
 projects[better_formats][version] = 1.0-beta1
 
-projects[calendar][subdir] = contrib
-projects[calendar][version] = 3.4
-; get rid of a bunch of notices with php 5.4
-projects[calendar][patch][1471400] = http://drupal.org/files/issues/calendar-illegal_offset-1471400-78.patch
-
-projects[date][subdir] = contrib
-projects[date][version] = 2.7
-
-projects[entity][subdir] = contrib
-projects[entity][version] = 1.4
-
 projects[eu-cookie-compliance][subdir] = contrib
 projects[eu-cookie-compliance][version] = 1.8
 
-projects[feature_set][subdir] = contrib
-projects[feature_set][version] = 1.1
-
-projects[features_override][subdir] = contrib
-projects[features_override][version] = 2.0-rc1
+; projects[feature_set][subdir] = contrib
+; projects[feature_set][version] = 1.1
 
 projects[feeds][subdir] = contrib
 projects[feeds][version] = 2.0-alpha8
@@ -112,7 +109,7 @@ projects[feeds_xpathparser][subdir] = contrib
 projects[feeds_xpathparser][version] = 1.0-beta4
 
 projects[field_group][subdir] = contrib
-projects[field_group][version] = 1.3
+projects[field_group][version] = 1.4
 
 projects[imagecache_actions][subdir] = contrib
 projects[imagecache_actions][version] = 1.4
@@ -120,17 +117,20 @@ projects[imagecache_actions][version] = 1.4
 projects[job_scheduler][subdir] = contrib
 projects[job_scheduler][version] = 2.0-alpha3
 
-projects[link][subdir] = contrib
-projects[link][version] = 1.2
-
 projects[menu_block][subdir] = contrib
 projects[menu_block][version] = 2.3
 
-projects[migrate][subdir] = contrib
-projects[migrate][version] = 2.5
+; projects[migrate][subdir] = contrib
+; projects[migrate][version] = 2.5
 
 projects[mimemail][subdir] = contrib
 projects[mimemail][version] = 1.0-beta3
+
+projects[multiupload_filefield_widget][subdir] = contrib
+projects[multiupload_filefield_widget][version] = 1.13
+
+projects[multiupload_imagefield_widget][subdir] = contrib
+projects[multiupload_imagefield_widget][version] = 1.3
 
 projects[options_element][subdir] = contrib
 projects[options_element][version] = 1.10
@@ -161,7 +161,7 @@ projects[weight][version] = 2.3
 
 ; WYSIWYG improvements
 projects[imce][subdir] = contrib
-projects[imce][version] = 1.8
+projects[imce][version] = 1.9
 
 projects[imce_wysiwyg][subdir] = contrib
 projects[imce_wysiwyg][version] = 1.0
@@ -172,81 +172,7 @@ projects[linkit][version] = 3.1
 ; projects[insert][subdir] = contrib
 ; projects[insert][version] = 1.3
 
-; projects[markdown][subdir] = contrib
-; projects[markdown][version] = 1.1
 
-
-; Satellite Base ==============================================================
-
-; Modules
-projects[colorbox][subdir] = contrib
-projects[colorbox][version] = 1.6
-
-projects[manualcrop][subdir] = contrib
-projects[manualcrop][version] = 1.x-dev
-
-projects[jquery_update][subdir] = contrib
-projects[jquery_update][version] = 2.3
-
-; Libraries
-libraries[colorbox][download][type] = "get"
-libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/archive/master.zip"
-libraries[colorbox][destination] = "libraries"
-libraries[colorbox][directory_name] = "colorbox"
-
-projects[imgareaselect_lib][type] = library
-projects[imgareaselect_lib][download][type] = get
-projects[imgareaselect_lib][download][url] = http://odyniec.net/projects/imgareaselect/jquery.imgareaselect-0.9.10.zip
-projects[imgareaselect_lib][directory_name] = jquery.imgareaselect
-
-projects[imagesloaded_lib][type] = library
-projects[imagesloaded_lib][download][type] = file
-projects[imagesloaded_lib][download][url] = http://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js
-projects[imagesloaded_lib][download][filename] = jquery.imagesloaded.min.js
-projects[imagesloaded_lib][directory_name] = jquery.imagesloaded
-
-
-; Satellite Spotlight ========================================================
-
-; Modules
-
-projects[flexslider][subdir] = contrib
-projects[flexslider][version] = 2.0-alpha3
-
-projects[flexslider_views_slideshow][subdir] = contrib
-
-projects[views_slideshow][subdir] = contrib
-projects[views_slideshow][version] = 3.1
-
-; Libraries
-
-libraries[flexslider][download][type] = "get"
-libraries[flexslider][download][url] = "https://github.com/woothemes/FlexSlider/archive/master.zip"
-libraries[flexslider][destination] = "libraries"
-libraries[flexslider][directory_name] = "flexslider"
-
-libraries[json2][download][type] = "get"
-libraries[json2][download][url] = "https://github.com/douglascrockford/JSON-js/archive/master.zip"
-libraries[json2][destination] = "libraries"
-libraries[json2][directory_name] = "json2"
-
-libraries[jquery_cycle_library][download][type] = "get"
-libraries[jquery_cycle_library][download][url] = "http://malsup.github.com/jquery.cycle.all.js"
-libraries[jquery_cycle_library][directory_name] = "jquery.cycle"
-libraries[jquery_cycle_library][destination] = "libraries"
-
-; Navbar test ====
-
-; projects[navbar][subdir] = contrib
-; projects[navbar][version] = 1.0-alpha10
-
-; projects[breakpoints][subdir] = contrib
-; projects[breakpoints][version] = 1.1
-
-; libraries[backbone][download][type] = "get"
-; libraries[backbone][download][url] = "https://github.com/jashkenas/backbone/archive/1.1.0.zip"
-; libraries[backbone][destination] = "libraries"
-; libraries[backbone][directory_name] = "backbone"
 
 
 

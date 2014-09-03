@@ -5,6 +5,8 @@ package = ESN Satellite
 dependencies[] = admin_menu
 dependencies[] = aggregator
 dependencies[] = block
+dependencies[] = ccl
+dependencies[] = ccl_actions
 dependencies[] = contact
 dependencies[] = contextual
 dependencies[] = ctools
@@ -13,23 +15,20 @@ dependencies[] = esn_wysiwyg
 dependencies[] = features
 dependencies[] = features_override
 dependencies[] = file
-dependencies[] = filter
 dependencies[] = image
 dependencies[] = jquery_update
 dependencies[] = link
 dependencies[] = linkit
 dependencies[] = manualcrop
 dependencies[] = menu
-dependencies[] = node
 dependencies[] = path
 dependencies[] = pathauto
 dependencies[] = strongarm
 dependencies[] = superfish
-dependencies[] = system
 dependencies[] = taxonomy
 dependencies[] = text
-dependencies[] = user
 dependencies[] = views
+features[ccl][] =  Actions <em class="placeholder">publish, sticky, promote</em>
 features[ctools][] = ds:ds:1
 features[ctools][] = linkit:linkit_profiles:1
 features[ctools][] = strongarm:strongarm:1
@@ -66,9 +65,9 @@ features[variable][] = imce_settings_textarea
 features[variable][] = imce_settings_thumb_method
 
 
-; Information added by drush on 2014-04-19
-version = "7.x-4.1"
+; Information added by drush on 2014-09-03
+version = "7.x-4.2"
 core = "7.x"
 project = "satellite"
-datestamp = "1397912729"
+datestamp = "1409732827"
 

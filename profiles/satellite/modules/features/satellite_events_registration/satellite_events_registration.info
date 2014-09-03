@@ -13,9 +13,9 @@ features[features_api][] = api:2
 features[variable][] = webform_node_event
 
 
-; Information added by drush on 2014-04-19
-version = "7.x-4.1"
+; Information added by drush on 2014-09-03
+version = "7.x-4.2"
 core = "7.x"
 project = "satellite"
-datestamp = "1397912729"
+datestamp = "1409732827"
 

@@ -1,6 +1,7 @@
 name = Satellite 4 Profile
 core = 7.x
 description = "Satellite - your ESN installation profile."
+exclusive = TRUE
 
 ; Drupal core modules
 dependencies[] = aggregator
@@ -16,18 +17,13 @@ dependencies[] = colorbox
 dependencies[] = date
 dependencies[] = date_all_day
 dependencies[] = date_views
+dependencies[] = diff
 dependencies[] = feeds
 dependencies[] = feeds_xpathparser
 dependencies[] = link
+dependencies[] = multiupload_filefield_widget
+dependencies[] = multiupload_imagefield_widget
 dependencies[] = override_node_options
-
-;-- general enhancement
-; dependencies[] = rules
-; dependencies[] = context
-; dependencies[] = context_ui
-; dependencies[] = context_layouts
-; dependencies[] = menu_block
-; dependencies[] = feature_set
 
 ;-- WYSIWYG options
 dependencies[] = entity
@@ -62,19 +58,17 @@ dependencies[] = satellite_spotlight
 dependencies[] = satellite_partners
 
 
-; essential developer modules
-dependencies[] = coffee
-dependencies[] = devel
-dependencies[] = diff
+; developer modules
+; we leave them here to let webmasters discover the UI
 dependencies[] = field_ui
 dependencies[] = views_ui
 
 
 
 
-; Information added by drush on 2014-04-19
-version = "7.x-4.1"
+; Information added by drush on 2014-09-03
+version = "7.x-4.2"
 core = "7.x"
 project = "satellite"
-datestamp = "1397912729"
+datestamp = "1409732827"
 

@@ -5,6 +5,20 @@
  */
 
 /**
+ * Implements hook_ccl_features_preset().
+ */
+function satellite_base_ccl_features_preset() {
+  return array(
+    ' Actions <em class="placeholder">publish, sticky, promote</em>' => array(
+      'type' => 'action',
+      'title' => ' Actions <em class="placeholder">publish, sticky, promote</em>',
+      'link' => '- n/a -',
+      'options' => 'a:4:{s:14:"actions_select";a:3:{s:7:"publish";s:7:"publish";s:6:"sticky";s:6:"sticky";s:7:"promote";s:7:"promote";}s:12:"node_options";s:6:"global";s:9:"node_type";s:5:"event";s:7:"node_id";s:0:"";}',
+    ),
+  );
+}
+
+/**
  * Implements hook_ctools_plugin_api().
  */
 function satellite_base_ctools_plugin_api($module = NULL, $api = NULL) {
