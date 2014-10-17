@@ -6,9 +6,9 @@ package = ESN Satellite
 files[] = satellite_settings.esn_cas_regex.class
 
 
-; Information added by drush on 2014-09-03
-version = "7.x-4.2"
+; Information added by drush on 2014-10-17
+version = "7.x-4.3"
 core = "7.x"
 project = "satellite"
-datestamp = "1409732827"
+datestamp = "1413580380"
 
