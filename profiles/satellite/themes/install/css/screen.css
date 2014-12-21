@@ -15,119 +15,103 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/robotobold.eot?") format("eot"), url("../fonts/robotobold.woff") format("woff"), url("../fonts/robotobold.ttf") format("truetype"), url("../fonts/robotobold.svg#robotobold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/robotoitalic.eot?") format("eot"), url("../fonts/robotoitalic.woff") format("woff"), url("../fonts/robotoitalic.ttf") format("truetype"), url("../fonts/robotoitalic.svg#robotoitalic") format("svg");
   font-weight: normal;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/robotobolditalic.eot?") format("eot"), url("../fonts/robotobolditalic.woff") format("woff"), url("../fonts/robotobolditalic.ttf") format("truetype"), url("../fonts/robotobolditalic.svg#robotobolditalic") format("svg");
   font-weight: bold;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Roboto Light";
   src: url("../fonts/robotolight.eot?") format("eot"), url("../fonts/robotolight.woff") format("woff"), url("../fonts/robotolight.ttf") format("truetype"), url("../fonts/robotolight.svg#robotolight") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto Light";
   src: url("../fonts/robotomedium.eot?") format("eot"), url("../fonts/robotomedium.woff") format("woff"), url("../fonts/robotomedium.ttf") format("truetype"), url("../fonts/robotomedium.svg#robotomedium") format("svg");
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto Light";
   src: url("../fonts/robotolightitalic.eot?") format("eot"), url("../fonts/robotolightitalic.woff") format("woff"), url("../fonts/robotolightitalic.ttf") format("truetype"), url("../fonts/robotolightitalic.svg#robotolightitalic") format("svg");
   font-weight: normal;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Roboto Light";
   src: url("../fonts/robotomediumitalic.eot?") format("eot"), url("../fonts/robotomediumitalic.woff") format("woff"), url("../fonts/robotomediumitalic.ttf") format("truetype"), url("../fonts/robotomediumitalic.svg#robotomediumitalic") format("svg");
   font-weight: bold;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Roboto Thin";
   src: url("../fonts/robotothin.eot?") format("eot"), url("../fonts/robotothin.woff") format("woff"), url("../fonts/robotothin.ttf") format("truetype"), url("../fonts/robotothin.svg#robotothin") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto Thin";
   src: url("../fonts/robotomedium.eot?") format("eot"), url("../fonts/robotomedium.woff") format("woff"), url("../fonts/robotomedium.ttf") format("truetype"), url("../fonts/robotomedium.svg#robotomedium") format("svg");
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto Thin";
   src: url("../fonts/robotothinitalic.eot?") format("eot"), url("../fonts/robotothinitalic.woff") format("woff"), url("../fonts/robotothinitalic.ttf") format("truetype"), url("../fonts/robotothinitalic.svg#robotothinitalic") format("svg");
   font-weight: normal;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Roboto Thin";
   src: url("../fonts/robotomediumitalic.eot?") format("eot"), url("../fonts/robotomediumitalic.woff") format("woff"), url("../fonts/robotomediumitalic.ttf") format("truetype"), url("../fonts/robotomediumitalic.svg#robotomediumitalic") format("svg");
   font-weight: bold;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Roboto Condensed";
   src: url("../fonts/robotocondensed.eot?") format("eot"), url("../fonts/robotocondensed.woff") format("woff"), url("../fonts/robotocondensed.ttf") format("truetype"), url("../fonts/robotocondensed.svg#robotocondensed") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto Condensed";
   src: url("../fonts/robotoboldcondensed.eot?") format("eot"), url("../fonts/robotoboldcondensed.woff") format("woff"), url("../fonts/robotoboldcondensed.ttf") format("truetype"), url("../fonts/robotoboldcondensed.svg#robotoboldcondensed") format("svg");
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/opensansregular.eot?") format("eot"), url("../fonts/opensansregular.woff") format("woff"), url("../fonts/opensansregular.ttf") format("truetype"), url("../fonts/opensansregular.svg#opensansregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Open Sans Light";
   src: url("../fonts/opensanslight.eot?") format("eot"), url("../fonts/opensanslight.woff") format("woff"), url("../fonts/opensanslight.ttf") format("truetype"), url("../fonts/opensanslight.svg#opensanslight") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
 /*
  * Corrects block display not defined in IE6/7/8/9 & FF3
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\0000324}}
 article,
 aside,
 details,
@@ -146,20 +130,18 @@ summary {
 /*
  * Corrects inline-block display not defined in IE6/7/8/9 & FF3
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\0000343}}
 audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 
 /*
  * Prevents modern browsers from displaying 'audio' without controls
  * Remove excess height in iOS5 devices
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\0000358}}
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -169,7 +151,7 @@ audio:not([controls]) {
  * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
  * Known issue: no IE6 support
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\0000368}}
 [hidden] {
   display: none;
 }
@@ -216,7 +198,7 @@ audio:not([controls]) {
  * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
  *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003119}}
 html {
   font-size: 100%;
   /* 1 */
@@ -231,7 +213,7 @@ html {
 /*
  * Addresses font-family inconsistency between 'textarea' and other form elements.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003131}}
 html,
 button,
 input,
@@ -243,7 +225,7 @@ textarea {
 /*
  * Addresses margins handled incorrectly in IE6/7
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003143}}
 body {
   margin: 0;
 }
@@ -258,7 +240,7 @@ body {
 /*
  * Addresses outline displayed oddly in Chrome
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003174}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003174}}
 a:focus {
   outline: thin dotted;
 }
@@ -267,7 +249,7 @@ a:focus {
  * Improves readability when focused and also mouse hovered in all browsers
  * people.opera.com/patrickl/experiments/keyboard/test
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003184}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003183}}
 a:hover,
 a:active {
   outline: 0;
@@ -286,7 +268,7 @@ a:active {
  * Addresses font sizes and margins set differently in IE6/7
  * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003204}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003204}}
 h1 {
   /* Sets the font-size and line-height while keeping a proper vertical rhythm. */
   font-size: 3em;
@@ -296,7 +278,7 @@ h1 {
   margin-bottom: 0.45833em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003213}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003213}}
 h2 {
   font-size: 1.5em;
   line-height: 1.83333em;
@@ -304,7 +286,7 @@ h2 {
   margin-bottom: 0.91667em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003219}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003219}}
 h3 {
   font-size: 1.17em;
   line-height: 2.35043em;
@@ -312,7 +294,7 @@ h3 {
   margin-bottom: 1.17521em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003225}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003225}}
 h4 {
   font-size: 1em;
   line-height: 1.375em;
@@ -320,7 +302,7 @@ h4 {
   margin-bottom: 1.375em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003231}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003231}}
 h5 {
   font-size: 0.83em;
   line-height: 1.65663em;
@@ -328,7 +310,7 @@ h5 {
   margin-bottom: 1.65663em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003237}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003237}}
 h6 {
   font-size: 0.75em;
   line-height: 1.83333em;
@@ -337,7 +319,7 @@ h6 {
 }
 
 /* Thematic break */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003244}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003244}}
 hr {
   height: 1px;
   border: 1px solid #666;
@@ -348,7 +330,7 @@ hr {
 /*
  * Addresses styling not present in IE7/8/9, S5, Chrome
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003255}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003255}}
 abbr[title] {
   border-bottom: 1px dotted;
   cursor: help;
@@ -358,13 +340,13 @@ abbr[title] {
 /*
  * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003266}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003265}}
 b,
 strong {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003270}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003270}}
 blockquote {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
   margin: 1.375em 30px;
@@ -373,7 +355,7 @@ blockquote {
 /*
  * Addresses styling not present in S5, Chrome
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003279}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003279}}
 dfn {
   font-style: italic;
 }
@@ -381,7 +363,7 @@ dfn {
 /*
  * Addresses styling not present in IE6/7/8/9
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003287}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003287}}
 mark {
   background: #ff0;
   color: #000;
@@ -390,7 +372,7 @@ mark {
 /*
  * Addresses margins set differently in IE6/7
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003297}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003296}}
 p,
 pre {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
@@ -401,7 +383,7 @@ pre {
  * Corrects font family set oddly in IE6, S4/5, Chrome
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003307}}
 pre,
 code,
 kbd,
@@ -410,7 +392,6 @@ tt,
 var {
   font-family: "Consolas", "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
   /* The $font-monospace value ends with ", serif". */
-  _font-family: 'courier new', monospace;
   font-size: 1em;
   line-height: 1.375em;
 }
@@ -418,7 +399,7 @@ var {
 /*
  * Improves readability of pre-formatted text in all browsers
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003324}}
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -430,13 +411,13 @@ pre {
  * 2. Addresses quote property not supported in S4
  */
 /* 1 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003337}}
 q {
   quotes: none;
 }
 
 /* 2 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003343}}
 q:before,
 q:after {
   content: '';
@@ -444,7 +425,7 @@ q:after {
 }
 
 /* @todo Determine how big element affects vertical rhythm. */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003350}}
 small {
   font-size: 75%;
 }
@@ -453,7 +434,7 @@ small {
  * Prevents sub and sup affecting line-height in all browsers
  * gist.github.com/413930
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003359}}
 sub,
 sup {
   font-size: 75%;
@@ -462,12 +443,12 @@ sup {
   vertical-align: baseline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003367}}
 sup {
   top: -0.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003371}}
 sub {
   bottom: -0.25em;
 }
@@ -478,7 +459,7 @@ sub {
 /*
  * Addresses margins set differently in IE6/7
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003384}}
 dl,
 menu,
 ol,
@@ -488,19 +469,19 @@ ul,
   margin: 1.375em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003393}}
 .item-list ul li {
   /* Drupal override */
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003397}}
 dd {
   margin: 0 0 0 30px;
   /* LTR */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003402}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003402}}
 ul ul, ul ol, ol ul, ol ol, .item-list ul ul, .item-list ul ol, .item-list ol ul, .item-list ol ol {
   margin: 0;
   /* Turn off margins on nested lists. */
@@ -509,7 +490,7 @@ ul ul, ul ol, ol ul, ol ol, .item-list ul ul, .item-list ul ol, .item-list ol ul
 /*
  * Addresses paddings set differently in IE6/7
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003414}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003411}}
 menu,
 ol,
 ul,
@@ -521,7 +502,7 @@ ul,
 /*
  * Corrects list images handled incorrectly in IE7
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003423}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003422}}
 nav ul,
 nav ol {
   list-style: none;
@@ -536,7 +517,7 @@ nav ol {
  * 2. Improves image quality when scaled in IE7
  *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003439}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003439}}
 img {
   border: 0;
   /* 1 */
@@ -553,7 +534,7 @@ img {
 /*
  * Corrects overflow displayed oddly in IE9
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003455}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003455}}
 svg:not(:root) {
   overflow: hidden;
 }
@@ -564,7 +545,7 @@ svg:not(:root) {
 /*
  * Addresses margin not present in IE6/7/8/9, S5, O11
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003468}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003468}}
 figure {
   margin: 0;
 }
@@ -575,7 +556,7 @@ figure {
 /*
  * Corrects margin displayed oddly in IE6/7
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003481}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003481}}
 form {
   margin: 0;
 }
@@ -583,22 +564,22 @@ form {
 /*
  * Define consistent border, margin, and padding
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003489}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003489}}
 fieldset {
   border-color: #c0c0c0;
   margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
-  border-top-style: solid;
   border-top-width: 0.0625em;
+  border-top-style: solid;
   padding-top: 0.41875em;
-  border-bottom-style: solid;
   border-bottom-width: 0.0625em;
+  border-bottom-style: solid;
   padding-bottom: 0.83125em;
-  border-left-style: solid;
   border-left-width: 0.0625em;
+  border-left-style: solid;
   padding-left: 0.83125em;
-  border-right-style: solid;
   border-right-width: 0.0625em;
+  border-right-style: solid;
   padding-right: 0.83125em;
 }
 
@@ -607,16 +588,13 @@ fieldset {
  * 2. Corrects text not wrapping in FF3
  * 3. Corrects alignment displayed oddly in IE6/7
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003505}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003505}}
 legend {
   border: 0;
   /* 1 */
   padding: 0;
   white-space: normal;
   /* 2 */
-  *margin-left: -7px;
-  /* 3 */
-  /* LTR */
 }
 
 /*
@@ -624,7 +602,7 @@ legend {
  * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
  * 3. Improves appearance and consistency in all browsers
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003523}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003520}}
 button,
 input,
 select,
@@ -635,14 +613,12 @@ textarea {
   /* 2 */
   vertical-align: baseline;
   /* 3 */
-  *vertical-align: middle;
-  /* 3 */
 }
 
 /*
  * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003537}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003536}}
 button,
 input {
   line-height: normal;
@@ -655,7 +631,7 @@ input {
  * 3. Removes inner spacing in IE7 without affecting normal text inputs
  *    Known issue: inner spacing remains in IE6
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003551}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003548}}
 button,
 input[type="button"],
 input[type="reset"],
@@ -664,14 +640,12 @@ input[type="submit"] {
   /* 1 */
   -webkit-appearance: button;
   /* 2 */
-  *overflow: visible;
-  /* 3 */
 }
 
 /*
  * Re-set default cursor for disabled elements
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003564}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003563}}
 button[disabled],
 input[disabled] {
   cursor: default;
@@ -683,31 +657,27 @@ input[disabled] {
  * 3. Removes excess padding in IE7
       Known issue: excess padding remains in IE6
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003576}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003575}}
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
-  *height: 13px;
-  /* 3 */
-  *width: 13px;
-  /* 3 */
 }
 
 /*
  * 1. Addresses appearance set to searchfield in S5, Chrome
  * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003590}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003590}}
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */
 }
@@ -715,7 +685,7 @@ input[type="search"] {
 /*
  * Removes inner padding and search cancel button in S5, Chrome on OS X
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003600}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003599}}
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -725,7 +695,7 @@ input[type="search"]::-webkit-search-cancel-button {
  * Removes inner padding and border in FF3+
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003610}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003609}}
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -736,7 +706,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE6/7/8/9
  * 2. Improves readability and alignment in all browsers
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003620}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003620}}
 textarea {
   overflow: auto;
   /* 1 */
@@ -750,7 +720,7 @@ textarea {
 /*
  * Remove most spacing between table cells
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003634}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003634}}
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -765,7 +735,7 @@ table {
  * Drupal provides table styling which is only useful for its admin section
  * forms, so we override this default CSS. (We set it back in forms.css.)
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003648}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003648}}
 th {
   text-align: left;
   /* LTR */
@@ -773,12 +743,12 @@ th {
   border-bottom: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003654}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003654}}
 tbody {
   border-top: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003659}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_normalize\.scss}line{font-family:\00003658}}
 *:focus {
   outline: none;
 }
@@ -789,140 +759,124 @@ tbody {
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/robotobold.eot?") format("eot"), url("../fonts/robotobold.woff") format("woff"), url("../fonts/robotobold.ttf") format("truetype"), url("../fonts/robotobold.svg#robotobold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/robotoitalic.eot?") format("eot"), url("../fonts/robotoitalic.woff") format("woff"), url("../fonts/robotoitalic.ttf") format("truetype"), url("../fonts/robotoitalic.svg#robotoitalic") format("svg");
   font-weight: normal;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/robotobolditalic.eot?") format("eot"), url("../fonts/robotobolditalic.woff") format("woff"), url("../fonts/robotobolditalic.ttf") format("truetype"), url("../fonts/robotobolditalic.svg#robotobolditalic") format("svg");
   font-weight: bold;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Roboto Light";
   src: url("../fonts/robotolight.eot?") format("eot"), url("../fonts/robotolight.woff") format("woff"), url("../fonts/robotolight.ttf") format("truetype"), url("../fonts/robotolight.svg#robotolight") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto Light";
   src: url("../fonts/robotomedium.eot?") format("eot"), url("../fonts/robotomedium.woff") format("woff"), url("../fonts/robotomedium.ttf") format("truetype"), url("../fonts/robotomedium.svg#robotomedium") format("svg");
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto Light";
   src: url("../fonts/robotolightitalic.eot?") format("eot"), url("../fonts/robotolightitalic.woff") format("woff"), url("../fonts/robotolightitalic.ttf") format("truetype"), url("../fonts/robotolightitalic.svg#robotolightitalic") format("svg");
   font-weight: normal;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Roboto Light";
   src: url("../fonts/robotomediumitalic.eot?") format("eot"), url("../fonts/robotomediumitalic.woff") format("woff"), url("../fonts/robotomediumitalic.ttf") format("truetype"), url("../fonts/robotomediumitalic.svg#robotomediumitalic") format("svg");
   font-weight: bold;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Roboto Thin";
   src: url("../fonts/robotothin.eot?") format("eot"), url("../fonts/robotothin.woff") format("woff"), url("../fonts/robotothin.ttf") format("truetype"), url("../fonts/robotothin.svg#robotothin") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto Thin";
   src: url("../fonts/robotomedium.eot?") format("eot"), url("../fonts/robotomedium.woff") format("woff"), url("../fonts/robotomedium.ttf") format("truetype"), url("../fonts/robotomedium.svg#robotomedium") format("svg");
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto Thin";
   src: url("../fonts/robotothinitalic.eot?") format("eot"), url("../fonts/robotothinitalic.woff") format("woff"), url("../fonts/robotothinitalic.ttf") format("truetype"), url("../fonts/robotothinitalic.svg#robotothinitalic") format("svg");
   font-weight: normal;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Roboto Thin";
   src: url("../fonts/robotomediumitalic.eot?") format("eot"), url("../fonts/robotomediumitalic.woff") format("woff"), url("../fonts/robotomediumitalic.ttf") format("truetype"), url("../fonts/robotomediumitalic.svg#robotomediumitalic") format("svg");
   font-weight: bold;
   font-style: italic;
 }
-
 @font-face {
   font-family: "Roboto Condensed";
   src: url("../fonts/robotocondensed.eot?") format("eot"), url("../fonts/robotocondensed.woff") format("woff"), url("../fonts/robotocondensed.ttf") format("truetype"), url("../fonts/robotocondensed.svg#robotocondensed") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto Condensed";
   src: url("../fonts/robotoboldcondensed.eot?") format("eot"), url("../fonts/robotoboldcondensed.woff") format("woff"), url("../fonts/robotoboldcondensed.ttf") format("truetype"), url("../fonts/robotoboldcondensed.svg#robotoboldcondensed") format("svg");
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/opensansregular.eot?") format("eot"), url("../fonts/opensansregular.woff") format("woff"), url("../fonts/opensansregular.ttf") format("truetype"), url("../fonts/opensansregular.svg#opensansregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Open Sans Light";
   src: url("../fonts/opensanslight.eot?") format("eot"), url("../fonts/opensanslight.woff") format("woff"), url("../fonts/opensanslight.ttf") format("truetype"), url("../fonts/opensanslight.svg#opensanslight") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_page\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_page\.scss}line{font-family:\000034}}
 html {
   background: #f5f5f5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_page\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_page\.scss}line{font-family:\000038}}
 body {
-  color: #666;
+  color: #999999;
 }
 
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_page\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_page\.scss}line{font-family:\0000315}}
 #wrapper {
   width: 1000px;
   margin: 50px auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_page\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_page\.scss}line{font-family:\0000320}}
 #page {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_page\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_page\.scss}line{font-family:\0000327}}
 #main {
   min-height: 500px;
 }
@@ -931,7 +885,7 @@ body {
 --------------------------------------------------- */
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_header\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_header\.scss}line{font-family:\000034}}
 #header {
   padding: 15px 25px;
   background: #58504d url("../img/header_bg_2.png") left top;
@@ -944,18 +898,18 @@ body {
 --------------------------------------------------- */
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_sidebar\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_sidebar\.scss}line{font-family:\000034}}
 #sidebar {
   float: left;
   width: 220px;
   padding-top: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_sidebar\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_sidebar\.scss}line{font-family:\000039}}
 #sidebar .task-list {
   margin-left: 0;
   padding-left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_sidebar\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_sidebar\.scss}line{font-family:\0000317}}
 #sidebar .task-list li {
   list-style: none;
   padding: 0 30px;
@@ -963,17 +917,18 @@ body {
   margin: 5px 0;
   display: inline-block;
   position: relative;
+  color: #999999;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_sidebar\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_sidebar\.scss}line{font-family:\0000327}}
 #sidebar .task-list .done {
-  color: #ddd;
+  color: #7ac143;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_sidebar\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_sidebar\.scss}line{font-family:\0000331}}
 #sidebar .task-list .active {
   background: #00aef0;
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_sidebar\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_sidebar\.scss}line{font-family:\0000336}}
 #sidebar .task-list .active:after {
   position: absolute;
   right: -40px;
@@ -992,7 +947,7 @@ body {
 --------------------------------------------------- */
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\000034}}
 #content {
   margin-left: 230px;
   padding: 30px 50px;
@@ -1000,24 +955,24 @@ body {
 
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000314}}
 h1 {
   font-weight: normal;
   font-size: 40px;
   margin: 10px 0 40px 0;
-  color: #999;
+  color: #999999;
 }
 
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000325}}
 .form-item {
   margin-bottom: 30px;
 }
 
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000332}}
 label {
   font-family: "Open Sans";
   font-weight: bold;
@@ -1026,59 +981,58 @@ label {
   margin-bottom: 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000340}}
 label.option {
   text-transform: none;
   padding-left: 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000345}}
 .form-item .description {
   margin-top: 5px;
   font-size: 12px;
   line-height: normal;
-  color: #bbb;
+  color: #999999;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000351}}
 .form-item .description a {
-  color: #aaa;
+  color: #aaaaaa;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000355}}
 .form-item .description a:hover {
   text-decoration: underline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000361}}
 .password-suggestions {
   padding: 10px 20px;
   background: #f5f5f5;
-  color: #888;
+  color: #999999;
   border: none !important;
   border-radius: 5px;
 }
 
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000372}}
 fieldset {
   margin: 50px 0;
   padding: 0;
-  border: 1px #ddd dotted;
+  border: 1px #cccccc dotted;
   border-radius: 0 0 5px 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000378}}
 fieldset .form-item:last-child {
   margin-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000394}}
 fieldset span.fieldset-legend {
   margin-left: 3px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\0000398}}
 fieldset legend {
   margin-left: -1px;
-  background: #fff;
   border: 1px #ddd dotted;
   border-radius: 5px 5px 0 0;
   background: #f5f5f5;
@@ -1089,29 +1043,29 @@ fieldset legend {
   font-family: "Open Sans";
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003111}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003110}}
 fieldset legend a {
   display: inline-block;
   padding: 7px 10px;
   text-decoration: none;
   color: #00aef0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003119}}
 fieldset.collapsed legend {
-  border-bottom: 1px #ddd dotted;
+  border-bottom: 1px #cccccc dotted;
   border-radius: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003124}}
 fieldset .fieldset-wrapper {
   padding: 20px 25px;
 }
 
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003140}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003139}}
 .form-text {
-  border: 1px #ddd solid;
-  border-color: #aaa #ddd #ddd #ddd;
+  border: 1px #cccccc solid;
+  border-color: #aaaaaa #cccccc #cccccc #cccccc;
   padding: 5px 10px;
   font-size: 16px;
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.05);
@@ -1120,12 +1074,12 @@ fieldset .fieldset-wrapper {
 
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003152}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003151}}
 .form-actions {
   margin-top: 50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003156}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003155}}
 .form-submit {
   background: #ed008c;
   color: #fff;
@@ -1137,16 +1091,16 @@ fieldset .fieldset-wrapper {
 
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003169}}
 table.system-status-report {
   font-size: 12px;
   line-height: normal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003175}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003174}}
 table.system-status-report tr {
   border-bottom: 3px #fff solid;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003195}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_content\.scss}line{font-family:\00003194}}
 table.system-status-report tr td.status-title {
   font-family: "Open Sans";
   font-weight: bold;
@@ -1159,10 +1113,10 @@ table.system-status-report tr td.status-title {
 --------------------------------------------------- */
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_footer\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_footer\.scss}line{font-family:\000034}}
 #footer {
   padding: 20px 30px;
-  color: #bbb;
+  color: #aaaaaa;
 }
 
 /* 
@@ -1171,11 +1125,11 @@ table.system-status-report tr td.status-title {
 --------------------------------------------------- */
 /* 
 --------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_console\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_console\.scss}line{font-family:\000034}}
 #console {
   margin-bottom: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_console\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_console\.scss}line{font-family:\000037}}
 #console .messages {
   font-size: 13px;
   line-height: normal;
@@ -1183,11 +1137,11 @@ table.system-status-report tr td.status-title {
   box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.03);
   border-radius: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_console\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_console\.scss}line{font-family:\0000317}}
 #console .error p.error {
   color: #8c2e0b;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/angel\/Sites\/satellite\/dev\/profiles\/satellite\/themes\/install\/sass\/_console\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/install\/sass\/_console\.scss}line{font-family:\0000322}}
 #console p.error {
   font-family: "Consolas", "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
   font-weight: bold;

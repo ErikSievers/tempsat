@@ -80,6 +80,14 @@ projects[webform_esncard][download][url] = "git@git.esn.org:common/webform_esnca
 projects[webform_esncard][download][branch] = 7.x-1.x
 projects[webform_esncard][download][full_version] = 7.x-1.x-dev
 
+; Satellite Blog
+projects[satellite_blog][type] = module
+projects[satellite_blog][subdir] = features
+projects[satellite_blog][download][type] = git
+projects[satellite_blog][download][url] = git@git.esn.org:satellite/satellite_blog.git
+projects[satellite_blog][download][branch] = master
+projects[satellite_blog][download][full_version] 7.x-1.x-dev
+
 ; Satellite features with makefiles ===========================================
 ; The modules in the respective makefiles are required for the feature to work.
 
@@ -88,6 +96,9 @@ includes[satellite_base] = "modules/features/satellite_base/satellite_base.make"
 includes[satellite_events] = "modules/features/satellite_events/satellite_events.make"
 
 includes[satellite_spotlight] = "modules/features/satellite_spotlight/satellite_spotlight.make"
+
+includes[satellite_socialmedia_integration] = "modules/features/satellite_socialmedia_integration/satellite_socialmedia_integration.make"
+
 
 ; Modules =====================================================================
 ; Modules here can be turned on or off by webmatsers.
@@ -106,13 +117,13 @@ projects[feeds][subdir] = contrib
 projects[feeds][version] = 2.0-alpha8
 
 projects[feeds_xpathparser][subdir] = contrib
-projects[feeds_xpathparser][version] = 1.0-beta4
+projects[feeds_xpathparser][version] = 1.0
 
 projects[field_group][subdir] = contrib
 projects[field_group][version] = 1.4
 
 projects[imagecache_actions][subdir] = contrib
-projects[imagecache_actions][version] = 1.4
+projects[imagecache_actions][version] = 1.5
 
 projects[job_scheduler][subdir] = contrib
 projects[job_scheduler][version] = 2.0-alpha3
@@ -136,7 +147,7 @@ projects[options_element][subdir] = contrib
 projects[options_element][version] = 1.10
 
 projects[override_node_options][subdir] = contrib
-projects[override_node_options][version] = 1.12
+projects[override_node_options][version] = 1.13
 
 projects[paranoia][subdir] = contrib
 projects[paranoia][version] = 1.0
@@ -157,7 +168,7 @@ projects[webform][subdir] = contrib
 projects[webform][version] = 4.0-beta3
 
 projects[weight][subdir] = contrib
-projects[weight][version] = 2.3
+projects[weight][version] = 2.4
 
 ; WYSIWYG improvements
 projects[imce][subdir] = contrib
@@ -167,7 +178,7 @@ projects[imce_wysiwyg][subdir] = contrib
 projects[imce_wysiwyg][version] = 1.0
 
 projects[linkit][subdir] = contrib
-projects[linkit][version] = 3.1
+projects[linkit][version] = 3.2
 
 ; projects[insert][subdir] = contrib
 ; projects[insert][version] = 1.3

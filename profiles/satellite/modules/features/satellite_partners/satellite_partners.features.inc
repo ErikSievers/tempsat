@@ -242,6 +242,7 @@ You can control the sort order of partners by setting the <strong>weight</strong
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }
 

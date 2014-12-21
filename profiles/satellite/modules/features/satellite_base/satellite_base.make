@@ -18,13 +18,19 @@ projects[features_override][subdir] = contrib
 projects[features_override][version] = 2.0-rc2
 
 projects[link][subdir] = contrib
-projects[link][version] = 1.2
+projects[link][version] = 1.3
 
 projects[manualcrop][subdir] = contrib
 projects[manualcrop][version] = 1.x-dev
 
 projects[jquery_update][subdir] = contrib
 projects[jquery_update][version] = 2.4
+
+projects[service_links][subdir] = contrib
+projects[service_links][version] = 2.2
+
+projects[metatag][subdir] = contrib
+projects[metatag][version] = 1.4
 
 ; Libraries
 libraries[colorbox][download][type] = "get"

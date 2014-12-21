@@ -76,7 +76,7 @@ function satellite_events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_contactdetails',
       1 => 'field_date',

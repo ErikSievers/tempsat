@@ -187,5 +187,73 @@ function satellite_base_strongarm() {
   $strongarm->value = 'scale_and_crop';
   $export['imce_settings_thumb_method'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_label_in_node';
+  $strongarm->value = '';
+  $export['service_links_label_in_node'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_new_window';
+  $strongarm->value = '1';
+  $export['service_links_new_window'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_node_types';
+  $strongarm->value = array(
+    'blog' => 'blog',
+    'event' => 'event',
+    'news' => 'news',
+    'page' => 'page',
+    'partner' => 'partner',
+    'partner_external' => 'partner_external',
+  );
+  $export['service_links_node_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_node_view_modes';
+  $strongarm->value = array(
+    'full' => 'full',
+    'teaser' => 'teaser',
+    'list' => 'list',
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'diff_standard' => 0,
+    'token' => 0,
+    'block' => 0,
+    'spotlight' => 0,
+    'revision' => 0,
+  );
+  $export['service_links_node_view_modes'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_path_icons';
+  $strongarm->value = 'profiles/satellite/modules/contrib/service_links/images';
+  $export['service_links_path_icons'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_style';
+  $strongarm->value = '2';
+  $export['service_links_style'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_weight_in_node';
+  $strongarm->value = '10';
+  $export['service_links_weight_in_node'] = $strongarm;
+
   return $export;
 }

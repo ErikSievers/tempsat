@@ -13,9 +13,6 @@ function satellite_base_features_override_default_overrides() {
 
   // Exported overrides for: wysiwyg
   $overrides["wysiwyg.rich_text.settings|advanced__active_tab"] = 'edit-basic';
-  $overrides["wysiwyg.rich_text.settings|buttons|imce"] = array(
-    'imce' => 1,
-  );
 
  return $overrides;
 }

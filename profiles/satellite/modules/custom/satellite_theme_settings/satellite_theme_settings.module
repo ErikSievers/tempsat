@@ -64,53 +64,70 @@ function satellite_theme_settings_form($form, &$form_state){
 		'#description' => t('Check here if you want the theme to fade in pages when they load.'),
 	);
 
-	
-
-    $form['theme_settings']['logo'] = array(
-      '#type' => 'fieldset',
-      '#title' => t('Logo image settings'),
-      '#description' => t('If toggled on, the following logo will be displayed.'),
-      '#attributes' => array('class' => array('theme-settings-bottom')),
-    );
-    $form['theme_settings']['logo']['default_logo'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Use the default logo'),
-      '#default_value' => theme_get_setting('default_logo', $key),
-      '#tree' => FALSE,
-      '#description' => t('Check here if you want the theme to use the logo supplied with it.')
-    );
-    $form['theme_settings']['logo']['settings'] = array(
-      '#type' => 'container',
-      '#states' => array(
-        // Hide the logo settings when using the default logo.
-        'invisible' => array(
-          'input[name="default_logo"]' => array('checked' => TRUE),
-        ),
+  $form['theme_settings']['logo'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Logo image settings'),
+    '#description' => t('If toggled on, the following logo will be displayed.'),
+    '#attributes' => array('class' => array('theme-settings-bottom')),
+  );
+  $form['theme_settings']['logo']['default_logo'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Use the default logo'),
+    '#default_value' => theme_get_setting('default_logo', $key),
+    '#tree' => FALSE,
+    '#description' => t('Check here if you want the theme to use the logo supplied with it.')
+  );
+  $form['theme_settings']['logo']['settings'] = array(
+    '#type' => 'container',
+    '#states' => array(
+      // Hide the logo settings when using the default logo.
+      'invisible' => array(
+        'input[name="default_logo"]' => array('checked' => TRUE),
       ),
-    );
-    $form['theme_settings']['logo']['settings']['logo_path'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Path to custom logo'),
-      '#description' => t('The path to the file you would like to use as your logo file instead of the default logo.'),
-      '#default_value' => theme_get_setting('logo_path', $key),
-    );
-    $form['theme_settings']['logo']['settings']['logo_upload'] = array(
-      '#type' => 'file',
-      '#title' => t('Upload logo image'),
-      '#maxlength' => 40,
-      '#description' => t("If you don't have direct file access to the server, use this field to upload your logo.")
-    );
+    ),
+  );
+  $form['theme_settings']['logo']['settings']['logo_path'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Path to custom logo'),
+    '#description' => t('The path to the file you would like to use as your logo file instead of the default logo.'),
+    '#default_value' => theme_get_setting('logo_path', $key),
+  );
+  $form['theme_settings']['logo']['settings']['logo_upload'] = array(
+    '#type' => 'file',
+    '#title' => t('Upload logo image'),
+    '#maxlength' => 40,
+    '#description' => t("If you don't have direct file access to the server, use this field to upload your logo.")
+  );
 
-  $form['theme_settings']['logo']['submit'] = array(
+  $form = _satellite_theme_settings_form_google_analytics($form, $form_state);
+
+  $form['theme_settings']['submit'] = array(
     '#type' => 'submit',
     '#value' => t('Save'),
   );
-  
   $form['#submit'][] = 'satellite_theme_settings_submit';
   $form['#validate'][] = 'satellite_theme_settings_validate';
-
   return $form;
+}
 
+function _satellite_theme_settings_form_google_analytics($form, &$form_state) {
+  $galink = l(t('Google Analytics'), 'http://www.google.com/analytics/', array('target' => '_blank'));
+  $form['theme_settings']['googleanalytics'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Google Analytics'),
+    '#attributes' => array('class' => array('theme-settings-bottom')),
+  );
+  if (module_exists('googleanalytics')) {
+    $form['theme_settings']['googleanalytics']['#description'] =
+      t('!galink is enabled. Here you can go to the !gaconfig.', array('!galink' => $galink, '!gaconfig' => l(t('configuration form'), 'admin/config/system/googleanalytics')));
+  } else {
+    $form['theme_settings']['googleanalytics']['#description'] =
+      t('!galink is either not !enabled or installed.', array('!galink' => $galink, '!enabled' => l(t('enabled'), 'admin/modules')));
+    $form['theme_settings']['googleanalytics']['download'] = array(
+      '#markup' => t('<p>If not installed, you can download the <em>Google Analytics</em> module from <a href="https://www.drupal.org/project/google_analytics" target="_blank">https://www.drupal.org/project/google_analytics</a>.</p>'),
+    );
+  }
+  return $form;
 }
 
 function satellite_theme_settings_validate($form, &$form_state) {

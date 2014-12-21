@@ -92,15 +92,34 @@ $legacy-support-for-ie8: true;
 		#middle-first  { @include zen-grid-item(1,1); }
 		#middle-second  { @include zen-grid-item(1,2); }
 	}
-
-
-	
 }
 
 
-/* 
+/* BLOG
 -------------------------------------------------------------- */
 
+.blog-posts-list {
+	ul {
+		padding-left: 0;
+
+		li {
+			background-image: url("../img/icon_blogpost.png");
+			background-position: 4px 2px;
+			background-repeat: no-repeat;
+			background-size: 14px auto;
+			font-size: 12px;
+			line-height: 17px;
+			list-style: outside none none;
+			margin-bottom: 12px;
+			padding-left: 24px;
+
+			.node-created {
+				display: block;
+				font-size: 0.8em;
+			}
+		}
+	}
+}
 
 /* 
 -------------------------------------------------------------- */

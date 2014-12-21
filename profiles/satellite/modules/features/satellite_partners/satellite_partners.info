@@ -2,12 +2,13 @@ name = ESN Partners
 description = Local partners
 core = 7.x
 package = ESN Satellite
+version = 7.x-1.0
 dependencies[] = colorbox
 dependencies[] = esn_base
 dependencies[] = imagecache_canvasactions
+dependencies[] = multiupload_filefield_widget
 dependencies[] = override_node_options
 dependencies[] = satellite_base
-dependencies[] = views
 dependencies[] = views_slideshow_cycle
 dependencies[] = weight
 features[ctools][] = ds:ds:1
@@ -29,6 +30,7 @@ features[image][] = partner
 features[image][] = partner_block
 features[image][] = partner_list
 features[image][] = partner_page
+features[metatag][] = node:partner
 features[node][] = partner
 features[variable][] = additional_settings__active_tab_partner
 features[variable][] = comment_anonymous_partner
@@ -56,12 +58,10 @@ features_exclude[field_base][field_file] = field_file
 features_exclude[field_base][field_image] = field_image
 features_exclude[field_base][field_link] = field_link
 features_exclude[dependencies][features] = features
+mtime = 1418506791
 project path = profiles/satellite/modules/features
 
-
-; Information added by drush on 2014-10-17
-version = "7.x-4.3"
-core = "7.x"
+; Information added by drush on 2014-12-21
+version = "7.x-4.4"
 project = "satellite"
-datestamp = "1413580380"
-
+datestamp = "1419188547"

@@ -2,6 +2,7 @@ name = ESN News
 description = News for your site
 core = 7.x
 package = ESN Satellite
+version = 7.x-1.0
 dependencies[] = colorbox
 dependencies[] = ctools
 dependencies[] = ds
@@ -11,6 +12,7 @@ dependencies[] = field_group
 dependencies[] = file
 dependencies[] = image
 dependencies[] = link
+dependencies[] = metatag
 dependencies[] = multiupload_filefield_widget
 dependencies[] = multiupload_imagefield_widget
 dependencies[] = override_node_options
@@ -65,12 +67,10 @@ features_exclude[field_base][field_image_gallery] = field_image_gallery
 features_exclude[field_base][field_image_spotlight] = field_image_spotlight
 features_exclude[field_base][field_link] = field_link
 features_exclude[field_base][field_summary] = field_summary
+mtime = 1418506723
 project path = profiles/satellite/modules/features
 
-
-; Information added by drush on 2014-10-17
-version = "7.x-4.3"
-core = "7.x"
+; Information added by drush on 2014-12-21
+version = "7.x-4.4"
 project = "satellite"
-datestamp = "1413580380"
-
+datestamp = "1419188547"

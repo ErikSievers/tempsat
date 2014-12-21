@@ -136,16 +136,18 @@ function satellite_news_ds_layout_settings_info() {
       ),
       'main_content' => array(
         1 => 'body',
+        2 => 'service_links_displays_group',
       ),
       'secondary' => array(
-        2 => 'field_image_gallery',
-        3 => 'field_link',
-        4 => 'field_file',
+        3 => 'field_image_gallery',
+        4 => 'field_link',
+        5 => 'field_file',
       ),
     ),
     'fields' => array(
       'field_image' => 'image',
       'body' => 'main_content',
+      'service_links_displays_group' => 'main_content',
       'field_image_gallery' => 'secondary',
       'field_link' => 'secondary',
       'field_file' => 'secondary',

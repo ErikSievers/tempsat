@@ -9,6 +9,14 @@ function satellite_events_install() {
   esn_blocktheme_set_icon('calendar', 'calendar_legend', 'calendar');
 }
 
+/** Setup update dependencies */
+function satellite_events_update_dependencies() {
+  $dependencies['satellite_events'][7002] = array(
+    'satellite_base' => 7001,
+  );
+  return $dependencies;
+}
+
 /**
  * Configure the calendar legend and enable the calendar module
  */
@@ -28,3 +36,12 @@ function satellite_events_update_7001() {
   menu_rebuild();
 }
 
+
+/**
+ *  Revert feature: Enable service links and metatag integration
+ */
+function satellite_events_update_7002() {
+  esn_base_features_revert(array(
+    'satellite_events'
+  ));
+}

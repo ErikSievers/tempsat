@@ -127,6 +127,7 @@ function satellite_partners_ds_layout_settings_info() {
       'secondary' => array(
         2 => 'field_link',
         3 => 'field_file',
+        4 => 'service_links_displays_group',
       ),
     ),
     'fields' => array(
@@ -134,6 +135,7 @@ function satellite_partners_ds_layout_settings_info() {
       'body' => 'main_content',
       'field_link' => 'secondary',
       'field_file' => 'secondary',
+      'service_links_displays_group' => 'secondary',
     ),
     'classes' => array(),
     'wrappers' => array(

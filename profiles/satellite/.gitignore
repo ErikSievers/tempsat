@@ -23,5 +23,8 @@
 /modules/features/satellite_team
 /themes/esnbase
 
+# No app modules
+/modules/features/satellite_blog
+
 #no cache
 .sass-cache

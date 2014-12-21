@@ -256,7 +256,7 @@ You can modify the part of the image being displayed for all three versions by c
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 17,
       ),
       'spotlight' => array(
         'label' => 'hidden',
@@ -336,6 +336,7 @@ You can modify the part of the image being displayed for all three versions by c
     'label' => 'More information',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -354,6 +355,7 @@ You can modify the part of the image being displayed for all three versions by c
       ),
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,

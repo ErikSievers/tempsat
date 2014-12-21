@@ -310,7 +310,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 19,
       ),
       'list' => array(
         'label' => 'above',
@@ -525,7 +525,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
           'colorbox_node_style' => 'gallery-thumbnail',
         ),
         'type' => 'colorbox',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -602,7 +602,7 @@ You can modify the part of the image being displayed for all three versions by c
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 17,
       ),
       'list' => array(
         'label' => 'above',
@@ -788,6 +788,7 @@ You can modify the part of the image being displayed for all three versions by c
     'label' => 'More information',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -806,6 +807,7 @@ You can modify the part of the image being displayed for all three versions by c
       ),
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -1016,7 +1018,7 @@ You can modify the part of the image being displayed for all three versions by c
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 18,
       ),
       'list' => array(
         'label' => 'hidden',

@@ -21,10 +21,11 @@
 			margin: 5px 0;
 			display: inline-block;
 			position: relative;
+			color: $gray;
 		}
 
 		.done {
-			color: #ddd;
+			color: $esn-green;
 		}
 
 		.active {

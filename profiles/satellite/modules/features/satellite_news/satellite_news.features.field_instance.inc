@@ -90,7 +90,7 @@ function satellite_news_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'list' => array(
         'label' => 'above',
@@ -247,7 +247,7 @@ function satellite_news_field_default_field_instances() {
           'colorbox_node_style' => 'gallery-thumbnail',
         ),
         'type' => 'colorbox',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'list' => array(
         'label' => 'above',
@@ -318,7 +318,7 @@ You can modify the part of the image being displayed for all three versions by c
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 14,
       ),
       'list' => array(
         'label' => 'above',
@@ -396,7 +396,7 @@ You can modify the part of the image being displayed for all three versions by c
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'list' => array(
         'label' => 'above',
@@ -416,6 +416,7 @@ You can modify the part of the image being displayed for all three versions by c
     'label' => 'More information',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -434,6 +435,7 @@ You can modify the part of the image being displayed for all three versions by c
       ),
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -466,7 +468,7 @@ You can modify the part of the image being displayed for all three versions by c
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 15,
       ),
       'list' => array(
         'label' => 'hidden',

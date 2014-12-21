@@ -1,5 +1,7 @@
 <?php
 
+include_once 'satellite.api.inc';
+
 define('SATELLITE_THEME', 'esnsatellite');
 
 /**
@@ -172,17 +174,7 @@ function satellite_install_place_blocks() {
       'cache' => 1,
     ),
   );
-  // execute the database query
-  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'visibility', 'pages', 'cache'));
-  foreach ($blocks as $block) {
-    if (isset($block['icon'])) {
-      // set the default icon
-      esn_blocktheme_set_icon($block['module'], $block['delta'], $block['icon']);
-      unset($block['icon']);
-    }
-    $query->values($block);
-  }
-  $query->execute();
+  satellite_insert_blocks($blocks);
 }
 
 /**
@@ -300,6 +292,38 @@ function satellite_configuration($form, &$form_state) {
   drupal_set_title(st('Satellite Configuration'));
   
   $form = satellite_settings_configuration_form();
+
+  $form['optional_features'] = array(
+    '#type' => 'fieldset',
+    '#title' => st('Optional Satellite features'),
+    '#collapsible' => false,
+    '#collapsed' => false,
+    '#class' => array('form-wrapper', 'form-optional-features'),
+  );
+
+  $form['optional_features']['explanation'] = array(
+    '#markup' => st('Optional features of Satellite which can be enabled during install. You can enable and disable them as well as admin under <a href="/admin/structure/features" target="_blank">admin/structure/features</a>'),
+  );
+
+  $form['optional_features']['of_events_registration'] = array(
+    '#type' => 'checkbox',
+    '#title' => st('Satellite Events registration<br /><small>Add webforms to the Event so that events can be used for registrations</small>'),
+    '#default_value' => false,
+  );
+
+  $form['optional_features']['of_faq'] = array(
+    '#type' => 'checkbox',
+    '#title' => st('Satellite FAQ<br /><small>Adds a Frequently asked questions field to events</small>'),
+    '#default_value' => false,
+  );
+
+  $form['optional_features']['of_blog'] = array(
+    '#type' => 'checkbox',
+    '#title' => st('Satellite Blog<br /><small>A blog for your section.</small>'),
+    '#default_value' => false,
+  );
+
+  // Default content
   
   $form['default_content'] = array(
     '#type' => 'fieldset',
@@ -332,6 +356,7 @@ function satellite_configuration($form, &$form_state) {
 function satellite_configuration_validate($form, &$form_state) {
   return satellite_settings_configuration_form_validate($form_state);
 }
+
 /**
  * The Satellite configuration form submission.
  */
@@ -347,7 +372,16 @@ function satellite_configuration_submit($form, &$form_state) {
   if ($form_state['values']['enable_content']) {
     variable_set('satellite_install_default_content', TRUE);
   }
-  
+  if ($form_state['values']['of_events_registration']){
+    variable_set('satellite_optional_feature_events_registration', true);
+  }
+  if ($form_state['values']['of_faq']){
+    variable_set('satellite_optional_feature_faq', true);
+  }
+  if ($form_state['values']['of_blog']){
+    variable_set('satellite_optional_feature_blog', true);
+  }
+
 }
 
 /**
@@ -371,6 +405,22 @@ function satellite_final_install() {
   $operations[] = array('satellite_assign_default_roles', array());
   $operations[] = array('satellite_add_contact_form', array());
 
+  $optional_features = array();
+  if (variable_get('satellite_optional_feature_events_registration', false)) {
+    $optional_features[] = 'satellite_events_registration';
+  }
+  if (variable_get('satellite_optional_feature_faq', false)) {
+    $optional_features[] = 'satellite_faq';
+  }
+  if (variable_get('satellite_optional_feature_blog', false)) {
+    $optional_features[] = 'satellite_blog';
+  }
+  if (count($optional_features)) {
+    $operations[] = array('module_enable', array($optional_features, true));
+  }
+  if (in_array('satellite_blog', $optional_features)) {
+    $operations[] = array('satellite_blog_add_categories', array());
+  }
 
   if (variable_get('satellite_install_default_content', FALSE)) {
     $operations[] = array('module_enable', array(array('satellite_dummy_content')));
@@ -386,7 +436,7 @@ function satellite_final_install() {
       $operations[] = array('satellite_enable_default_content', array($importer_id, $source_file));
     }
     
-    //$operations[] = array('drupal_get_messages', array('status', TRUE)); 
+    $operations[] = array('satellite_cleanup_after_install', array());
   }
   
   $batch = array(
@@ -400,7 +450,7 @@ function satellite_final_install() {
 
 }
 
-function satellite_assign_default_roles() {
+function satellite_assign_default_roles(&$context) {
   $editor_permissions = array( 
     'create event content',
     'edit own event content',
@@ -447,9 +497,10 @@ function satellite_assign_default_roles() {
   user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
   variable_set('user_admin_role', $admin_role->rid);
 
+  $context['message'] = st('Configured default roles "Editor" and "Administrator".');
 }
 
-function satellite_disable_cas_if_no_curl() {
+function satellite_disable_cas_if_no_curl(&$context) {
   $pass = FALSE;
   if (function_exists('curl_version')) {
     $curl_version = curl_version();
@@ -459,13 +510,15 @@ function satellite_disable_cas_if_no_curl() {
   }
   if (!$pass) {
     module_disable(array('esn_cas', 'cas', 'cas_attributes', 'cas_roles'));
+    $context['message'] = st('CAS disabled. curl is not available or curl version not supported.');
   }
   else {
     variable_set('cas_roles_roles', '[cas:attribute:sc]_[cas:attribute:roles]');
+    $context['message'] = st('CAS has been configured.');
   }
 }
 
-function satellite_add_event_audience() {
+function satellite_add_event_audience(&$context) {
   $vocabulary = taxonomy_vocabulary_machine_name_load('event_audience');
   
   $terms = array(
@@ -483,9 +536,10 @@ function satellite_add_event_audience() {
     $entity = entity_create('taxonomy_term', $values);
     entity_save('taxonomy_term', $entity);
   }
+  $context['message'] = st('Added event audiences.');
 }
 
-function satellite_add_event_types() {
+function satellite_add_event_types(&$context) {
   $vocabulary = taxonomy_vocabulary_machine_name_load('event_type');
   
   $terms = array(
@@ -508,9 +562,10 @@ function satellite_add_event_types() {
     $wrapper->save(true);
     entity_save('taxonomy_term', $entity);
   }
+  $context['message'] = st('Added event types.');
 }
 
-function satellite_add_contact_form() {
+function satellite_add_contact_form(&$context) {
   db_update('contact')
     ->fields(array(
       'category' => 'General contact',
@@ -520,6 +575,7 @@ function satellite_add_contact_form() {
     ))
     ->condition('cid', 1)
     ->execute();
+  $context['message'] = st('Configured contact form.');
 }
 
 function satellite_enable_default_content($importer_id, $source_file, &$context) {
@@ -539,4 +595,10 @@ function satellite_enable_default_content($importer_id, $source_file, &$context)
   if (FEEDS_BATCH_COMPLETE != $source->import()) {
     $context['finished'] = 0;
   }
+}
+
+function satellite_cleanup_after_install(&$context) {
+  variable_del('satellite_optional_feature_blog');
+  variable_del('satellite_install_default_content');
+  $context['message'] = st('Cleaned up installation information.');
 }
