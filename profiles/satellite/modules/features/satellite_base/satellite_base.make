@@ -8,11 +8,14 @@ core = 7.x
 
 ; Modules
 
+projects[addressfield][subdir] = contrib/gis
+projects[addressfield][version] = 1.1
+
 projects[ccl][subdir] = contrib
 projects[ccl][version] = 1.5
 
 projects[colorbox][subdir] = contrib
-projects[colorbox][version] = 1.6
+projects[colorbox][version] = 2.9
 
 projects[features_override][subdir] = contrib
 projects[features_override][version] = 2.0-rc2
@@ -21,16 +24,16 @@ projects[link][subdir] = contrib
 projects[link][version] = 1.3
 
 projects[manualcrop][subdir] = contrib
-projects[manualcrop][version] = 1.x-dev
+projects[manualcrop][version] = 1.5
 
 projects[jquery_update][subdir] = contrib
-projects[jquery_update][version] = 2.4
+projects[jquery_update][version] = 2.6
 
 projects[service_links][subdir] = contrib
-projects[service_links][version] = 2.2
+projects[service_links][version] = 2.3
 
 projects[metatag][subdir] = contrib
-projects[metatag][version] = 1.4
+projects[metatag][version] = 1.7
 
 ; Libraries
 libraries[colorbox][download][type] = "get"
@@ -43,8 +46,6 @@ projects[imgareaselect_lib][download][type] = get
 projects[imgareaselect_lib][download][url] = http://odyniec.net/projects/imgareaselect/jquery.imgareaselect-0.9.10.zip
 projects[imgareaselect_lib][directory_name] = jquery.imgareaselect
 
-projects[imagesloaded_lib][type] = library
-projects[imagesloaded_lib][download][type] = file
-projects[imagesloaded_lib][download][url] = http://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js
-projects[imagesloaded_lib][download][filename] = jquery.imagesloaded.min.js
-projects[imagesloaded_lib][directory_name] = jquery.imagesloaded
+libraries[jquery.imagesloaded][download][type] = file
+libraries[jquery.imagesloaded][download][url] = https://github.com/desandro/imagesloaded/archive/v2.1.2.tar.gz
+libraries[jquery.imagesloaded][download][subtree] = imagesloaded-2.1.2

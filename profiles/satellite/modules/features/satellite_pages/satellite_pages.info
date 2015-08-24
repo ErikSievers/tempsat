@@ -58,10 +58,9 @@ features_exclude[field_base][field_image] = field_image
 features_exclude[field_base][field_image_gallery] = field_image_gallery
 features_exclude[field_base][field_image_spotlight] = field_image_spotlight
 features_exclude[field_base][field_link] = field_link
-mtime = 1418506758
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2014-12-21
-version = "7.x-4.4"
+; Information added by drush on 2015-08-24
+version = "7.x-4.5"
 project = "satellite"
-datestamp = "1419188547"
+datestamp = "1440370496"

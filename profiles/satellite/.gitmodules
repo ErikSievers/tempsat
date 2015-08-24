@@ -1,0 +1,9 @@
+[submodule "modules/custom/esn_api_tools"]
+	path = modules/custom/esn_api_tools
+	url = git@git.esn.org:common/esn_api_tools.git
+	branch = dev
+
+[submodule "modules/features/esn_mobile_api"]
+	path = modules/features/esn_mobile_api
+	url = git@git.esn.org:satellite/esn_mobile_api.git
+	branch = 7.x-1.x

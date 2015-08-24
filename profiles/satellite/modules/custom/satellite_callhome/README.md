@@ -14,8 +14,8 @@ Currently sends:
 
 Key variables
 =========
-- 'satellite_callhome_optin', True/False value of whether the module should call (opt-out).
-- 'satellite_callhome_url', the url, to which the information will be sent.
+- 'satellite_callhome_extdata', True/False value of whether the module should send extended data to ESN IT Committee. Basic data must be always send.
+- 'satellite_callhome_gateway', the server to which the information will be sent, if not set the default gateway (satellite.esn.org) will be used.
 - 'satellite_callhome_lastcall', unix timestamp of last call.
 - 'satellite_callhome_update', True/False value of whether the update notification should be shown.
 - 'satellite_callhome_message', the message to display including the link.

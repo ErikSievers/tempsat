@@ -117,12 +117,19 @@ function satellite_events_strongarm() {
         'path' => array(
           'weight' => '8',
         ),
+        'metatags' => array(
+          'weight' => '40',
+        ),
       ),
       'display' => array(
         'webform' => array(
           'default' => array(
             'weight' => '10',
-            'visible' => TRUE,
+            'visible' => FALSE,
+          ),
+          'list' => array(
+            'weight' => '17',
+            'visible' => FALSE,
           ),
         ),
       ),

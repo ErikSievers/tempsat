@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Inform user how to enable the Mobile API
+ */
+function satellite_settings_update_7001() {
+  if (satellite_settings_get_scope() == 'local') {
+    return t('Please go to <a href="!url">!url</a> to enable this Satellite as Mobile API data service.', array('!url' => url('admin/settings/satellite/galaxy')));
+  }
+}

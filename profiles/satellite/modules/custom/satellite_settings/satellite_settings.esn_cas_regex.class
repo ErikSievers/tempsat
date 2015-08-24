@@ -15,6 +15,7 @@ define('ESN_ROLE_NR', 'nationalRepresentative');
 define('ESN_ROLE_VICENR', 'nationalViceRepresentative');
 define('ESN_ROLE_WPA', 'webProjectAdministrator');
 define('ESN_ROLE_ITCHAIR', 'ITChair');
+define('ESN_ROLE_ITSUPPORT', 'ITSupport');
 define('ESN_ROLE_ACTIVEMEMBER', 'activeMember');
 
 
@@ -64,7 +65,7 @@ final class ESN_CAS_Regex {
     if ($satellite_settings['permissions']['internationalAdmin']) {
       $webmasterAlts[] = $this->mkFullPatt('[A-Z]{2}',
         array($this->mkClause(array($this->mkSectionLevel(ESN_LEVEL_INTERNATIONAL)),
-         array(ESN_ROLE_WPA, ESN_ROLE_ITCHAIR))));
+         array(ESN_ROLE_WPA, ESN_ROLE_ITCHAIR, ESN_ROLE_ITSUPPORT))));
     }
 
     return $this->mkRegex($webmasterAlts);

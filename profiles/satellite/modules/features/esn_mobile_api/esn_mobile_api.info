@@ -1,0 +1,25 @@
+name = ESN Mobile API
+description = ESN Mobile API core. Provides meta information about the APIs of the site, specific APIs can be plugged in by other modules.
+core = 7.x
+package = ESN
+version = 7.x-1.0-dev
+project = esn_mobile_api
+dependencies[] = advanced_help
+dependencies[] = ctools
+dependencies[] = esn_galaxy_api
+dependencies[] = image_url_formatter
+dependencies[] = rest_server
+dependencies[] = satellite_callhome
+dependencies[] = satellite_settings
+dependencies[] = services
+dependencies[] = services_views
+dependencies[] = uuid
+dependencies[] = views_php
+features[features_api][] = api:2
+features_exclude[dependencies][image] = image
+project path = profiles/satellite/modules/features
+
+; Information added by drush on 2015-08-04
+version = "7.x-1.x-dev"
+project = "esn_mobile_api"
+datestamp = "1438641171"

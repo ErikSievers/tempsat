@@ -134,19 +134,10 @@ function satellite_base_metatag_export_default() {
       'og:longitude' => array(
         'value' => '',
       ),
-      'og:street-address' => array(
-        'value' => '',
-      ),
       'og:locality' => array(
         'value' => '',
       ),
       'og:region' => array(
-        'value' => '',
-      ),
-      'og:postal-code' => array(
-        'value' => '',
-      ),
-      'og:country-name' => array(
         'value' => '',
       ),
       'og:email' => array(
@@ -359,13 +350,21 @@ function satellite_base_metatag_export_default() {
       'twitter:data2' => array(
         'value' => '',
       ),
+      'og:street_address' => array(
+        'value' => '',
+      ),
+      'og:postal_code' => array(
+        'value' => '',
+      ),
+      'og:country_name' => array(
+        'value' => '',
+      ),
     ),
   );
 
   // Exported Metatag config instance: global:403.
   $config['global:403'] = array(
     'instance' => 'global:403',
-    'disabled' => FALSE,
     'config' => array(
       'canonical' => array(
         'value' => '[site:url]',
@@ -397,7 +396,6 @@ function satellite_base_metatag_export_default() {
   // Exported Metatag config instance: global:404.
   $config['global:404'] = array(
     'instance' => 'global:404',
-    'disabled' => FALSE,
     'config' => array(
       'canonical' => array(
         'value' => '[site:url]',
@@ -429,7 +427,6 @@ function satellite_base_metatag_export_default() {
   // Exported Metatag config instance: global:frontpage.
   $config['global:frontpage'] = array(
     'instance' => 'global:frontpage',
-    'disabled' => FALSE,
     'config' => array(
       'title' => array(
         'value' => '[site:name]',
@@ -525,7 +522,6 @@ function satellite_base_metatag_export_default() {
   // Exported Metatag config instance: taxonomy_term.
   $config['taxonomy_term'] = array(
     'instance' => 'taxonomy_term',
-    'disabled' => FALSE,
     'config' => array(
       'title' => array(
         'value' => '[term:name] | [site:name]',
@@ -557,7 +553,6 @@ function satellite_base_metatag_export_default() {
   // Exported Metatag config instance: user.
   $config['user'] = array(
     'instance' => 'user',
-    'disabled' => FALSE,
     'config' => array(
       'title' => array(
         'value' => '[user:name] | [site:name]',

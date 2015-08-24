@@ -14,12 +14,27 @@ projects[esn_base][download][url] = "git@git.esn.org:common/esn_base.git"
 projects[esn_base][download][branch] = 7.x-1.x
 projects[esn_base][download][full_version] = 7.x-1.x-dev
 
+projects[esn_api_tools][type] = module
+projects[esn_api_tools][subdir] = custom
+projects[esn_api_tools][download][type] = git
+projects[esn_api_tools][download][url] = "git@git.esn.org:common/esn_api_tools.git"
+projects[esn_api_tools][download][branch] = dev
+projects[esn_api_tools][download][full_version] = 7.x-1.x-dev
+
 projects[esn_galaxy_api][type] = module
 projects[esn_galaxy_api][subdir] = custom
 projects[esn_galaxy_api][download][type] = git
 projects[esn_galaxy_api][download][url] = "git@git.esn.org:common/esn_galaxy_api.git"
-projects[esn_galaxy_api][download][branch] = 7.x-1.x
-projects[esn_galaxy_api][download][full_version] = 7.x-1.x-dev
+projects[esn_galaxy_api][download][branch] = 7.x-2.x
+projects[esn_galaxy_api][download][full_version] = 7.x-2.x-dev
+
+; The Mobile API
+projects[esn_mobile_api][type] = module
+projects[esn_mobile_api][subdir] = features
+projects[esn_mobile_api][download][type] = git
+projects[esn_mobile_api][download][url] = "git@git.esn.org:satellite/esn_mobile_api.git"
+projects[esn_mobile_api][download][branch] = 7.x-1.x
+projects[esn_mobile_api][download][full_version] = 7.x-1.x-dev
 
 projects[esn_wysiwyg][type] = module
 projects[esn_wysiwyg][subdir] = features
@@ -108,16 +123,16 @@ projects[better_formats][subdir] = contrib
 projects[better_formats][version] = 1.0-beta1
 
 projects[eu-cookie-compliance][subdir] = contrib
-projects[eu-cookie-compliance][version] = 1.8
+projects[eu-cookie-compliance][version] = 1.13
 
 ; projects[feature_set][subdir] = contrib
 ; projects[feature_set][version] = 1.1
 
 projects[feeds][subdir] = contrib
-projects[feeds][version] = 2.0-alpha8
+projects[feeds][version] = 2.0-beta1
 
 projects[feeds_xpathparser][subdir] = contrib
-projects[feeds_xpathparser][version] = 1.0
+projects[feeds_xpathparser][version] = 1.1
 
 projects[field_group][subdir] = contrib
 projects[field_group][version] = 1.4
@@ -165,10 +180,10 @@ projects[textformatter][subdir] = contrib
 projects[textformatter][version] = 1.3
 
 projects[webform][subdir] = contrib
-projects[webform][version] = 4.0-beta3
+projects[webform][version] = 4.10
 
 projects[weight][subdir] = contrib
-projects[weight][version] = 2.4
+projects[weight][version] = 2.5
 
 ; WYSIWYG improvements
 projects[imce][subdir] = contrib
@@ -178,7 +193,7 @@ projects[imce_wysiwyg][subdir] = contrib
 projects[imce_wysiwyg][version] = 1.0
 
 projects[linkit][subdir] = contrib
-projects[linkit][version] = 3.2
+projects[linkit][version] = 3.4
 
 ; projects[insert][subdir] = contrib
 ; projects[insert][version] = 1.3

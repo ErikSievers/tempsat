@@ -16,8 +16,6 @@ function satellite_spotlight_flexslider_default_presets() {
   $preset->name = 'spotlight';
   $preset->title = 'Spotlight';
   $preset->theme = 'classic';
-  $preset->imagestyle_normal = 'spotlight';
-  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',

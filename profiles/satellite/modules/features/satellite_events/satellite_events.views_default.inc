@@ -66,6 +66,23 @@ function satellite_events_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event' => 'event',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['path'] = 'events';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Events';
@@ -178,6 +195,206 @@ function satellite_events_views_default_views() {
     'next_events_block' => 0,
     'past_events_block' => 0,
   );
+
+  /* Display: ServicesV1 */
+  $handler = $view->new_display('services', 'ServicesV1', 'services_1');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = 'nid';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php']['id'] = 'php';
+  $handler->display->display_options['fields']['php']['table'] = 'views';
+  $handler->display->display_options['fields']['php']['field'] = 'php';
+  $handler->display->display_options['fields']['php']['label'] = 'date_starts';
+  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php']['php_value'] = '$node = node_load($row->nid);
+$node_wrapper = entity_metadata_wrapper(\'node\', $node);
+$field_val = $node_wrapper->field_date->value->value();
+if ($field_val == 0)
+return \'\';
+else
+return date(\'c\',$field_val);';
+  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_1']['id'] = 'php_1';
+  $handler->display->display_options['fields']['php_1']['table'] = 'views';
+  $handler->display->display_options['fields']['php_1']['field'] = 'php';
+  $handler->display->display_options['fields']['php_1']['label'] = 'date_ends';
+  $handler->display->display_options['fields']['php_1']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_1']['php_value'] = '$node = node_load($row->nid);
+$node_wrapper = entity_metadata_wrapper(\'node\', $node);
+$field_val = $node_wrapper->field_date->value2->value();
+if ($field_val == 0)
+return \'\';
+else
+return date(\'c\',$field_val);';
+  $handler->display->display_options['fields']['php_1']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_1']['php_click_sortable'] = '';
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = 'small_image';
+  $handler->display->display_options['fields']['field_image']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_image']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['field_image']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['type'] = 'image_url';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'url_type' => '0',
+    'image_style' => 'mobile_small__640x320_',
+    'image_link' => '',
+  );
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_image_1']['id'] = 'field_image_1';
+  $handler->display->display_options['fields']['field_image_1']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image_1']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image_1']['label'] = 'large_image';
+  $handler->display->display_options['fields']['field_image_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image_1']['type'] = 'image_url';
+  $handler->display->display_options['fields']['field_image_1']['settings'] = array(
+    'url_type' => '0',
+    'image_style' => 'mobile_large__1280x640_',
+    'image_link' => '',
+  );
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_image_2']['id'] = 'field_image_2';
+  $handler->display->display_options['fields']['field_image_2']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image_2']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image_2']['label'] = 'thumb_image';
+  $handler->display->display_options['fields']['field_image_2']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image_2']['type'] = 'image_url';
+  $handler->display->display_options['fields']['field_image_2']['settings'] = array(
+    'url_type' => '0',
+    'image_style' => 'mobile_thumb__160x160_',
+    'image_link' => '',
+  );
+  /* Field: Content: Place */
+  $handler->display->display_options['fields']['field_place']['id'] = 'field_place';
+  $handler->display->display_options['fields']['field_place']['table'] = 'field_data_field_place';
+  $handler->display->display_options['fields']['field_place']['field'] = 'field_place';
+  $handler->display->display_options['fields']['field_place']['label'] = 'place';
+  /* Field: Content: Price */
+  $handler->display->display_options['fields']['field_price']['id'] = 'field_price';
+  $handler->display->display_options['fields']['field_price']['table'] = 'field_data_field_price';
+  $handler->display->display_options['fields']['field_price']['field'] = 'field_price';
+  $handler->display->display_options['fields']['field_price']['label'] = 'price';
+  /* Field: Content: Event type */
+  $handler->display->display_options['fields']['field_event_type']['id'] = 'field_event_type';
+  $handler->display->display_options['fields']['field_event_type']['table'] = 'field_data_field_event_type';
+  $handler->display->display_options['fields']['field_event_type']['field'] = 'field_event_type';
+  $handler->display->display_options['fields']['field_event_type']['label'] = 'event_type';
+  $handler->display->display_options['fields']['field_event_type']['delta_offset'] = '0';
+  /* Field: Content: Meeting Point */
+  $handler->display->display_options['fields']['field_meetingpoint']['id'] = 'field_meetingpoint';
+  $handler->display->display_options['fields']['field_meetingpoint']['table'] = 'field_data_field_meetingpoint';
+  $handler->display->display_options['fields']['field_meetingpoint']['field'] = 'field_meetingpoint';
+  $handler->display->display_options['fields']['field_meetingpoint']['label'] = 'meeting_point';
+  /* Field: Content: More information */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = 'more_information';
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_link']['delta_offset'] = '0';
+  /* Field: Content: What's included */
+  $handler->display->display_options['fields']['field_included']['id'] = 'field_included';
+  $handler->display->display_options['fields']['field_included']['table'] = 'field_data_field_included';
+  $handler->display->display_options['fields']['field_included']['field'] = 'field_included';
+  $handler->display->display_options['fields']['field_included']['label'] = 'included';
+  $handler->display->display_options['fields']['field_included']['delta_offset'] = '0';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = 'content';
+  /* Field: Content: Address */
+  $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
+  $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address']['field'] = 'field_address';
+  $handler->display->display_options['fields']['field_address']['label'] = 'address';
+  $handler->display->display_options['fields']['field_address']['click_sort_column'] = 'country';
+  $handler->display->display_options['fields']['field_address']['type'] = 'services';
+  $handler->display->display_options['fields']['field_address']['settings'] = array(
+    'skip_safe' => 0,
+    'skip_empty_values' => 0,
+  );
+  /* Field: Content: Location */
+  $handler->display->display_options['fields']['field_geolocation']['id'] = 'field_geolocation';
+  $handler->display->display_options['fields']['field_geolocation']['table'] = 'field_data_field_geolocation';
+  $handler->display->display_options['fields']['field_geolocation']['field'] = 'field_geolocation';
+  $handler->display->display_options['fields']['field_geolocation']['label'] = 'location';
+  $handler->display->display_options['fields']['field_geolocation']['click_sort_column'] = 'geom';
+  $handler->display->display_options['fields']['field_geolocation']['settings'] = array(
+    'data' => 'full',
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event' => 'event',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Nid */
+  $handler->display->display_options['filters']['nid']['id'] = 'nid';
+  $handler->display->display_options['filters']['nid']['table'] = 'node';
+  $handler->display->display_options['filters']['nid']['field'] = 'nid';
+  $handler->display->display_options['filters']['nid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['nid']['expose']['operator_id'] = 'nid_op';
+  $handler->display->display_options['filters']['nid']['expose']['label'] = 'nid';
+  $handler->display->display_options['filters']['nid']['expose']['operator'] = 'nid_op';
+  $handler->display->display_options['filters']['nid']['expose']['identifier'] = 'nid';
+  $handler->display->display_options['filters']['nid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['path'] = 'eventsv1';
   $export['events'] = $view;
 
   $view = new view();

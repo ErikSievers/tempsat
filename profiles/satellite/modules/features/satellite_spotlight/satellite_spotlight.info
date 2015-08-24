@@ -17,9 +17,8 @@ features[ds_view_modes][] = spotlight
 features[features_api][] = api:2
 features[flexslider_optionset][] = spotlight
 features[views_view][] = spotlight
-mtime = 1417993503
 
-; Information added by drush on 2014-12-21
-version = "7.x-4.4"
+; Information added by drush on 2015-08-24
+version = "7.x-4.5"
 project = "satellite"
-datestamp = "1419188547"
+datestamp = "1440370496"

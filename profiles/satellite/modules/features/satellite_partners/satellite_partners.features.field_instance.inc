@@ -204,6 +204,7 @@ function satellite_partners_field_default_field_instances() {
         'manualcrop_maximize_default_crop_area' => 0,
         'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
+          'mobile_thumb__160x160_' => 'mobile_thumb__160x160_',
           'partner' => 'partner',
         ),
         'manualcrop_styles_mode' => 'include',

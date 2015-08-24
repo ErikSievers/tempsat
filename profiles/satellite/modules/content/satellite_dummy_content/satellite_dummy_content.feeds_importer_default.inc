@@ -111,17 +111,17 @@ function satellite_dummy_content_feeds_importer_default() {
           ),
           3 => array(
             'source' => 'xpathparser:3',
-            'target' => 'field_image',
+            'target' => 'field_image:uri',
             'unique' => FALSE,
           ),
           4 => array(
             'source' => 'xpathparser:4',
-            'target' => 'field_image_spotlight',
+            'target' => 'field_image_spotlight:uri',
             'unique' => FALSE,
           ),
           5 => array(
             'source' => 'xpathparser:5',
-            'target' => 'field_image_gallery',
+            'target' => 'field_image_gallery:uri',
             'unique' => FALSE,
           ),
           6 => array(
@@ -136,7 +136,7 @@ function satellite_dummy_content_feeds_importer_default() {
           ),
           8 => array(
             'source' => 'xpathparser:8',
-            'target' => 'field_file',
+            'target' => 'field_file:uri',
             'unique' => FALSE,
           ),
           9 => array(
@@ -169,6 +169,7 @@ function satellite_dummy_content_feeds_importer_default() {
         'input_format' => 'rich_text',
         'skip_hash_check' => 0,
         'bundle' => 'event',
+        'update_non_existent' => 'skip',
       ),
     ),
     'content_type' => '',
@@ -266,22 +267,22 @@ function satellite_dummy_content_feeds_importer_default() {
           ),
           3 => array(
             'source' => 'xpathparser:3',
-            'target' => 'field_image',
+            'target' => 'field_image:uri',
             'unique' => FALSE,
           ),
           4 => array(
             'source' => 'xpathparser:4',
-            'target' => 'field_image_spotlight',
+            'target' => 'field_image_spotlight:uri',
             'unique' => FALSE,
           ),
           5 => array(
             'source' => 'xpathparser:5',
-            'target' => 'field_image_gallery',
+            'target' => 'field_image_gallery:uri',
             'unique' => FALSE,
           ),
           6 => array(
             'source' => 'xpathparser:6',
-            'target' => 'field_file',
+            'target' => 'field_file:uri',
             'unique' => FALSE,
           ),
           7 => array(
@@ -299,6 +300,7 @@ function satellite_dummy_content_feeds_importer_default() {
         'input_format' => 'rich_text',
         'skip_hash_check' => 0,
         'bundle' => 'news',
+        'update_non_existent' => 'skip',
       ),
     ),
     'content_type' => '',
@@ -385,22 +387,22 @@ function satellite_dummy_content_feeds_importer_default() {
           ),
           2 => array(
             'source' => 'xpathparser:3',
-            'target' => 'field_image',
+            'target' => 'field_image:uri',
             'unique' => FALSE,
           ),
           3 => array(
             'source' => 'xpathparser:4',
-            'target' => 'field_image_spotlight',
+            'target' => 'field_image_spotlight:uri',
             'unique' => FALSE,
           ),
           4 => array(
             'source' => 'xpathparser:5',
-            'target' => 'field_image_gallery',
+            'target' => 'field_image_gallery:uri',
             'unique' => FALSE,
           ),
           5 => array(
             'source' => 'xpathparser:6',
-            'target' => 'field_file',
+            'target' => 'field_file:uri',
             'unique' => FALSE,
           ),
           6 => array(
@@ -413,6 +415,7 @@ function satellite_dummy_content_feeds_importer_default() {
         'input_format' => 'rich_text',
         'skip_hash_check' => 0,
         'bundle' => 'page',
+        'update_non_existent' => 'skip',
       ),
     ),
     'content_type' => '',
@@ -496,7 +499,7 @@ function satellite_dummy_content_feeds_importer_default() {
           ),
           2 => array(
             'source' => 'xpathparser:3',
-            'target' => 'field_image',
+            'target' => 'field_image:uri',
             'unique' => FALSE,
           ),
           3 => array(
@@ -511,7 +514,7 @@ function satellite_dummy_content_feeds_importer_default() {
           ),
           5 => array(
             'source' => 'xpathparser:6',
-            'target' => 'field_file',
+            'target' => 'field_file:uri',
             'unique' => FALSE,
           ),
         ),
@@ -519,6 +522,7 @@ function satellite_dummy_content_feeds_importer_default() {
         'input_format' => 'rich_text',
         'skip_hash_check' => 0,
         'bundle' => 'partner',
+        'update_non_existent' => 'skip',
       ),
     ),
     'content_type' => '',

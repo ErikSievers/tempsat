@@ -31,16 +31,9 @@ function satellite_partners_image_default_styles() {
 
   // Exported image style: partner.
   $styles['partner'] = array(
-    'name' => 'partner',
     'label' => 'partner',
     'effects' => array(
       1 => array(
-        'label' => 'Manual Crop: Custom crop',
-        'help' => 'Crop a freely user-selected area.',
-        'effect callback' => 'manualcrop_crop_effect',
-        'form callback' => 'manualcrop_crop_form',
-        'summary theme' => 'manualcrop_crop_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_crop',
         'data' => array(
           'width' => '',
@@ -56,16 +49,9 @@ function satellite_partners_image_default_styles() {
 
   // Exported image style: partner_block.
   $styles['partner_block'] = array(
-    'name' => 'partner_block',
     'label' => 'partner block',
     'effects' => array(
       5 => array(
-        'label' => 'Manual Crop: Reuse cropped style',
-        'help' => 'Reuse a crop selection from another Manual Crop enabled image style.',
-        'effect callback' => 'manualcrop_reuse_effect',
-        'form callback' => 'manualcrop_reuse_form',
-        'summary theme' => 'manualcrop_reuse_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_reuse',
         'data' => array(
           'reuse_crop_style' => 'partner',
@@ -73,13 +59,6 @@ function satellite_partners_image_default_styles() {
         'weight' => 0,
       ),
       6 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
           'width' => 60,
@@ -89,13 +68,6 @@ function satellite_partners_image_default_styles() {
         'weight' => 2,
       ),
       7 => array(
-        'label' => 'Define canvas',
-        'help' => 'Define the size of the working canvas and background color, this controls the dimensions of the output image.',
-        'effect callback' => 'canvasactions_definecanvas_effect',
-        'dimensions callback' => 'canvasactions_definecanvas_dimensions',
-        'form callback' => 'canvasactions_definecanvas_form',
-        'summary theme' => 'canvasactions_definecanvas_summary',
-        'module' => 'imagecache_canvasactions',
         'name' => 'canvasactions_definecanvas',
         'data' => array(
           'RGB' => array(
@@ -122,16 +94,9 @@ function satellite_partners_image_default_styles() {
 
   // Exported image style: partner_list.
   $styles['partner_list'] = array(
-    'name' => 'partner_list',
     'label' => 'partner list',
     'effects' => array(
       2 => array(
-        'label' => 'Manual Crop: Reuse cropped style',
-        'help' => 'Reuse a crop selection from another Manual Crop enabled image style.',
-        'effect callback' => 'manualcrop_reuse_effect',
-        'form callback' => 'manualcrop_reuse_form',
-        'summary theme' => 'manualcrop_reuse_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_reuse',
         'data' => array(
           'reuse_crop_style' => 'partner',
@@ -139,13 +104,6 @@ function satellite_partners_image_default_styles() {
         'weight' => 0,
       ),
       3 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
           'width' => 120,
@@ -155,13 +113,6 @@ function satellite_partners_image_default_styles() {
         'weight' => 2,
       ),
       4 => array(
-        'label' => 'Define canvas',
-        'help' => 'Define the size of the working canvas and background color, this controls the dimensions of the output image.',
-        'effect callback' => 'canvasactions_definecanvas_effect',
-        'dimensions callback' => 'canvasactions_definecanvas_dimensions',
-        'form callback' => 'canvasactions_definecanvas_form',
-        'summary theme' => 'canvasactions_definecanvas_summary',
-        'module' => 'imagecache_canvasactions',
         'name' => 'canvasactions_definecanvas',
         'data' => array(
           'RGB' => array(
@@ -188,16 +139,9 @@ function satellite_partners_image_default_styles() {
 
   // Exported image style: partner_page.
   $styles['partner_page'] = array(
-    'name' => 'partner_page',
     'label' => 'partner page',
     'effects' => array(
       8 => array(
-        'label' => 'Manual Crop: Reuse cropped style',
-        'help' => 'Reuse a crop selection from another Manual Crop enabled image style.',
-        'effect callback' => 'manualcrop_reuse_effect',
-        'form callback' => 'manualcrop_reuse_form',
-        'summary theme' => 'manualcrop_reuse_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_reuse',
         'data' => array(
           'reuse_crop_style' => 'partner',
@@ -205,13 +149,6 @@ function satellite_partners_image_default_styles() {
         'weight' => 0,
       ),
       9 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
           'width' => 250,

@@ -2,10 +2,11 @@ name = ESN Satellite Settings
 description = Configure your Satellite with this module
 core = 7.x
 package = ESN Satellite
+dependencies[] = esn_galaxy_api (>=2.x)
 
 files[] = satellite_settings.esn_cas_regex.class
 
-; Information added by drush on 2014-12-21
-version = "7.x-4.4"
+; Information added by drush on 2015-08-24
+version = "7.x-4.5"
 project = "satellite"
-datestamp = "1419188547"
+datestamp = "1440370496"

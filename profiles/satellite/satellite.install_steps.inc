@@ -4,6 +4,34 @@ include_once 'satellite.api.inc';
 
 define('SATELLITE_THEME', 'esnsatellite');
 
+
+function _satellite_update_usermail_templates($key, $offset = false) {
+  $template = _user_mail_text($key, NULL, array(), FALSE);
+  $search = "[user:name]";
+  $replace = "[user:name-raw]";
+  if ($offset === true) {
+    $offset = strlen($search);
+  } else if ($offset === false || $offset < 0) {
+    $offset = 0;
+  }
+  if (strpos($template, $search, $offset)) {
+    if ($offset > 0 && strlen($template) > $offset){
+      $tmp = array(
+        substr($template, 0, $offset),
+        substr($template, $offset),
+      );
+      $tmp[1] = str_replace($search, $replace, $tmp[1]);
+      $templateNew = implode('', $tmp);
+    } else {
+      $templateNew = str_replace($search, $replace, $template);
+    }
+    if ($template != $templateNew) {
+      variable_set('user_mail_' . $key, $templateNew);
+      watchdog('satellite', "Satellite: Email template '!template' has been updated to use !rawname", array('!template' => $key, '!rawname' => $replace), WATCHDOG_INFO);
+    }
+  }
+}
+
 /**
  * place blocks during installation.
  */
@@ -323,6 +351,7 @@ function satellite_configuration($form, &$form_state) {
     '#default_value' => false,
   );
 
+
   // Default content
   
   $form['default_content'] = array(
@@ -363,7 +392,7 @@ function satellite_configuration_validate($form, &$form_state) {
 function satellite_configuration_submit($form, &$form_state) {
   $satellite_settings = satellite_settings_parse_admin_form($form_state);
   satellite_settings_configure_cas($satellite_settings);
-  satellite_settings_save_settings($satellite_settings);
+  satellite_settings_save_settings($satellite_settings,TRUE);
   
   if (satellite_settings_get_name()) {
     variable_set('site_name', satellite_settings_get_name());
@@ -598,6 +627,9 @@ function satellite_enable_default_content($importer_id, $source_file, &$context)
 }
 
 function satellite_cleanup_after_install(&$context) {
+  _satellite_update_usermail_templates('register_no_approval_required_body', true);
+  _satellite_update_usermail_templates('register_admin_created_body', true);
+  _satellite_update_usermail_templates('status_activated_body', true);
   variable_del('satellite_optional_feature_blog');
   variable_del('satellite_install_default_content');
   $context['message'] = st('Cleaned up installation information.');

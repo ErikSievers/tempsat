@@ -34,7 +34,7 @@ function satellite_events_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 21,
       ),
       'spotlight' => array(
         'label' => 'hidden',
@@ -70,6 +70,73 @@ function satellite_events_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_address'
+  $field_instances['node-event-field_address'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 9,
+      ),
+      'list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_address',
+    'label' => 'Address',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'addressfield',
+      'settings' => array(
+        'available_countries' => array(),
+        'default_country' => 'site_default',
+        'format_handlers' => array(
+          'address' => 'address',
+          'address-hide-country' => 'address-hide-country',
+          'address-optional' => 'address-optional',
+          'address-hide-postal-code' => 0,
+          'address-hide-street' => 0,
+          'organisation' => 0,
+          'name-full' => 0,
+          'name-oneline' => 0,
+        ),
+      ),
+      'type' => 'addressfield_standard',
+      'weight' => 20,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_contactdetails'
   $field_instances['node-event-field_contactdetails'] = array(
     'bundle' => 'event',
@@ -88,13 +155,13 @@ function satellite_events_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'list' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 29,
       ),
       'spotlight' => array(
         'label' => 'above',
@@ -261,13 +328,13 @@ If your event has an end date you can add this by checking the <strong>Show End 
           'textformatter_type' => 'ul',
         ),
         'type' => 'textformatter_list',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 18,
       ),
       'spotlight' => array(
         'label' => 'above',
@@ -316,7 +383,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 20,
       ),
       'spotlight' => array(
         'label' => 'above',
@@ -364,7 +431,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 23,
       ),
       'spotlight' => array(
         'label' => 'above',
@@ -392,6 +459,70 @@ If your event has an end date you can add this by checking the <strong>Show End 
       ),
       'type' => 'file_mfw',
       'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_geolocation'
+  $field_instances['node-event-field_geolocation'] = array(
+    'bundle' => 'event',
+    'default_value' => array(),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
+      'list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_geolocation',
+    'label' => 'Location',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'geocoder',
+      'settings' => array(
+        'delta_handling' => 'default',
+        'geocoder_field' => 'field_address',
+        'geocoder_handler' => 'google',
+        'handler_settings' => array(
+          'google' => array(
+            'all_results' => 1,
+            'geometry_type' => 'point',
+            'reject_results' => array(
+              'APPROXIMATE' => 0,
+              'GEOMETRIC_CENTER' => 0,
+              'RANGE_INTERPOLATED' => 0,
+              'ROOFTOP' => 0,
+            ),
+          ),
+        ),
+      ),
+      'type' => 'geocoder',
+      'weight' => 21,
     ),
   );
 
@@ -426,7 +557,9 @@ If your event has an end date you can add this by checking the <strong>Show End 
           'colorbox_gallery' => 'post',
           'colorbox_gallery_custom' => '',
           'colorbox_image_style' => 'zoom',
+          'colorbox_multivalue_index' => NULL,
           'colorbox_node_style' => 'page',
+          'colorbox_node_style_first' => '',
         ),
         'type' => 'colorbox',
         'weight' => 0,
@@ -489,6 +622,8 @@ If your event has an end date you can add this by checking the <strong>Show End 
         'manualcrop_styles_list' => array(
           'block' => 'block',
           'list' => 'list',
+          'mobile_large__1280x640_' => 'mobile_large__1280x640_',
+          'mobile_small__640x320_' => 'mobile_small__640x320_',
           'page' => 'page',
         ),
         'manualcrop_styles_mode' => 'include',
@@ -522,7 +657,9 @@ If your event has an end date you can add this by checking the <strong>Show End 
           'colorbox_gallery' => 'post',
           'colorbox_gallery_custom' => '',
           'colorbox_image_style' => 'zoom',
+          'colorbox_multivalue_index' => NULL,
           'colorbox_node_style' => 'gallery-thumbnail',
+          'colorbox_node_style_first' => '',
         ),
         'type' => 'colorbox',
         'weight' => 4,
@@ -531,7 +668,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 22,
       ),
       'spotlight' => array(
         'label' => 'hidden',
@@ -608,7 +745,7 @@ You can modify the part of the image being displayed for all three versions by c
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 31,
       ),
       'spotlight' => array(
         'label' => 'hidden',
@@ -698,13 +835,13 @@ You can modify the part of the image being displayed for all three versions by c
           'textformatter_type' => 'ul',
         ),
         'type' => 'textformatter_list',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'list' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 28,
       ),
       'spotlight' => array(
         'label' => 'above',
@@ -768,13 +905,13 @@ You can modify the part of the image being displayed for all three versions by c
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'list' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 30,
       ),
       'spotlight' => array(
         'label' => 'above',
@@ -847,7 +984,7 @@ You can modify the part of the image being displayed for all three versions by c
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 26,
       ),
       'spotlight' => array(
         'label' => 'above',
@@ -904,7 +1041,7 @@ You can modify the part of the image being displayed for all three versions by c
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 25,
       ),
       'spotlight' => array(
         'label' => 'above',
@@ -956,13 +1093,13 @@ You can modify the part of the image being displayed for all three versions by c
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'list' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 27,
       ),
       'spotlight' => array(
         'label' => 'inline',
@@ -1095,7 +1232,7 @@ You can modify the part of the image being displayed for all three versions by c
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 24,
       ),
       'spotlight' => array(
         'label' => 'inline',
@@ -1168,6 +1305,7 @@ You can modify the part of the image being displayed for all three versions by c
   // Translatables
   // Included for use with string extractors like potx.
   t('<strong>Do not use this field, it will be removed in the next version of <em>Satellite</em>! Please use the time part of the <em>Date</em> field instead.</strong>');
+  t('Address');
   t('Attachment Files');
   t('Audience');
   t('Body');
@@ -1186,6 +1324,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
 You can modify the part of the image being displayed for all three versions by clicking on the image previews.');
   t('Image');
   t('Links to more information, like homepages of event partners, facebook etc. <strong>The url must be valid, which includes that it starts with <code>http://</code>, <code>https://</code> or something like this.</strong>. You can provide an optional title for the link, if not the url will be used as title. Links open in a new window.');
+  t('Location');
   t('Meeting Point');
   t('More information');
   t('Place');

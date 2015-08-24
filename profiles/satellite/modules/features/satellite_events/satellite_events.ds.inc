@@ -121,39 +121,41 @@ function satellite_events_ds_layout_settings_info() {
   $ds_layout->layout = 'esn_page';
   $ds_layout->settings = array(
     'regions' => array(
-      'image' => array(
-        0 => 'field_image',
-      ),
       'main_content' => array(
-        1 => 'body',
-        2 => 'service_links_displays_group',
+        0 => 'service_links_displays_group',
+        2 => 'body',
+      ),
+      'image' => array(
+        1 => 'field_image',
       ),
       'secondary' => array(
         3 => 'group_details',
         4 => 'field_image_gallery',
-        5 => 'field_date',
-        6 => 'field_file',
+        5 => 'field_file',
+        6 => 'field_date',
         7 => 'field_time',
         8 => 'field_place',
         9 => 'field_meetingpoint',
-        10 => 'field_price',
-        11 => 'field_included',
-        12 => 'field_contactdetails',
-        13 => 'field_link',
-        14 => 'field_event_audience',
+        10 => 'field_address',
+        11 => 'field_price',
+        12 => 'field_included',
+        13 => 'field_contactdetails',
+        14 => 'field_link',
+        15 => 'field_event_audience',
       ),
     ),
     'fields' => array(
+      'service_links_displays_group' => 'main_content',
       'field_image' => 'image',
       'body' => 'main_content',
-      'service_links_displays_group' => 'main_content',
       'group_details' => 'secondary',
       'field_image_gallery' => 'secondary',
-      'field_date' => 'secondary',
       'field_file' => 'secondary',
+      'field_date' => 'secondary',
       'field_time' => 'secondary',
       'field_place' => 'secondary',
       'field_meetingpoint' => 'secondary',
+      'field_address' => 'secondary',
       'field_price' => 'secondary',
       'field_included' => 'secondary',
       'field_contactdetails' => 'secondary',
@@ -171,6 +173,7 @@ function satellite_events_ds_layout_settings_info() {
     'layout_attributes_merge' => 0,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => 0,
   );
   $export['node|event|default'] = $ds_layout;
 
@@ -208,6 +211,7 @@ function satellite_events_ds_layout_settings_info() {
     'layout_attributes_merge' => 0,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => 0,
   );
   $export['node|event|list'] = $ds_layout;
 

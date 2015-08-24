@@ -52,6 +52,8 @@ function satellite_events_field_group_info() {
       0 => 'field_contactdetails',
       1 => 'field_meetingpoint',
       2 => 'field_place',
+      3 => 'field_address',
+      4 => 'field_geolocation',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -87,6 +89,7 @@ function satellite_events_field_group_info() {
       6 => 'field_place',
       7 => 'field_price',
       8 => 'field_time',
+      9 => 'field_address',
     ),
     'format_type' => 'div',
     'format_settings' => array(

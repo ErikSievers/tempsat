@@ -5,7 +5,7 @@ core = 7.x
 ; Modules
 
 projects[flexslider][subdir] = contrib
-projects[flexslider][version] = 2.0-alpha3
+projects[flexslider][version] = 2.0-rc1
 
 projects[flexslider_views_slideshow][subdir] = contrib
 
