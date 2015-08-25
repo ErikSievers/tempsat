@@ -26,7 +26,7 @@ projects[esn_galaxy_api][subdir] = custom
 projects[esn_galaxy_api][download][type] = git
 projects[esn_galaxy_api][download][url] = "git@git.esn.org:common/esn_galaxy_api.git"
 projects[esn_galaxy_api][download][branch] = 7.x-2.x
-projects[esn_galaxy_api][download][full_version] = 7.x-2.x-dev
+projects[esn_galaxy_api][download][full_version] = 7.x-2.0
 
 ; The Mobile API
 projects[esn_mobile_api][type] = module

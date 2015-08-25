@@ -60,7 +60,7 @@ features_exclude[field_base][field_image_spotlight] = field_image_spotlight
 features_exclude[field_base][field_link] = field_link
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2015-08-24
-version = "7.x-4.5"
+; Information added by drush on 2015-08-25
+version = "7.x-4.5.1"
 project = "satellite"
-datestamp = "1440370496"
+datestamp = "1440458720"
