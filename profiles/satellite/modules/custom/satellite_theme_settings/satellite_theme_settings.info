@@ -6,7 +6,7 @@ php = 5.2.5
 
 configure = admin/settings/satellite/theme_settings
 
-; Information added by drush on 2015-08-25
-version = "7.x-4.5.1"
+; Information added by drush on 2015-10-11
+version = "7.x-4.5.2"
 project = "satellite"
-datestamp = "1440458720"
+datestamp = "1444522881"

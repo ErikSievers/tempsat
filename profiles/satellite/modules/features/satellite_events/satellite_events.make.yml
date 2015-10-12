@@ -1,0 +1,12 @@
+api: 2
+core: 7.x
+
+
+# Specify common subdir of "contrib"
+defaults:
+  projects:
+    subdir: "contrib"
+
+projects:
+  calendar:
+    version: 3.5

@@ -38,9 +38,10 @@ function satellite_events_update_7001() {
 
 
 /**
- *  Revert feature: Enable service links and metatag integration
+ *  Revert feature: Enable service links, metatag integration and location fields
  */
 function satellite_events_update_7002() {
+  module_enable(array('addressfield', 'geophp', 'geocoder', 'geofield'), true);
   esn_base_features_revert(array(
     'satellite_events'
   ));

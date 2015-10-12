@@ -65,7 +65,7 @@ features_exclude[field_base][field_link] = field_link
 features_exclude[field_base][field_summary] = field_summary
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2015-08-25
-version = "7.x-4.5.1"
+; Information added by drush on 2015-10-11
+version = "7.x-4.5.2"
 project = "satellite"
-datestamp = "1440458720"
+datestamp = "1444522881"

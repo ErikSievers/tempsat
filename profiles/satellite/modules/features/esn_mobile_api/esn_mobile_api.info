@@ -20,6 +20,6 @@ features_exclude[dependencies][image] = image
 project path = profiles/satellite/modules/features
 
 ; Information added by drush on 2015-08-04
-version = "7.x-1.x-dev"
+version = "7.x-1.0"
 project = "esn_mobile_api"
 datestamp = "1438641171"
