@@ -2,43 +2,32 @@
 <partners>
   <item>
     <title>IT committee</title>
-    <body><![CDATA[>
-    The IT committee is very awesome! they made my awesome website!
+    <body><![CDATA[
+    <p style="text-align: justify;">The IT Committee works closely with the Web Project Administrator, aims at strengthening ESN by developing IT systems for the whole Network and by providing assistance and advice about technological matters in general.</p>
     <!]]></body>
-    <logo>profiles/satellite/modules/content/files/ESN_astronaut.png</logo>
+    <logo>profiles/satellite/modules/content/files/itcom.png</logo>
     <link>
       <title>Facebook page</title>
       <url>https://www.facebook.com/ESN.IT.Committee</url>
     </link>
     <link>
-      <title>Page on esn.org</title>
-      <url>http://www.esn.org/committees/it</url>
+      <title>IT Committee page</title>
+      <url>http://it.esn.org</url>
     </link>
   </item>
   <item>
-    <title>New Yorker</title>
-    <body><![CDATA[>
-    <p>New Yorker and the International Erasmus Exchange Student Network have one thing in common: the young people who are the focus of their activities – you!&nbsp;</p>
-<p>As a partner to the network, we assist with projects aimed at providing you with knowledge and skills within an international company. In the future, there are plans to offer student projects and social events that you can take part in.</p>
-<p>The partnership has begun with the introduction of an exclusive New Yorker Discount Card, which gives you, as members of the network, a one-off discount of 20% on your purchase in any of our stores.</p>
-<p>We are an international fashion company with over 960 branches in 38 countries. Our stores offer trendy young fashion, denim, sportswear and streetwear, as well as accessories and underwear. Our product range includes our own brands Amisu, Smog, Fishbone and Censored, with the collections changing to suit the latest international fashion trends every season. You can find more information on our clothing and company on our official website <a href="http://www.newyorker.eu/">www.newyorker.eu</a>.</p><!]]></body>
-    <logo>profiles/satellite/modules/content/files/NY_Logos.png</logo>
+    <title>The ESNcard</title>
+    <body><![CDATA[
+<p style="text-align: justify;">The <strong>ESNcard</strong> is the membership card of ESN which means that you can access to all the services offered by the ESN and our partners.</p><p style="text-align: justify;">With the ESNcard, you will enjoy thousands of discounts (housing, sport, food, bars, etc.) all over Europe. Moreover, you will have the opportunity to participate in thousands of events (trips, cultural events, sports activities and parties) all year long.</p><p style="text-align: justify;">The aim of the ESNcard is to support and give opportunities to international students during and after their exchange.</p><h3>Who uses the ESNcard?</h3><p style="text-align: justify;">The ESNcard is used by over 120.000 people per year in 38 countries, and the numbers are growing every year.</p><p style="text-align: justify;">You can get the ESNcard, if you belong to one of the following groups:</p><ul><li>You have been an international student (e.g Erasmus or any other exchange programme)</li><li>You are currently an international student on exchange</li><li>You are a volunteer in ESN</li></ul><h3>How can you get the ESNcard?</h3><p style="text-align: justify;">The ESNcard is sold in almost all the countries where ESN is present by the ESN sections which are non-profit student organisations.</p><p style="text-align: justify;">The ESNcard can be obtained exclusively from your local ESN section. You can find the sales point of the ESNcard in “get a card”.</p><!]]></body>
+    <logo>profiles/satellite/modules/content/files/esncard.png</logo>
     <link>
-      <title>New Yorker</title>
-      <url>http://www.newyorker.eu/</url>
-    </link>
-    <link>
-      <title>Facebook page</title>
-      <url>https://www.facebook.com/NewYorker.Fashion</url>
-    </link>
-    <link>
-      <title>Page on esn.org</title>
-      <url>http://esn.org/partner/new-yorker</url>
+      <title>ESNcard.org</title>
+      <url>http://www.esncard.org</url>
     </link>
   </item>
   <item>
       <title>Eurail.Com</title>
-      <body><![CDATA[>
+      <body><![CDATA[
       <h3>Who are we?</h3>
 <p>Eurail.com&nbsp;is the online store for your European rail passes. Eurail.com is a fast growing e-commerce company which sells&nbsp;<a href="http://esncard.org/discount/eurailcom" target="_blank">Eurail</a>&nbsp;and&nbsp;<a href="http://esncard.org/discount/interraileu" target="_blank">InterRail</a>&nbsp;train passes online, and provides first-class customer service and expert travel advice. Our rail passes let you visit up to 30 European countries by train.</p>
 <h3>Do I need a Eurail or an InterRail pass?</h3>
@@ -56,12 +45,8 @@
         <url>http://www.eurail.com/</url>
       </link>
       <link>
-        <title>Facebook page</title>
-        <url>https://www.facebook.com/eurail</url>
-      </link>
-      <link>
-        <title>Page on esn.org</title>
-        <url>http://esn.org/partner/eurailcom</url>
+        <title>Page on ESNcard.org</title>
+        <url>http://esncard.org/eurail</url>
       </link>
     </item>
   </partners>

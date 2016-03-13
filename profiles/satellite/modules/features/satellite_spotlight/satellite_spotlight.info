@@ -18,7 +18,7 @@ features[features_api][] = api:2
 features[flexslider_optionset][] = spotlight
 features[views_view][] = spotlight
 
-; Information added by drush on 2015-10-11
-version = "7.x-4.5.2"
+; Information added by drush on 2016-03-13
+version = "7.x-4.6.0"
 project = "satellite"
-datestamp = "1444522881"
+datestamp = "1457900650"

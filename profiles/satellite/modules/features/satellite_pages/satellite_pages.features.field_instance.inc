@@ -253,7 +253,7 @@ function satellite_pages_field_default_field_instances() {
   $field_instances['node-page-field_image_spotlight'] = array(
     'bundle' => 'page',
     'deleted' => 0,
-    'description' => 'If you want to display the page in the spotlight of the start page please upload an image. It will be displayed with <strong>512 x 256 px</strong>. Your image should have at least this size and a ratio of 2 x 1 to look nice in the spotlight.<br />
+    'description' => 'If you want to display the page in the spotlight of the start page please upload an image. It will be displayed with <strong>621 x 311 px</strong>. Your image should have at least this size and a ratio of 2 x 1 to look nice in the spotlight.<br />
 You can modify the part of the image being displayed for all three versions by clicking on the image previews.',
     'display' => array(
       'default' => array(
@@ -387,7 +387,7 @@ You can modify the part of the image being displayed for all three versions by c
   t('Attachment Files');
   t('Body');
   t('Gallery');
-  t('If you want to display the page in the spotlight of the start page please upload an image. It will be displayed with <strong>512 x 256 px</strong>. Your image should have at least this size and a ratio of 2 x 1 to look nice in the spotlight.<br />
+  t('If you want to display the page in the spotlight of the start page please upload an image. It will be displayed with <strong>621 x 311 px</strong>. Your image should have at least this size and a ratio of 2 x 1 to look nice in the spotlight.<br />
 You can modify the part of the image being displayed for all three versions by clicking on the image previews.');
   t('Image');
   t('Links to more information, like homepages of event partners, facebook etc. <strong>The url must be valid, which includes that it starts with <code>http://</code>, <code>https://</code> or something like this.</strong>. You can provide an optional title for the link, if not the url will be used as title. Links open in a new window.');

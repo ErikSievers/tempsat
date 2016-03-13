@@ -10,7 +10,7 @@
 function satellite_base_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_file'
+  // Exported field_base: 'field_file'.
   $field_bases['field_file'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -33,7 +33,7 @@ function satellite_base_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_image'
+  // Exported field_base: 'field_image'.
   $field_bases['field_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -55,7 +55,7 @@ function satellite_base_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_image_gallery'
+  // Exported field_base: 'field_image_gallery'.
   $field_bases['field_image_gallery'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -77,7 +77,7 @@ function satellite_base_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_image_spotlight'
+  // Exported field_base: 'field_image_spotlight'.
   $field_bases['field_image_spotlight'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -99,7 +99,7 @@ function satellite_base_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_link'
+  // Exported field_base: 'field_link'.
   $field_bases['field_link'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -128,7 +128,7 @@ function satellite_base_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_summary'
+  // Exported field_base: 'field_summary'.
   $field_bases['field_summary'] = array(
     'active' => 1,
     'cardinality' => 1,

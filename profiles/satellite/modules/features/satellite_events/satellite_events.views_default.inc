@@ -180,7 +180,7 @@ function satellite_events_views_default_views() {
   $handler->display->display_options['filters']['field_date_value2']['field'] = 'field_date_value2';
   $handler->display->display_options['filters']['field_date_value2']['operator'] = '<';
   $handler->display->display_options['filters']['field_date_value2']['default_date'] = 'now';
-  $handler->display->display_options['block_description'] = 'Events (Next)';
+  $handler->display->display_options['block_description'] = 'Events (Past)';
 
   /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed_1');

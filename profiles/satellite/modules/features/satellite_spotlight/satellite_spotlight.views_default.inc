@@ -97,6 +97,20 @@ function satellite_spotlight_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'AND',
+  );
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['table'] = 'node';
+  $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['operator'] = 'not in';
+  $handler->display->display_options['filters']['type_1']['value'] = array(
+    'event' => 'event',
+  );
+  $handler->display->display_options['filters']['type_1']['group'] = 1;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -116,6 +130,39 @@ function satellite_spotlight_views_default_views() {
   $handler->display->display_options['filters']['field_image_spotlight_fid']['field'] = 'field_image_spotlight_fid';
   $handler->display->display_options['filters']['field_image_spotlight_fid']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_image_spotlight_fid']['group'] = 1;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event' => 'event',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 2;
+  /* Filter criterion: Content: Date -  start date (field_date) */
+  $handler->display->display_options['filters']['field_date_value']['id'] = 'field_date_value';
+  $handler->display->display_options['filters']['field_date_value']['table'] = 'field_data_field_date';
+  $handler->display->display_options['filters']['field_date_value']['field'] = 'field_date_value';
+  $handler->display->display_options['filters']['field_date_value']['operator'] = '>';
+  $handler->display->display_options['filters']['field_date_value']['group'] = 2;
+  $handler->display->display_options['filters']['field_date_value']['default_date'] = 'now';
+  /* Filter criterion: Content: Promoted to front page */
+  $handler->display->display_options['filters']['promote_1']['id'] = 'promote_1';
+  $handler->display->display_options['filters']['promote_1']['table'] = 'node';
+  $handler->display->display_options['filters']['promote_1']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote_1']['value'] = '1';
+  $handler->display->display_options['filters']['promote_1']['group'] = 2;
+  /* Filter criterion: Content: Spotlight Image (field_image_spotlight:fid) */
+  $handler->display->display_options['filters']['field_image_spotlight_fid_1']['id'] = 'field_image_spotlight_fid_1';
+  $handler->display->display_options['filters']['field_image_spotlight_fid_1']['table'] = 'field_data_field_image_spotlight';
+  $handler->display->display_options['filters']['field_image_spotlight_fid_1']['field'] = 'field_image_spotlight_fid';
+  $handler->display->display_options['filters']['field_image_spotlight_fid_1']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_image_spotlight_fid_1']['group'] = 2;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
+  $handler->display->display_options['filters']['status_1']['table'] = 'node';
+  $handler->display->display_options['filters']['status_1']['field'] = 'status';
+  $handler->display->display_options['filters']['status_1']['value'] = '1';
+  $handler->display->display_options['filters']['status_1']['group'] = 2;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');

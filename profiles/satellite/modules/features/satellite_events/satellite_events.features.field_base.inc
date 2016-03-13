@@ -10,7 +10,7 @@
 function satellite_events_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_address'
+  // Exported field_base: 'field_address'.
   $field_bases['field_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -27,7 +27,7 @@ function satellite_events_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_calendar_color'
+  // Exported field_base: 'field_calendar_color'.
   $field_bases['field_calendar_color'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -55,7 +55,7 @@ function satellite_events_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_contactdetails'
+  // Exported field_base: 'field_contactdetails'.
   $field_bases['field_contactdetails'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -74,7 +74,7 @@ function satellite_events_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_date'
+  // Exported field_base: 'field_date'.
   $field_bases['field_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -103,7 +103,7 @@ function satellite_events_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_event_audience'
+  // Exported field_base: 'field_event_audience'.
   $field_bases['field_event_audience'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -129,7 +129,7 @@ function satellite_events_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_event_type'
+  // Exported field_base: 'field_event_type'.
   $field_bases['field_event_type'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -155,7 +155,7 @@ function satellite_events_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_geolocation'
+  // Exported field_base: 'field_geolocation'.
   $field_bases['field_geolocation'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -206,7 +206,7 @@ function satellite_events_field_default_field_bases() {
     'type' => 'geofield',
   );
 
-  // Exported field_base: 'field_included'
+  // Exported field_base: 'field_included'.
   $field_bases['field_included'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -227,7 +227,7 @@ function satellite_events_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_meetingpoint'
+  // Exported field_base: 'field_meetingpoint'.
   $field_bases['field_meetingpoint'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -248,7 +248,7 @@ function satellite_events_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_place'
+  // Exported field_base: 'field_place'.
   $field_bases['field_place'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -269,7 +269,7 @@ function satellite_events_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_price'
+  // Exported field_base: 'field_price'.
   $field_bases['field_price'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -290,7 +290,7 @@ function satellite_events_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_time'
+  // Exported field_base: 'field_time'.
   $field_bases['field_time'] = array(
     'active' => 1,
     'cardinality' => 1,

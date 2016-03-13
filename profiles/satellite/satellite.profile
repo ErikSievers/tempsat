@@ -47,4 +47,11 @@ function _satellite_get_supported_countries(){
 	return $all_countries;
 }
 
-
+function satellite_file_get_contents($filename) {
+  $path = DRUPAL_ROOT . '/profiles/satellite/' . $filename;
+  if (file_exists($path)) {
+    $content = file_get_contents($path);
+    return $content;
+  }
+  return NULL;
+}

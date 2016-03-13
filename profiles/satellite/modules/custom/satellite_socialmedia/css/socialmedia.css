@@ -61,3 +61,8 @@
   background-color: #f0f0f0;
   background-image: url(../img/socialmedia-flickr.png);
 }
+/* line 46, ../sass/socialmedia.scss */
+#socialmedia .socialmedia-instagram a {
+  background-color: #135379;
+  background-image: url(../img/socialmedia-instagram.png);
+}

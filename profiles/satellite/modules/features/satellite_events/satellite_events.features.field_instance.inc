@@ -10,7 +10,7 @@
 function satellite_events_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-event-body'
+  // Exported field_instance: 'node-event-body'.
   $field_instances['node-event-body'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -70,7 +70,7 @@ function satellite_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_address'
+  // Exported field_instance: 'node-event-field_address'.
   $field_instances['node-event-field_address'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -137,7 +137,7 @@ function satellite_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_contactdetails'
+  // Exported field_instance: 'node-event-field_contactdetails'.
   $field_instances['node-event-field_contactdetails'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -194,7 +194,7 @@ function satellite_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_date'
+  // Exported field_instance: 'node-event-field_date'.
   $field_instances['node-event-field_date'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -212,6 +212,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -225,6 +226,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 5,
@@ -238,6 +240,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -251,6 +254,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 2,
@@ -264,6 +268,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -297,7 +302,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_audience'
+  // Exported field_instance: 'node-event-field_event_audience'.
   $field_instances['node-event-field_event_audience'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -359,7 +364,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_type'
+  // Exported field_instance: 'node-event-field_event_type'.
   $field_instances['node-event-field_event_type'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -408,7 +413,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
     ),
   );
 
-  // Exported field_instance: 'node-event-field_file'
+  // Exported field_instance: 'node-event-field_file'.
   $field_instances['node-event-field_file'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -462,7 +467,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
     ),
   );
 
-  // Exported field_instance: 'node-event-field_geolocation'
+  // Exported field_instance: 'node-event-field_geolocation'.
   $field_instances['node-event-field_geolocation'] = array(
     'bundle' => 'event',
     'default_value' => array(),
@@ -526,7 +531,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
     ),
   );
 
-  // Exported field_instance: 'node-event-field_image'
+  // Exported field_instance: 'node-event-field_image'.
   $field_instances['node-event-field_image'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -636,7 +641,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
     ),
   );
 
-  // Exported field_instance: 'node-event-field_image_gallery'
+  // Exported field_instance: 'node-event-field_image_gallery'.
   $field_instances['node-event-field_image_gallery'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -722,11 +727,11 @@ If your event has an end date you can add this by checking the <strong>Show End 
     ),
   );
 
-  // Exported field_instance: 'node-event-field_image_spotlight'
+  // Exported field_instance: 'node-event-field_image_spotlight'.
   $field_instances['node-event-field_image_spotlight'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => 'If you want to display the event in the spotlight of the start page please upload an image. It will be displayed with <strong>512 x 256 px</strong>. Your image should have at least this size and a ratio of 2 x 1 to look nice in the spotlight.<br />
+    'description' => 'If you want to display the event in the spotlight of the start page please upload an image. It will be displayed with <strong>621 x 311 px</strong>. Your image should have at least this size and a ratio of 2 x 1 to look nice in the spotlight.<br />
 You can modify the part of the image being displayed for all three versions by clicking on the image previews.',
     'display' => array(
       'block' => array(
@@ -805,7 +810,7 @@ You can modify the part of the image being displayed for all three versions by c
     ),
   );
 
-  // Exported field_instance: 'node-event-field_included'
+  // Exported field_instance: 'node-event-field_included'.
   $field_instances['node-event-field_included'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -887,7 +892,7 @@ You can modify the part of the image being displayed for all three versions by c
     ),
   );
 
-  // Exported field_instance: 'node-event-field_link'
+  // Exported field_instance: 'node-event-field_link'.
   $field_instances['node-event-field_link'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -960,7 +965,7 @@ You can modify the part of the image being displayed for all three versions by c
     ),
   );
 
-  // Exported field_instance: 'node-event-field_meetingpoint'
+  // Exported field_instance: 'node-event-field_meetingpoint'.
   $field_instances['node-event-field_meetingpoint'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1017,7 +1022,7 @@ You can modify the part of the image being displayed for all three versions by c
     ),
   );
 
-  // Exported field_instance: 'node-event-field_place'
+  // Exported field_instance: 'node-event-field_place'.
   $field_instances['node-event-field_place'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1074,7 +1079,7 @@ You can modify the part of the image being displayed for all three versions by c
     ),
   );
 
-  // Exported field_instance: 'node-event-field_price'
+  // Exported field_instance: 'node-event-field_price'.
   $field_instances['node-event-field_price'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1138,7 +1143,7 @@ You can modify the part of the image being displayed for all three versions by c
     ),
   );
 
-  // Exported field_instance: 'node-event-field_summary'
+  // Exported field_instance: 'node-event-field_summary'.
   $field_instances['node-event-field_summary'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1208,7 +1213,7 @@ You can modify the part of the image being displayed for all three versions by c
     ),
   );
 
-  // Exported field_instance: 'node-event-field_time'
+  // Exported field_instance: 'node-event-field_time'.
   $field_instances['node-event-field_time'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1271,7 +1276,7 @@ You can modify the part of the image being displayed for all three versions by c
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-event_type-field_calendar_color'
+  // Exported field_instance: 'taxonomy_term-event_type-field_calendar_color'.
   $field_instances['taxonomy_term-event_type-field_calendar_color'] = array(
     'bundle' => 'event_type',
     'default_value' => NULL,
@@ -1320,7 +1325,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
   t('Here you can enter free text where the event is. <em>(maybe this will be changed or supplemented with an address field which can generate a map or link to a map.)</em>');
   t('Here you can enter information about who to contact to get more information about the event, e. g. the Name and Email / phone number of the person responsible or the full address where the event takes place...');
   t('Here you can give your participants short information where (and maybe when) to meet. <em>(maybe this will be changed or supplemented with an address field which can generate a map or link to a map.)</em>');
-  t('If you want to display the event in the spotlight of the start page please upload an image. It will be displayed with <strong>512 x 256 px</strong>. Your image should have at least this size and a ratio of 2 x 1 to look nice in the spotlight.<br />
+  t('If you want to display the event in the spotlight of the start page please upload an image. It will be displayed with <strong>621 x 311 px</strong>. Your image should have at least this size and a ratio of 2 x 1 to look nice in the spotlight.<br />
 You can modify the part of the image being displayed for all three versions by clicking on the image previews.');
   t('Image');
   t('Links to more information, like homepages of event partners, facebook etc. <strong>The url must be valid, which includes that it starts with <code>http://</code>, <code>https://</code> or something like this.</strong>. You can provide an optional title for the link, if not the url will be used as title. Links open in a new window.');

@@ -70,3 +70,21 @@ function satellite_callhome_call() {
   }
   variable_set('satellite_callhome_lastcall', time() );
 }
+
+function satellite_callhome_report_satellite_update(&$session, $trigger) {
+  if ($session !== NULL && $trigger != NULL) {
+    if (isset($session[__FUNCTION__])) {
+      $callee = $session[__FUNCTION__];
+    }
+    else {
+      $callee = $session[__FUNCTION__] = $trigger;
+    }
+    if ($callee == $trigger) {
+      try {
+        satellite_callhome_call();
+      } catch (Exception $err) {
+        // Don't do anything, callhome will be done during next cron.
+      }
+    }
+  }
+}

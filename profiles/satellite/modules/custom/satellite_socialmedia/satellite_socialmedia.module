@@ -16,6 +16,7 @@ function _satellite_soicalmedia_types() {
       'youtube' => 'Youtube',
       'flickr' => 'Flickr',
       'vimeo' => 'Vimeo',
+      'instagram'  => 'Instagram',
     );
   return $socialmedia;
 } 
@@ -74,7 +75,7 @@ function satellite_socialmedia_admin() {
       '#title' => $name . ' ' . t('link'),
       '#default_value' => variable_get('satellite_socialmedia_' . $social,''),
       '#size' => 50,
-      '#description' => t('complete link to %social including http://', array('%social' => $name) ),
+      '#description' => t('complete link to %social including http:// or https://', array('%social' => $name) ),
     );
   }
   

@@ -209,9 +209,6 @@ function satellite_base_metatag_export_default() {
       'book:tag' => array(
         'value' => '',
       ),
-      'og:video' => array(
-        'value' => '',
-      ),
       'og:video:secure_url' => array(
         'value' => '',
       ),
@@ -270,9 +267,6 @@ function satellite_base_metatag_export_default() {
         'value' => '[current-page:title]',
       ),
       'twitter:description' => array(
-        'value' => '',
-      ),
-      'twitter:image:src' => array(
         'value' => '',
       ),
       'twitter:image:width' => array(
@@ -357,6 +351,12 @@ function satellite_base_metatag_export_default() {
         'value' => '',
       ),
       'og:country_name' => array(
+        'value' => '',
+      ),
+      'og:video:url' => array(
+        'value' => '',
+      ),
+      'twitter:image' => array(
         'value' => '',
       ),
     ),
@@ -513,7 +513,7 @@ function satellite_base_metatag_export_default() {
       'twitter:description' => array(
         'value' => '[node:summary]',
       ),
-      'twitter:image:src' => array(
+      'twitter:image' => array(
         'value' => '[node:field-image:file:url]',
       ),
     ),

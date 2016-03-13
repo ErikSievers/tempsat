@@ -7,6 +7,7 @@ project = satellite_events
 dependencies[] = addressfield
 dependencies[] = calendar
 dependencies[] = colorbox
+dependencies[] = context
 dependencies[] = ctools
 dependencies[] = date
 dependencies[] = date_all_day
@@ -122,7 +123,7 @@ features_exclude[field_base][field_faq] = field_faq
 features_exclude[field_instance][node-event-field_faq] = node-event-field_faq
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2015-10-11
-version = "7.x-4.5.2"
+; Information added by drush on 2016-03-13
+version = "7.x-4.6.0"
 project = "satellite"
-datestamp = "1444522881"
+datestamp = "1457900650"

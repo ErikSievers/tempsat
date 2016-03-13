@@ -31,6 +31,9 @@ function satellite_install() {
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'access news feeds', 'access site-wide contact form'));
   variable_set('user_register', 0);
   variable_set('jquery_update_jquery_version', '1.7');
+  // Fixes http://git.esn.org/satellite/satellite_profile/issues/65
+  // Enable Superfish Auto-arrows for the main menu.
+  variable_set('superfish_arrow_1', TRUE);
 }
 
 
@@ -202,4 +205,27 @@ function satellite_update_7009() {
  */
 function satellite_update_7010() {
   module_enable(array('satellite_site_meta'));
+}
+
+/**
+ * Make 3rd level of main menu visible by showing an arrow if sub-items exists.
+ */
+// Fixes http://git.esn.org/satellite/satellite_profile/issues/65
+function satellite_update_7011() {
+  // Enable Superfish Auto-arrows for the main menu.
+  variable_set('superfish_arrow_1', TRUE);
+}
+
+/**
+ * Enable and preconfigure EU Cookie Compliance.
+ */
+function satellite_update_7012() {
+  satellite_preconfigure_eu_cookie_compliance(TRUE);
+}
+
+/**
+ * Update ESN Callhome information (Satellite 4.6)
+ */
+function satellite_update_7013() {
+  satellite_callhome_report_satellite_update($_SESSION, __FUNCTION__);
 }

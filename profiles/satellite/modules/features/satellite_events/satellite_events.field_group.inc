@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function satellite_events_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -34,7 +34,7 @@ function satellite_events_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_conditions|node|event|form'] = $field_group;
+  $field_groups['group_conditions|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -65,7 +65,7 @@ function satellite_events_field_group_info() {
       ),
     ),
   );
-  $export['group_contact|node|event|form'] = $field_group;
+  $field_groups['group_contact|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -105,7 +105,7 @@ function satellite_events_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_details|node|event|default'] = $field_group;
+  $field_groups['group_details|node|event|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -136,7 +136,7 @@ function satellite_events_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_details|node|event|form'] = $field_group;
+  $field_groups['group_details|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -165,7 +165,7 @@ function satellite_events_field_group_info() {
       ),
     ),
   );
-  $export['group_event_details|node|event|form'] = $field_group;
+  $field_groups['group_event_details|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -193,7 +193,7 @@ function satellite_events_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_images|node|event|form'] = $field_group;
+  $field_groups['group_images|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -221,7 +221,7 @@ function satellite_events_field_group_info() {
       ),
     ),
   );
-  $export['group_other|node|event|form'] = $field_group;
+  $field_groups['group_other|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -248,7 +248,17 @@ function satellite_events_field_group_info() {
       ),
     ),
   );
-  $export['group_time|node|event|form'] = $field_group;
+  $field_groups['group_time|node|event|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Conditions');
+  t('Contact');
+  t('Date/Time');
+  t('Details');
+  t('Event details');
+  t('Images');
+  t('Other');
+
+  return $field_groups;
 }

@@ -464,9 +464,10 @@ function satellite_final_install() {
     foreach ($default_feeds as $importer_id => $source_file) {
       $operations[] = array('satellite_enable_default_content', array($importer_id, $source_file));
     }
-    
-    $operations[] = array('satellite_cleanup_after_install', array());
   }
+
+  $operations[] = array('satellite_preconfigure_eu_cookie_compliance', array(FALSE));
+  $operations[] = array('satellite_cleanup_after_install', array());
   
   $batch = array(
     'title' => st('Satellite Installation'),
@@ -526,7 +527,7 @@ function satellite_assign_default_roles(&$context) {
   user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
   variable_set('user_admin_role', $admin_role->rid);
 
-  $context['message'] = st('Configured default roles "Editor" and "Administrator".');
+  drupal_set_message(st('Configured default roles "Editor" and "Administrator".'));
 }
 
 function satellite_disable_cas_if_no_curl(&$context) {
@@ -539,11 +540,11 @@ function satellite_disable_cas_if_no_curl(&$context) {
   }
   if (!$pass) {
     module_disable(array('esn_cas', 'cas', 'cas_attributes', 'cas_roles'));
-    $context['message'] = st('CAS disabled. curl is not available or curl version not supported.');
+    drupal_set_message(st('CAS disabled. curl is not available or curl version not supported.'), 'warning');
   }
   else {
     variable_set('cas_roles_roles', '[cas:attribute:sc]_[cas:attribute:roles]');
-    $context['message'] = st('CAS has been configured.');
+    drupal_set_message(st('CAS has been configured.'));
   }
 }
 
@@ -565,7 +566,7 @@ function satellite_add_event_audience(&$context) {
     $entity = entity_create('taxonomy_term', $values);
     entity_save('taxonomy_term', $entity);
   }
-  $context['message'] = st('Added event audiences.');
+  drupal_set_message(st('Added event audiences.'));
 }
 
 function satellite_add_event_types(&$context) {
@@ -591,7 +592,7 @@ function satellite_add_event_types(&$context) {
     $wrapper->save(true);
     entity_save('taxonomy_term', $entity);
   }
-  $context['message'] = st('Added event types.');
+  drupal_set_message(st('Added event types.'));
 }
 
 function satellite_add_contact_form(&$context) {
@@ -604,11 +605,10 @@ function satellite_add_contact_form(&$context) {
     ))
     ->condition('cid', 1)
     ->execute();
-  $context['message'] = st('Configured contact form.');
+  drupal_set_message(st('Configured contact form.'));
 }
 
 function satellite_enable_default_content($importer_id, $source_file, &$context) {
-
   if (empty($context['sandbox'])) {
     $source = feeds_source($importer_id);
     $fetcher_config = $source->getConfigFor($source->importer->fetcher);
@@ -626,11 +626,98 @@ function satellite_enable_default_content($importer_id, $source_file, &$context)
   }
 }
 
+function satellite_preconfigure_eu_cookie_compliance($is_update = FALSE) {
+  $t = get_t();
+  $privacy_page = FALSE;
+  $link_attributes = array('attributes' => array('target' => '_blank'));
+  if ($is_update) {
+    $query = (new EntityFieldQuery())
+      ->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'page')
+      ->propertyCondition('title', 'privacy policy', 'CONTAINS')
+      ->execute();
+    if (!empty($query['node'])) {
+      $query = $query['node'];
+      $privacy_page = array_pop($query);
+      $privacy_page = 'node/' . $privacy_page->nid;
+    }
+  }
+  // Create the privacy policy page because we couldn't find it...
+  if (!$privacy_page) {
+    $node = array(
+      'type' => 'page',
+      'uid' => 1,
+      'status' => 1,
+      'comment' => 0,
+      'promote' => 0
+    );
+    $node = entity_metadata_wrapper('node', entity_create('node', $node));
+    $node->title->set('Privacy Policy');
+    $body = '<p><strong>Please fill in your <em style="color: red;">Privacy Policy</em> information here!!!</strong></p>';
+    $lipsum = satellite_file_get_contents('modules/content/lorem-ipsum.en.htt');
+    $node->body->set(array('value' => $body . $lipsum, 'format' => 'rich_text'));
+    $node->body->summary->set($body);
+    $node->save();
+    $privacy_page = 'node/' . $node->getIdentifier();
+    drupal_set_message($t("A <em>Privacy Policy</em> page has been created for you. Please !privacy_link it to your needs.",
+      array('!privacy_link' => l($t('edit and customize'), $privacy_page, $link_attributes))
+    ));
+  }
+  module_enable(array('eu_cookie_compliance'), TRUE);
+  $eucookie_defaults = array(
+    'popup_enabled' => TRUE,
+    'popup_clicking_confirmation' => TRUE,
+    'popup_position' => 0,
+    'popup_agree_button_message' => 'OK, I agree',
+    'popup_disagree_button_message' => 'No, give me more info',
+    'popup_info'=> array(
+      'value' => '<h3>We use cookies on this site to enhance your user experience</h3><p>By clicking any link on this page you are giving your consent for us to set cookies.</p>',
+      'format' => 'rich_text',
+    ),
+    'popup_agreed_enabled' => FALSE,
+    'popup_hide_agreed' => FALSE,
+    'popup_find_more_button_message' => 'More info',
+    'popup_hide_button_message' => 'Hide',
+    'popup_agreed' => array(
+      'value' => '<h3>Thank you for accepting cookies</h3><p>You can now hide this message or find out more about cookies.</p>',
+      'format' => 'rich_text',
+    ),
+    'popup_link' => $privacy_page,
+    'popup_link_new_window' => TRUE,
+    'popup_height' => '',
+    'popup_width' => '100%',
+    'popup_delay' => 1,
+    'popup_bg_hex' => '2e3192', // ESN Dark Blue
+    'popup_text_hex' => 'ffffff',
+    'domains_option' => TRUE,
+    'domains_list' => '',
+    'exclude_paths' => 'admin/*',
+  );
+  $eucookies = variable_get('eu_cookie_compliance_en', array());
+  if ($is_update) {
+    // preserve existing settings made by any site builder, but in text messages
+    // change H2s to H3s...
+    if (isset($eucookies['popup_info']['value'])) {
+      $eucookies['popup_info']['value'] = str_replace(array('<h2','</h2'), array('<h3', '</h3'), $eucookies['popup_info']['value']);
+    }
+    if (isset($eucookies['popup_agreed']['value'])) {
+      $eucookies['popup_agreed']['value'] = str_replace(array('<h2','</h2'), array('<h3', '</h3'), $eucookies['popup_agreed']['value']);
+    }
+    $eucookies = array_merge($eucookie_defaults, $eucookies);
+  } else {
+    $eucookies = $eucookie_defaults;
+  }
+  variable_set('eu_cookie_compliance_en', $eucookies);
+  drupal_set_message($t("EU Cookie Compliance has been pre-configured. You can !customization to your country's needs.",
+    array('!customization' => l('modify the configuration', 'admin/config/system/eu-cookie-compliance', $link_attributes))
+  ));
+}
+
 function satellite_cleanup_after_install(&$context) {
   _satellite_update_usermail_templates('register_no_approval_required_body', true);
   _satellite_update_usermail_templates('register_admin_created_body', true);
   _satellite_update_usermail_templates('status_activated_body', true);
   variable_del('satellite_optional_feature_blog');
   variable_del('satellite_install_default_content');
-  $context['message'] = st('Cleaned up installation information.');
+  drupal_set_message(st('Cleaned up installation information.'));
 }

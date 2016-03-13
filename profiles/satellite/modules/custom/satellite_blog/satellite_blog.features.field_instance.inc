@@ -10,7 +10,7 @@
 function satellite_blog_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_blog-comment_body'
+  // Exported field_instance: 'comment-comment_node_blog-comment_body'.
   $field_instances['comment-comment_node_blog-comment_body'] = array(
     'bundle' => 'comment_node_blog',
     'default_value' => NULL,
@@ -43,7 +43,7 @@ function satellite_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog-body'
+  // Exported field_instance: 'node-blog-body'.
   $field_instances['node-blog-body'] = array(
     'bundle' => 'blog',
     'default_value' => NULL,
@@ -96,7 +96,7 @@ function satellite_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_blog_categories'
+  // Exported field_instance: 'node-blog-field_blog_categories'.
   $field_instances['node-blog-field_blog_categories'] = array(
     'bundle' => 'blog',
     'default_value' => NULL,
@@ -149,7 +149,7 @@ function satellite_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_image_blog'
+  // Exported field_instance: 'node-blog-field_image_blog'.
   $field_instances['node-blog-field_image_blog'] = array(
     'bundle' => 'blog',
     'deleted' => 0,
@@ -164,7 +164,9 @@ function satellite_blog_field_default_field_instances() {
           'colorbox_gallery' => 'none',
           'colorbox_gallery_custom' => '',
           'colorbox_image_style' => 'zoom',
+          'colorbox_multivalue_index' => NULL,
           'colorbox_node_style' => 'page',
+          'colorbox_node_style_first' => '',
         ),
         'type' => 'colorbox',
         'weight' => 0,
@@ -229,7 +231,7 @@ function satellite_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_first_name'
+  // Exported field_instance: 'user-user-field_first_name'.
   $field_instances['user-user-field_first_name'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -268,7 +270,7 @@ function satellite_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_last_name'
+  // Exported field_instance: 'user-user-field_last_name'.
   $field_instances['user-user-field_last_name'] = array(
     'bundle' => 'user',
     'default_value' => NULL,

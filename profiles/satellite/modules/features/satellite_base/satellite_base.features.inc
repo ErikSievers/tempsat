@@ -169,8 +169,8 @@ function satellite_base_image_default_styles() {
       2 => array(
         'name' => 'manualcrop_crop_and_scale',
         'data' => array(
-          'width' => 512,
-          'height' => 256,
+          'width' => 621,
+          'height' => 311,
           'upscale' => 0,
           'respectminimum' => 1,
           'onlyscaleifcrop' => 0,

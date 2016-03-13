@@ -3,6 +3,11 @@
 	url = git@git.esn.org:common/esn_api_tools.git
 	branch = dev
 
+[submodule "esn_layout"]
+	path = modules/features/esn_layout
+	url = git@git.esn.org:common/esn_layout.git
+	branch = 7.x-1.x
+
 [submodule "modules/features/esn_mobile_api"]
 	path = modules/features/esn_mobile_api
 	url = git@git.esn.org:satellite/esn_mobile_api.git

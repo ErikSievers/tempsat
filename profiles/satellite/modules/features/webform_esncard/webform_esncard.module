@@ -74,7 +74,7 @@ function _webform_render_esncard($component, $value = NULL, $filter = TRUE)
     $form_item = array(
         '#type' => 'textfield',
         '#title' => $filter ? webform_filter_xss($component['name']) : $component['name'],
-        '#required' => $component['mandatory'],
+        '#required' => $component['required'],
         '#weight' => $component['weight'],
         '#size' => 20,
         '#description' => $filter ? webform_filter_descriptions($component['extra']['description']) : $component['extra']['description'],
