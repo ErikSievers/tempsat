@@ -130,7 +130,6 @@ projects:
       url:  git@git.esn.org:common/webform_esncard.git
       branch:       7.x-1.x
       full_version: 7.x-1.x-dev
-    makefile: webform_esncard-release.make.yml
 
   satellite_blog:
   # Satellite Blog
@@ -193,7 +192,7 @@ projects:
     version:  '2.5'
   # WYSIWYG improvements
   imce:
-    version: '1.9'
+    version: '1.10'
   imce_wysiwyg:
     version: '1.0'
   linkit:

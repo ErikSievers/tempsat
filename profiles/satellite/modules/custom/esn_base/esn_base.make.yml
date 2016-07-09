@@ -14,21 +14,21 @@ defaults:
 
 projects:
   context:
-    version: '3.6'
+    version: '3.7'
   ctools:
     version: '1.9'
   diff:
     version: '3.2'
   features:
-    version: '2.7'
+    version: '2.10'
   strongarm:
     version: '2.0'
   views:
-    version: '3.13'
+    version: '3.14'
   date:
     version: '2.9'
   ds:
-    version: '2.13'
+    version: '2.14'
   entitycache:
     version: '1.x-dev'
   superfish:
@@ -94,3 +94,11 @@ projects:
       url: 'git@git.esn.org:common/esn_blocktheme.git'
       branch: 7.x-1.x
       full_version: 7.x-1.x-dev
+
+libraries:
+  glip:
+    download:
+      type: get
+      url: https://github.com/halstead/glip/archive/master.zip
+    destination: libraries
+    directory_name: glip

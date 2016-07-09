@@ -1,5 +1,6 @@
 <?php
 
+include_once 'satellite.api.inc';
 
 function satellite_install_tasks_alter(&$tasks, $install_state) {
   // Hide the profile and language selection
@@ -45,13 +46,4 @@ function _satellite_get_supported_countries(){
 	$all_countries = _country_get_predefined_list();
 	$all_countries = array_intersect_key($all_countries, $supported_countries);
 	return $all_countries;
-}
-
-function satellite_file_get_contents($filename) {
-  $path = DRUPAL_ROOT . '/profiles/satellite/' . $filename;
-  if (file_exists($path)) {
-    $content = file_get_contents($path);
-    return $content;
-  }
-  return NULL;
 }

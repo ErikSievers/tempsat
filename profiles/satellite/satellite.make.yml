@@ -194,7 +194,7 @@ projects:
     version:  '2.5'
   # WYSIWYG improvements
   imce:
-    version: '1.9'
+    version: '1.10'
   imce_wysiwyg:
     version: '1.0'
   linkit:
