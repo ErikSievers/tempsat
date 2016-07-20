@@ -12,7 +12,7 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[variable][] = webform_node_event
 
-; Information added by drush on 2016-07-09
-version = "7.x-4.6.1"
+; Information added by drush on 2016-07-15
+version = "7.x-4.6.2"
 project = "satellite"
-datestamp = "1468086810"
+datestamp = "1468588870"

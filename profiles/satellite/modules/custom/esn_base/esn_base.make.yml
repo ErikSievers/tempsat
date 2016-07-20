@@ -44,8 +44,6 @@ projects:
   geofield:
     subdir: contrib/gis
     version: '2.3'
-  advanced_help:
-    version: ~
   coffee:
     version: ~
   entity:

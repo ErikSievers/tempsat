@@ -11,3 +11,8 @@ files[] = includes/http.inc
 files[] = includes/strings.inc
 files[] = tests/keys.test
 files[] = tests/rsa.test
+
+; Information added by drush on 2016-07-13
+version = "7.x-1.x-dev"
+project = "esn_api_tools"
+datestamp = "1468409905"

@@ -104,17 +104,31 @@ function esn_api_tools_get_private_key($id = false) {
   if (empty($id) && $id !== FALSE) {
     return FALSE;
   }
+  $id = FALSE;
   $keys = variable_get('esn_api_private_keys', array());
-  if (is_array($keys)){
-    if (isset($keys[$id]) && isset($keys[$id]['key'])){
-      return $keys[$id]['key'];
-    }else if ($id === false) {
-      $key = array_pop($keys);
-      if (isset($key['key'])) {
-        return $key['key'];
-      }
-    }
+  if (isset($keys['esn_api_private_keys'])) {
+    $keys = $keys['esn_api_private_keys'];
   }
+  if (!is_array($keys) || count($keys) == 0) {
+    watchdog('esn_api_tools', 'esn_api_private_keys variable has no data.', array(), WATCHDOG_ERROR);
+    return FALSE;
+  }
+  if ($id !== FAlSE) {
+    if (!isset($keys[$id])) {
+      watchdog('esn_api_tools', 'Key @id not found.', array('@id' => $id), WATCHDOG_DEBUG);
+      return FALSE;
+    }
+    if (!isset($keys[$id]['key'])) {
+      watchdog('esn_api_tools', 'Key @id has no private key stored.', array('@id' => $id), WATCHDOG_DEBUG);
+      return FALSE;
+    }
+    return $keys[$id]['key'];
+  }
+  $key = array_pop($keys);
+  if (isset($key['key'])) {
+    return $key['key'];
+  }
+  watchdog('esn_api_tools', "First key object has no private key stored.", array(), WATCHDOG_DEBUG);
   return false;
 }
 

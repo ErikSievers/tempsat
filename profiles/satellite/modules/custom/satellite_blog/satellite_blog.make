@@ -9,5 +9,5 @@ core = 7.x
 ; Modules
 
 projects[realname][subdir] = contrib
-projects[realname][version] = 1.2
+projects[realname][version] = 1.3
 

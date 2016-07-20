@@ -34,7 +34,7 @@ projects:
 
   esn_api_tools:
     type:   module
-    subdir: features
+    subdir: custom
     download:
       type: git
       url:  git@git.esn.org:common/esn_api_tools.git
