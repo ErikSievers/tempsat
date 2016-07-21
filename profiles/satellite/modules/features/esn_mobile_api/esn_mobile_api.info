@@ -4,7 +4,6 @@ core = 7.x
 package = ESN
 version = 7.x-1.0-dev
 project = esn_mobile_api
-dependencies[] = advanced_help
 dependencies[] = ctools
 dependencies[] = esn_galaxy_api
 dependencies[] = image_url_formatter
