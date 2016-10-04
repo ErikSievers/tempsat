@@ -10,7 +10,7 @@
 function satellite_news_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-news-body'
+  // Exported field_instance: 'node-news-body'.
   $field_instances['node-news-body'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -73,9 +73,10 @@ function satellite_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_file'
+  // Exported field_instance: 'node-news-field_file'.
   $field_instances['node-news-field_file'] = array(
     'bundle' => 'news',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => 'You can attach files like a printed programme. Download links to the files using the file names as link text will be added at the bottom of the article page.',
     'display' => array(
@@ -113,21 +114,24 @@ function satellite_news_field_default_field_instances() {
       'description_field' => 0,
       'file_directory' => 'news',
       'file_extensions' => 'txt zip rar pdf doc docx ppt pptx xls xlsx',
-      'max_filesize' => '',
+      'max_filesize' => '1 MB',
+      'resup' => 1,
+      'resup_autostart' => 1,
+      'resup_max_filesize' => '20 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'multiupload_filefield_widget',
+      'module' => 'file',
       'settings' => array(
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'file_mfw',
+      'type' => 'file_generic',
       'weight' => 9,
     ),
   );
 
-  // Exported field_instance: 'node-news-field_image'
+  // Exported field_instance: 'node-news-field_image'.
   $field_instances['node-news-field_image'] = array(
     'bundle' => 'news',
     'deleted' => 0,
@@ -187,13 +191,16 @@ function satellite_news_field_default_field_instances() {
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => 'news/images',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '1 MB',
       'max_resolution' => '',
       'min_resolution' => '',
+      'resup' => 1,
+      'resup_autostart' => 1,
+      'resup_max_filesize' => '2 MB',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -227,9 +234,10 @@ function satellite_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_image_gallery'
+  // Exported field_instance: 'node-news-field_image_gallery'.
   $field_instances['node-news-field_image_gallery'] = array(
     'bundle' => 'news',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => 'You can upload as many images as you want. Previews will be displayed on the news full view with <em>100 x 100 px </em>. If the user clicks on them an image viewer opens the selected image with navigation options.',
     'display' => array(
@@ -273,19 +281,22 @@ function satellite_news_field_default_field_instances() {
     'label' => 'Gallery',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => 'news/galleries',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '1 MB',
       'max_resolution' => '',
       'min_resolution' => '',
+      'resup' => 1,
+      'resup_autostart' => 1,
+      'resup_max_filesize' => '2 MB',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'multiupload_imagefield_widget',
+      'module' => 'image',
       'settings' => array(
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
@@ -302,12 +313,12 @@ function satellite_news_field_default_field_instances() {
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_miw',
+      'type' => 'image_image',
       'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'node-news-field_image_spotlight'
+  // Exported field_instance: 'node-news-field_image_spotlight'.
   $field_instances['node-news-field_image_spotlight'] = array(
     'bundle' => 'news',
     'deleted' => 0,
@@ -348,13 +359,16 @@ You can modify the part of the image being displayed for all three versions by c
     'label' => 'Spotlight Image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => 'news/spotlight',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '1 MB',
       'max_resolution' => '',
       'min_resolution' => '',
+      'resup' => 1,
+      'resup_autostart' => 1,
+      'resup_max_filesize' => '2 MB',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -384,7 +398,7 @@ You can modify the part of the image being displayed for all three versions by c
     ),
   );
 
-  // Exported field_instance: 'node-news-field_link'
+  // Exported field_instance: 'node-news-field_link'.
   $field_instances['node-news-field_link'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -457,7 +471,7 @@ You can modify the part of the image being displayed for all three versions by c
     ),
   );
 
-  // Exported field_instance: 'node-news-field_summary'
+  // Exported field_instance: 'node-news-field_summary'.
   $field_instances['node-news-field_summary'] = array(
     'bundle' => 'news',
     'default_value' => NULL,

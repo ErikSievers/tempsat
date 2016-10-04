@@ -5,20 +5,10 @@ package = ESN Satellite
 version = 7.x-1.0-dev
 dependencies[] = colorbox
 dependencies[] = comment
-dependencies[] = ds
 dependencies[] = esn_base
-dependencies[] = features
-dependencies[] = image
-dependencies[] = metatag
-dependencies[] = node
-dependencies[] = options
 dependencies[] = override_node_options
 dependencies[] = realname
 dependencies[] = satellite_base
-dependencies[] = strongarm
-dependencies[] = taxonomy
-dependencies[] = text
-dependencies[] = views
 dependencies[] = weight
 features[ctools][] = ds:ds:1
 features[ctools][] = strongarm:strongarm:1
@@ -94,9 +84,10 @@ features[variable][] = weight_menu_blog
 features[variable][] = weight_range_blog
 features[views_view][] = blog
 features[weight][] = blog
+features_exclude[dependencies][features] = features
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2016-07-20
+; Information added by drush on 2016-08-08
 version = "7.x-1.x-dev"
 project = "satellite_blog"
-datestamp = "1469027930"
+datestamp = "1470682170"

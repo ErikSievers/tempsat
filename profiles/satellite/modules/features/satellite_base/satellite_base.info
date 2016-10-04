@@ -16,6 +16,7 @@ dependencies[] = features
 dependencies[] = features_override
 dependencies[] = file
 dependencies[] = image
+dependencies[] = imagecache_token
 dependencies[] = jquery_update
 dependencies[] = link
 dependencies[] = linkit
@@ -30,6 +31,7 @@ dependencies[] = pathauto
 dependencies[] = service_links
 dependencies[] = strongarm
 dependencies[] = superfish
+dependencies[] = transliteration
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
@@ -87,7 +89,7 @@ features[variable][] = service_links_style
 features[variable][] = service_links_weight_in_node
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2016-07-15
-version = "7.x-4.6.3"
+; Information added by drush on 2016-09-25
+version = "7.x-4.6.4"
 project = "satellite"
-datestamp = "1468588870"
+datestamp = "1474839177"

@@ -119,3 +119,10 @@ function satellite_base_update_7001() {
     'satellite_base'
   ));
 }
+
+/**
+ * Enable Imagecache Token and Transliteration
+ */
+function satellite_base_update_7002() {
+  module_enable(array('imagecache_token', 'transliteration'));
+}

@@ -1,0 +1,14 @@
+name = WYSIWYG configuration
+core = 7.x
+package = ESN
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = wysiwyg
+features[features_api][] = api:2
+features[wysiwyg][] = rich_text
+features_exclude[filter][rich_text] = rich_text
+
+; Information added by drush on 2014-08-09
+version = "7.x-1.x-dev"
+project = "esn_wysiwyg"
+datestamp = "1407539442"

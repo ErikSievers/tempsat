@@ -416,6 +416,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
   // Exported field_instance: 'node-event-field_file'.
   $field_instances['node-event-field_file'] = array(
     'bundle' => 'event',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => 'You can attach files to the event like a printed programme. Download links to the files using the file names as link text will be added at the bottom of the event page.',
     'display' => array(
@@ -454,15 +455,18 @@ If your event has an end date you can add this by checking the <strong>Show End 
       'file_directory' => 'events',
       'file_extensions' => 'txt zip rar pdf doc docx ppt pptx xls xlsx',
       'max_filesize' => '',
+      'resup' => 1,
+      'resup_autostart' => 1,
+      'resup_max_filesize' => '20 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'multiupload_filefield_widget',
+      'module' => 'file',
       'settings' => array(
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'file_mfw',
+      'type' => 'file_generic',
       'weight' => 31,
     ),
   );
@@ -601,13 +605,16 @@ If your event has an end date you can add this by checking the <strong>Show End 
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => 'events/images',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '1 MB',
       'max_resolution' => '',
       'min_resolution' => '',
+      'resup' => 1,
+      'resup_autostart' => 1,
+      'resup_max_filesize' => '2 MB',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -644,6 +651,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
   // Exported field_instance: 'node-event-field_image_gallery'.
   $field_instances['node-event-field_image_gallery'] = array(
     'bundle' => 'event',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => 'You can upload as many images as you want. Previews will be displayed on the event full view with <em>100 x 100 px </em>. If the user clicks on them an image viewer opens the selected image as uploaded with navigation options.',
     'display' => array(
@@ -693,19 +701,22 @@ If your event has an end date you can add this by checking the <strong>Show End 
     'label' => 'Gallery',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => 'events/galleries',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '1 MB',
       'max_resolution' => '',
       'min_resolution' => '',
+      'resup' => 1,
+      'resup_autostart' => 1,
+      'resup_max_filesize' => '2 MB',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'multiupload_imagefield_widget',
+      'module' => 'image',
       'settings' => array(
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
@@ -722,7 +733,7 @@ If your event has an end date you can add this by checking the <strong>Show End 
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_miw',
+      'type' => 'image_image',
       'weight' => 6,
     ),
   );
@@ -774,13 +785,16 @@ You can modify the part of the image being displayed for all three versions by c
     'label' => 'Spotlight Image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => 'events/spotlight',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '1 MB',
       'max_resolution' => '',
       'min_resolution' => '',
+      'resup' => 1,
+      'resup_autostart' => 1,
+      'resup_max_filesize' => '2 MB',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),

@@ -13,6 +13,7 @@ function satellite_blog_metatag_export_default() {
   // Exported Metatag config instance: node:blog.
   $config['node:blog'] = array(
     'instance' => 'node:blog',
+    'disabled' => FALSE,
     'config' => array(
       'itemtype' => array(
         'value' => 'Blog',

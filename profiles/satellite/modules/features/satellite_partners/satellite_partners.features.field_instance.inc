@@ -10,7 +10,7 @@
 function satellite_partners_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-partner-body'
+  // Exported field_instance: 'node-partner-body'.
   $field_instances['node-partner-body'] = array(
     'bundle' => 'partner',
     'default_value' => NULL,
@@ -74,9 +74,10 @@ function satellite_partners_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-partner-field_file'
+  // Exported field_instance: 'node-partner-field_file'.
   $field_instances['node-partner-field_file'] = array(
     'bundle' => 'partner',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => 'You can attach files like a printed programme. Download links to the files using the file names as link text will be added at the bottom of the partner page.',
     'display' => array(
@@ -108,21 +109,24 @@ function satellite_partners_field_default_field_instances() {
       'description_field' => 0,
       'file_directory' => 'partners',
       'file_extensions' => 'txt zip rar pdf doc docx ppt pptx xls xlsx',
-      'max_filesize' => '',
+      'max_filesize' => '1 MB',
+      'resup' => 1,
+      'resup_autostart' => 1,
+      'resup_max_filesize' => '20 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'multiupload_filefield_widget',
+      'module' => 'file',
       'settings' => array(
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'file_mfw',
+      'type' => 'file_generic',
       'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-partner-field_image'
+  // Exported field_instance: 'node-partner-field_image'.
   $field_instances['node-partner-field_image'] = array(
     'bundle' => 'partner',
     'deleted' => 0,
@@ -180,13 +184,16 @@ function satellite_partners_field_default_field_instances() {
     'label' => 'Logo',
     'required' => 1,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => 'partners/images',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '1 MB',
       'max_resolution' => '',
       'min_resolution' => '',
+      'resup' => 1,
+      'resup_autostart' => 1,
+      'resup_max_filesize' => '2 MB',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -217,7 +224,7 @@ function satellite_partners_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-partner-field_link'
+  // Exported field_instance: 'node-partner-field_link'.
   $field_instances['node-partner-field_link'] = array(
     'bundle' => 'partner',
     'default_value' => NULL,

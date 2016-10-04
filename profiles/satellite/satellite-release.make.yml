@@ -38,8 +38,8 @@ projects:
     download:
       type: git
       url:  git@git.esn.org:common/esn_api_tools.git
-      branch:       dev
-      full_version: 7.x-1.x-dev
+      tag:       7.1.2
+      full_version: 7.x-1.2
 
   esn_galaxy_api:
     type:   module
@@ -68,8 +68,25 @@ projects:
       branch:       7.x-1.x
       full_version: 7.x-1.x-dev
 
-  # Extra Satellite features
-  # These features are good candidates to become apps in the future
+  satellite_blog:
+  # Satellite Blog
+    type:   module
+    subdir: custom
+    download:
+      type: git
+      url:  git@git.esn.org:satellite/satellite_blog.git
+      branch:       dev
+      full_version: 7.x-1.x-dev
+
+  satellite_events:
+  # Satellite Events
+    type:   module
+    subdir: features
+    download:
+      type: git
+      url:  git@git.esn.org:satellite/events.git
+      tag:       7.1.2
+      full_version: 7.x-1.2
 
   satellite_faq:
   # FAQ field for events (and other content types)
@@ -81,6 +98,35 @@ projects:
       branch:       7.x-1.x
       full_version: 7.x-1.x-dev
 
+  satellite_news:
+  # Satellite News
+    type:   module
+    subdir: features
+    download:
+      type: git
+      url:  git@git.esn.org:satellite/news.git
+      tag:       7.1.1
+      full_version: 7.x-1.1
+
+  satellite_pages:
+  # Satellite Pages
+    type:   module
+    subdir: features
+    download:
+      type: git
+      url:  git@git.esn.org:satellite/pages.git
+      tag:       7.1.0
+      full_version: 7.x-1.0
+
+  satellite_partners:
+  # Satellite Local ESN Partners
+    type:   module
+    subdir: features
+    download:
+      type: git
+      url:  git@git.esn.org:satellite/partners.git
+      tag:       7.1.1
+      full_version: 7.x-1.1
 
   satellite_partners_external:
   # National and international partners
@@ -89,16 +135,6 @@ projects:
     download:
       type: git
       url:  git@git.esn.org:satellite/satellite_partners_external.git
-      branch:       7.x-1.x
-      full_version: 7.x-1.x-dev
-
-  satellite_discounts:
-  # esncard.org discounts
-    type:   module
-    subdir: features
-    download:
-      type: git
-      url:  git@git.esn.org:satellite/satellite_discounts.git
       branch:       7.x-1.x
       full_version: 7.x-1.x-dev
 
@@ -123,16 +159,6 @@ projects:
       full_version: 7.x-1.x-dev
     makefile: webform_esncard-release.make.yml
 
-  satellite_blog:
-  # Satellite Blog
-    type:   module
-    subdir: custom
-    download:
-      type: git
-      url:  git@git.esn.org:satellite/satellite_blog.git
-      branch:       master
-      full_version: 7.x-1.x-dev
-
   # Modules
   # Modules here can be turned on or off by webmatsers.
   # The default ones are turned on in satellite.info
@@ -148,6 +174,8 @@ projects:
     version:  '1.1'
   field_group:
     version:  '1.5'
+  file_resup:
+    version: '1.4'
   google_analytics:
     version: '2.1'
   imagecache_actions:
@@ -179,7 +207,7 @@ projects:
   textformatter:
     version:  '1.4'
   webform:
-    version:  '4.12'
+    version:  '4.14'
   weight:
     version:  '2.5'
   # WYSIWYG improvements
@@ -196,6 +224,5 @@ includes:
   # Satellite features with makefiles
   # The modules in the respective makefiles are required for the feature to work.
   - modules/features/satellite_base/satellite_base.make.yml
-  - modules/features/satellite_events/satellite_events.make.yml
   - modules/features/satellite_spotlight/satellite_spotlight.make.yml
   #- modules/features/satellite_socialmedia_integration/satellite_socialmedia_integration.make

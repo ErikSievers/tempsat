@@ -1,20 +1,14 @@
-name = ESN News
+name = Satellite News
 description = News for your site
 core = 7.x
 package = ESN Satellite
-version = 7.x-1.0
 project = satellite_news
 dependencies[] = colorbox
-dependencies[] = ds
 dependencies[] = esn_base
-dependencies[] = features
 dependencies[] = field_group
-dependencies[] = link
-dependencies[] = multiupload_imagefield_widget
 dependencies[] = override_node_options
 dependencies[] = satellite_base
 dependencies[] = services_views
-dependencies[] = strongarm
 features[ctools][] = ds:ds:1
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
@@ -65,7 +59,7 @@ features_exclude[field_base][field_link] = field_link
 features_exclude[field_base][field_summary] = field_summary
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2016-07-15
-version = "7.x-4.6.3"
-project = "satellite"
-datestamp = "1468588870"
+; Information added by drush on 2016-08-21
+version = "7.x-1.1"
+project = "satellite_news"
+datestamp = "1471788030"

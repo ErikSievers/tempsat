@@ -13,6 +13,7 @@ function satellite_events_metatag_export_default() {
   // Exported Metatag config instance: node:event.
   $config['node:event'] = array(
     'instance' => 'node:event',
+    'disabled' => FALSE,
     'config' => array(
       'itemtype' => array(
         'value' => 'Event',

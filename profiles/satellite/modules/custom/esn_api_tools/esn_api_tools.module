@@ -20,20 +20,43 @@ function esn_api_tools_debug() {
   return (bool)variable_get('esn_api_tools_debug', false);
 }
 
-function _esn_api_tools_init_phpseclib($modules) {
-  global $include_path;
-  if (!isset($include_path)) {
-    $tmp = get_include_path();
-    $libPath = DRUPAL_ROOT . '/' . drupal_get_path('module', 'esn_api_tools') . '/lib/phpseclib';
-    $include_path = $tmp . PATH_SEPARATOR . $libPath;
-    set_include_path($include_path);
-  }
+/**
+ * Implements hook_init().
+ */
+function esn_api_tools_init() {
+  spl_autoload_register('_esn_api_tools_autoload');
+}
 
-  if (!is_array($modules)){
-    $modules = array($modules);
-  }
-  foreach ($modules as $m) {
-    require_once "$m.php";
+function _esn_api_tools_autoload($class) {
+  try{
+    $cache = &drupal_static(__FUNCTION__, (object)array('base_path' => '', 'initialized' => FALSE, 'namespaces' => array(), 'classes' => array()));
+    if (!$cache->initialized) {
+      $cache->base_path = DRUPAL_ROOT . '/' . drupal_get_path('module', 'esn_api_tools') . '/lib/phpseclib/';
+      // load seclib folders to only try to load classes from any of those folders
+      foreach (scandir($cache->base_path) as $item) {
+        if ($item == '.' || $item == '..') {
+          continue;
+        }
+        if (is_dir($cache->base_path . $item)) {
+          $cache->namespaces[] = $item;
+        }
+      }
+      $cache->initialized = TRUE;
+    }
+    if (strpos($class, '_') === FALSE) { // it isn't namespaced thus not from PHPseclib
+      return;
+    }
+    $parts = explode('_', $class);
+    if (in_array($parts[0], $cache->namespaces) && !isset($cache->classes[$class])) {
+      $path = $cache->base_path . implode('/', $parts) . '.php';
+      $cache->classes[$class] = file_exists($path) ? $path : FALSE;
+    }
+
+    if (isset($cache->classes[$class]) && $cache->classes[$class]) {
+      include_once $cache->classes[$class];
+    }
+  } catch (Exception $exception) {
+    watchdog_exception('esn_api_tools', $exception, 'Cannot load class "!class".', array('!class' => $class));
   }
 }
 
@@ -51,7 +74,6 @@ function _esn_api_tools_get_keyfile($keyfile) {
 }
 
 function esn_api_tools_create_key_pair() {
-  _esn_api_tools_init_phpseclib('Crypt/RSA');
   $rsa = new Crypt_RSA();
   $key_pair = $rsa->createKey();
   $key_pair['id'] = uniqid();
@@ -137,7 +159,6 @@ function esn_api_tools_export_private_keys() {
 }
 
 function esn_api_tools_encrypt($key, $data) {
-  _esn_api_tools_init_phpseclib('Crypt/RSA');
   if (is_array($data) || is_object($data)){
     $data = ESN_COMPLEX_DATA_PREFIX . serialize($data);
   }
@@ -147,7 +168,6 @@ function esn_api_tools_encrypt($key, $data) {
 }
 
 function esn_api_tools_decrypt($key, $data) {
-  _esn_api_tools_init_phpseclib('Crypt/RSA');
   $data = (string)base64_decode($data);
   $data = _esn_api_tools_crypt($key, $data, false);
   if ($data) {
@@ -159,7 +179,6 @@ function esn_api_tools_decrypt($key, $data) {
 }
 
 function _esn_api_tools_crypt($key, $data, $encrypt = true){
-  _esn_api_tools_init_phpseclib('Crypt/RSA');
   $rsa = new Crypt_RSA();
   $rsa->loadKey($key);
   $rsa->setEncryptionMode(CRYPT_RSA_ENCRYPTION_PKCS1);

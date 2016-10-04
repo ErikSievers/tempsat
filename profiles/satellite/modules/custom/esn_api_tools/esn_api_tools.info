@@ -12,7 +12,7 @@ files[] = includes/strings.inc
 files[] = tests/keys.test
 files[] = tests/rsa.test
 
-; Information added by drush on 2016-07-13
-version = "7.x-1.x-dev"
+; Information added by drush on 2016-09-25
+version = "7.x-1.2"
 project = "esn_api_tools"
-datestamp = "1468409905"
+datestamp = "1474838714"

@@ -20,9 +20,8 @@ dependencies[] = date_views
 dependencies[] = diff
 dependencies[] = feeds
 dependencies[] = feeds_xpathparser
+dependencies[] = file_resup
 dependencies[] = link
-dependencies[] = multiupload_filefield_widget
-dependencies[] = multiupload_imagefield_widget
 dependencies[] = override_node_options
 
 ;-- WYSIWYG options
@@ -68,7 +67,7 @@ dependencies[] = views_ui
 dependencies[] = weight
 
 
-; Information added by drush on 2016-07-15
-version = "7.x-4.6.3"
+; Information added by drush on 2016-09-25
+version = "7.x-4.6.4"
 project = "satellite"
-datestamp = "1468588870"
+datestamp = "1474839177"

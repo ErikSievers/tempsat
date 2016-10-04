@@ -49,11 +49,11 @@ function satellite_events_field_group_info() {
     'label' => 'Contact',
     'weight' => '16',
     'children' => array(
-      0 => 'field_contactdetails',
-      1 => 'field_meetingpoint',
-      2 => 'field_place',
-      3 => 'field_address',
-      4 => 'field_geolocation',
+      0 => 'field_address',
+      1 => 'field_contactdetails',
+      2 => 'field_geolocation',
+      3 => 'field_meetingpoint',
+      4 => 'field_place',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

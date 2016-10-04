@@ -2,7 +2,6 @@ name = ESN Events
 description = Events for your site
 core = 7.x
 package = ESN Satellite
-version = 7.x-1.1
 project = satellite_events
 dependencies[] = addressfield
 dependencies[] = calendar
@@ -24,8 +23,6 @@ dependencies[] = image
 dependencies[] = link
 dependencies[] = list
 dependencies[] = metatag
-dependencies[] = multiupload_filefield_widget
-dependencies[] = multiupload_imagefield_widget
 dependencies[] = options
 dependencies[] = override_node_options
 dependencies[] = satellite_base
@@ -35,7 +32,6 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = textformatter
 dependencies[] = views
-datestamp = 1361733283
 features[context][] = calendar
 features[ctools][] = context:context:3
 features[ctools][] = ds:ds:1
@@ -123,7 +119,7 @@ features_exclude[field_base][field_faq] = field_faq
 features_exclude[field_instance][node-event-field_faq] = node-event-field_faq
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2016-07-15
-version = "7.x-4.6.3"
-project = "satellite"
-datestamp = "1468588870"
+; Information added by drush on 2016-08-21
+version = "7.x-1.2"
+project = "satellite_events"
+datestamp = "1471787373"

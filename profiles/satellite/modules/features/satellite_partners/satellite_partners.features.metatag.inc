@@ -13,6 +13,7 @@ function satellite_partners_metatag_export_default() {
   // Exported Metatag config instance: node:partner.
   $config['node:partner'] = array(
     'instance' => 'node:partner',
+    'disabled' => FALSE,
     'config' => array(
       'itemtype' => array(
         'value' => 'Organization',

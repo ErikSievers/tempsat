@@ -162,13 +162,11 @@ function satellite_update_7005() {
 }
 
 /**
- * Enable multiupload_filefield_widget, multiupload_imagefield_widget and revert features.
+ * Obsolete upadte hook, does nothing ;)
  */
 function satellite_update_7006() {
-  module_enable(array('multiupload_filefield_widget', 'multiupload_imagefield_widget'));
-  esn_base_features_revert(array(
-    'satellite_news', 'satellite_pages', 'satellite_partners', 'satellite_events'
-  ));
+  // We discontinue using Multiupload File & Image Field Widgets as of 2016-08-08 in favor of File Resumable Upload
+  // and thus do nothing here anymore.
 }
 
 /**
@@ -228,4 +226,36 @@ function satellite_update_7012() {
  */
 function satellite_update_7013() {
   satellite_callhome_report_satellite_update($_SESSION, __FUNCTION__);
+}
+
+/**
+ * Disable multiupload_filefield_widget & multiupload_imagefield_widget in favor of file_resup
+ */
+function satellite_update_7014() {
+  if (module_exists('multiupload_imagefield_widget')) {
+    module_disable(array('multiupload_imagefield_widget'));
+  }
+  if (module_exists('multiupload_filefield_widget')) {
+    module_disable(array('multiupload_filefield_widget'));
+  }
+}
+
+/**
+ * Enable file_resup and revert features.
+ */
+function satellite_update_7015() {
+  module_enable(array('file_resup'));
+  $revert = array(
+    'satellite_blog',
+    'satellite_news',
+    'satellite_pages',
+    'satellite_partners',
+    'satellite_partners_external',
+    'satellite_events'
+  );
+  foreach ($revert as $feature) {
+    if (module_exists($feature)){
+      esn_base_features_revert(array($feature));
+    }
+  }
 }

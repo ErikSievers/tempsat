@@ -2,7 +2,7 @@ name = ESN Pages
 description = Static pages for your site
 core = 7.x
 package = ESN Satellite
-version = 7.x-1.0
+version = 7.x-1.1
 dependencies[] = colorbox
 dependencies[] = ctools
 dependencies[] = ds
@@ -10,11 +10,10 @@ dependencies[] = esn_base
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = file
+dependencies[] = file_resup
 dependencies[] = image
 dependencies[] = link
 dependencies[] = metatag
-dependencies[] = multiupload_filefield_widget
-dependencies[] = multiupload_imagefield_widget
 dependencies[] = override_node_options
 dependencies[] = satellite_base
 dependencies[] = strongarm
@@ -60,7 +59,7 @@ features_exclude[field_base][field_image_spotlight] = field_image_spotlight
 features_exclude[field_base][field_link] = field_link
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2016-07-15
-version = "7.x-4.6.3"
-project = "satellite"
-datestamp = "1468588870"
+; Information added by drush on 2016-08-14
+version = "7.x-1.0"
+project = "satellite_pages"
+datestamp = "1471188382"

@@ -22,16 +22,20 @@ projects:
     version: '2.12'
   features_override:
     version: '2.0-rc3'
+  imagecache_token:
+    version: '1.0-rc2'
+  jquery_update:
+    version: '2.7'
   link:
     version: '1.4'
   manualcrop:
     version: '1.5'
-  jquery_update:
-    version: '2.7'
-  service_links:
-    version: '2.3'
   metatag:
     version: '1.17'
+  service_links:
+    version: '2.3'
+  transliteration:
+    version: '3.2'
 
 libraries:
   colorbox:
