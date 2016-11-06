@@ -13,6 +13,6 @@ files[] = tests/keys.test
 files[] = tests/rsa.test
 
 ; Information added by drush on 2016-09-25
-version = "7.x-1.2"
+version = "7.x-1.x-dev"
 project = "esn_api_tools"
 datestamp = "1474838714"

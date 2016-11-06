@@ -13,6 +13,6 @@ defaults:
 
 projects:
   panels:
-    version: 3.5
+    version: 3.7
   panelizer:
     version: 3.1

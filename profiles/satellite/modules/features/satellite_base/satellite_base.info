@@ -89,7 +89,7 @@ features[variable][] = service_links_style
 features[variable][] = service_links_weight_in_node
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2016-09-25
-version = "7.x-4.6.4"
+; Information added by drush on 2016-11-06
+version = "7.x-4.6.5"
 project = "satellite"
-datestamp = "1474839177"
+datestamp = "1478461143"

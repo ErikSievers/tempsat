@@ -225,7 +225,11 @@ function satellite_update_7012() {
  * Update ESN Callhome information (Satellite 4.6)
  */
 function satellite_update_7013() {
-  satellite_callhome_report_satellite_update($_SESSION, __FUNCTION__);
+  // Remove the Callhome call because due to a later change of loading phpseclib
+  // using a simple class autoloader instead of setting include paths, as the
+  // autoloader itself is initialized in hook_init() which is only available after
+  //  clearing all caches after finishing the update process, it doesn't work at
+  // this point anymore.
 }
 
 /**

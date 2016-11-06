@@ -16,7 +16,7 @@ projects:
   context:
     version: '3.7'
   ctools:
-    version: '1.10'
+    version: '1.11'
   diff:
     version: '3.2'
   features:
