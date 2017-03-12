@@ -18,7 +18,7 @@ features[field_instance][] = node-event-field_faq
 features[variable][] = field_bundle_settings_field_collection_item__field_faq
 features_exclude[dependencies][satellite_faq] = satellite_faq
 
-; Information added by drush on 2016-02-21
+; Information added by drush on 2017-03-12
 version = "7.x-1.x-dev"
 project = "satellite_faq"
-datestamp = "1456089392"
+datestamp = "1489348569"

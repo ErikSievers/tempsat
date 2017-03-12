@@ -263,3 +263,10 @@ function satellite_update_7015() {
     }
   }
 }
+
+/**
+ * Set ESN install theme for maintenance pages (updates etc.)
+ */
+function satellite_update_7016() {
+  variable_set('maintenance_theme', 'install');
+}

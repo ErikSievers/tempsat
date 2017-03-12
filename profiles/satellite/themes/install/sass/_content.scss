@@ -207,12 +207,11 @@ table.system-status-report {
 
 }
 
-
-/* 
---------------------------------------------------- */
-
-
-
-/* 
---------------------------------------------------- */
-
+#body {
+	.status,
+	.warning,
+	.error {
+		background-repeat: no-repeat;
+		text-indent: 30px;
+	}
+}

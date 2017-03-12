@@ -9,6 +9,6 @@ files[] = esn_galaxy_api.module
 files[] = esn_galaxy_api.functions.inc
 
 ; Information added by drush on 2016-07-09
-version = "7.x-2.0+1-dev"
+version = "7.x-2.0"
 project = "esn_galaxy_api"
 datestamp = "1468085175"

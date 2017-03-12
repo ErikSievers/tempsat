@@ -60,6 +60,6 @@ features_exclude[field_base][field_summary] = field_summary
 project path = profiles/satellite/modules/features
 
 ; Information added by drush on 2016-08-21
-version = "7.x-1.x-dev"
+version = "7.x-1.1"
 project = "satellite_news"
 datestamp = "1471788030"

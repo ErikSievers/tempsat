@@ -1,0 +1,102 @@
+# ESN Base makefile
+
+# You can run this makefile with the following command if you don't want to rebuild the entire satellite:
+# drush make --no-core --contrib-destination=profiles/satellite/ profiles/satellite/satellite.make.yml .
+
+api:  2
+core: 7.x
+
+# Specify common subdir of "contrib"
+defaults:
+  projects:
+    subdir: "contrib"
+
+
+projects:
+  context:
+    version: '3.7'
+  ctools:
+    version: '1.12'
+  diff:
+    version: '3.3'
+  features:
+    version: '2.10'
+  strongarm:
+    version: '2.0'
+  views:
+    version: '3.15'
+  date:
+    version: '2.9'
+  ds:
+    version: '2.14'
+  entitycache:
+    version: '1.x-dev'
+  superfish:
+    version: '1.9'
+  admin_menu:
+    version: '3.0-rc5'
+  geophp:
+    subdir: contrib/gis
+    version: '1.7'
+  geocoder:
+    subdir: contrib/gis
+    version: '1.3'
+  geofield:
+    subdir: contrib/gis
+    version: '2.3'
+  coffee:
+    version: ~
+  entity:
+    version: ~
+  libraries:
+    version: ~
+  module_filter:
+    version: ~
+  pathauto:
+    version: ~
+  rules:
+    version: ~
+  token:
+    version: ~
+  transliteration:
+    version: ~
+  git_deploy:
+    version: ~
+  zen:
+    type: theme
+    version: '5.6'
+    subdir: ""
+  adminimal_theme:
+    type: theme
+    version: '1.24'
+    subdir: ""
+  esn_cas:
+    type: module
+    subdir: features
+    download:
+      type: git
+      url: 'git@git.esn.org:common/esn_cas.git'
+      branch: 7.x-1.x
+      full_version: 7.x-1.x-dev
+  esnbase:
+    type: theme
+    subdir: ""
+    download:
+      type: git
+      url: 'git@git.esn.org:common/esnbase.git'
+  esn_blocktheme:
+    type: module
+    subdir: custom
+    download:
+      type: git
+      url: 'git@git.esn.org:common/esn_blocktheme.git'
+      branch: 7.x-1.x
+      full_version: 7.x-1.x-dev
+
+libraries:
+  glip:
+    download:
+      type: get
+      url: https://github.com/halstead/glip/archive/master.zip
+    destination: libraries
+    directory_name: glip

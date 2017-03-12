@@ -4,7 +4,7 @@ core = 7.x
 package = Satellite
 files[] = satellite_site_meta.module
 version = "7.x-1.0"
-; Information added by drush on 2016-11-06
-version = "7.x-4.6.5"
+; Information added by drush on 2017-03-12
+version = "7.x-4.6.6"
 project = "satellite"
-datestamp = "1478461143"
+datestamp = "1489357731"

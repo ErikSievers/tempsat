@@ -17,7 +17,7 @@ projects:
     subdir: contrib/gis
     version: '1.2'
   ccl:
-    version: '1.5'
+    version: '1.6'
   colorbox:
     version: '2.12'
   features_override:
@@ -29,9 +29,9 @@ projects:
   link:
     version: '1.4'
   manualcrop:
-    version: '1.5'
+    version: '1.6'
   metatag:
-    version: '1.17'
+    version: '1.21'
   service_links:
     version: '2.3'
   transliteration:
@@ -47,7 +47,7 @@ libraries:
   imgareaselect_lib:
     download:
       type: get
-      url:  http://odyniec.net/projects/imgareaselect/jquery.imgareaselect-0.9.10.zip
+      url:  https://github.com/odyniec/imgareaselect/archive/v0.9.11-rc.1.tar.gz
     directory_name: jquery.imgareaselect
   jquery.imagesloaded:
     download:

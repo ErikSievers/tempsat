@@ -119,7 +119,7 @@ features_exclude[field_base][field_faq] = field_faq
 features_exclude[field_instance][node-event-field_faq] = node-event-field_faq
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2016-09-24
-version = "7.x-1.x-dev"
+; Information added by drush on 2016-08-21
+version = "7.x-1.2"
 project = "satellite_events"
-datestamp = "1474741065"
+datestamp = "1471787373"

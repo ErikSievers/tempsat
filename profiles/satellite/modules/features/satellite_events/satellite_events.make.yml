@@ -10,12 +10,3 @@ defaults:
 projects:
   calendar:
     version: '3.5'
-
-  satellite_events_registration:
-    type:   module
-    subdir: features
-    download:
-      type: git
-      url:  git@git.esn.org:satellite/events-registration.git
-      branch:       7.x-1.x
-      full_version: 7.x-1.x-dev
