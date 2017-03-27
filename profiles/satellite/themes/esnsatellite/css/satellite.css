@@ -73,9 +73,9 @@ td.multi-day a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite\/build\/dev\/profiles\/satellite\/themes\/esnsatellite\/sass\/satellite\.scss}line{font-family:\0000386}}
   #middle-main {
     float: left;
-    width: 200%;
+    width: 66.66667%;
     margin-left: 0%;
-    margin-right: -200%;
+    margin-right: -66.66667%;
     padding-left: 10px;
     padding-right: 10px;
     -moz-box-sizing: border-box;
@@ -88,9 +88,9 @@ td.multi-day a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite\/build\/dev\/profiles\/satellite\/themes\/esnsatellite\/sass\/satellite\.scss}line{font-family:\0000387}}
   #middle-sidebar {
     float: left;
-    width: 100%;
-    margin-left: 200%;
-    margin-right: -300%;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
     padding-left: 10px;
     padding-right: 10px;
     -moz-box-sizing: border-box;
@@ -103,9 +103,9 @@ td.multi-day a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite\/build\/dev\/profiles\/satellite\/themes\/esnsatellite\/sass\/satellite\.scss}line{font-family:\0000392}}
   #middle-middle #middle-first {
     float: left;
-    width: 100%;
+    width: 50%;
     margin-left: 0%;
-    margin-right: -100%;
+    margin-right: -50%;
     padding-left: 10px;
     padding-right: 10px;
     -moz-box-sizing: border-box;
@@ -117,9 +117,9 @@ td.multi-day a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite\/build\/dev\/profiles\/satellite\/themes\/esnsatellite\/sass\/satellite\.scss}line{font-family:\0000393}}
   #middle-middle #middle-second {
     float: left;
-    width: 100%;
-    margin-left: 100%;
-    margin-right: -200%;
+    width: 50%;
+    margin-left: 50%;
+    margin-right: -100%;
     padding-left: 10px;
     padding-right: 10px;
     -moz-box-sizing: border-box;

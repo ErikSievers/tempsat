@@ -33,7 +33,7 @@ stylesheets[all][] = css/screen.css
 ; scripts[] = js/script.js
 
 
-; Information added by drush on 2017-03-12
-version = "7.x-4.6.6"
+; Information added by drush on 2017-03-28
+version = "7.x-4.6.7"
 project = "satellite"
-datestamp = "1489357731"
+datestamp = "1490653473"

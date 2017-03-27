@@ -83,14 +83,14 @@ td.multi-day {
 		@include zen-grid-container();
 	}
 
-	#middle-main    { @include zen-grid-item(2,1); }
-	#middle-sidebar { @include zen-grid-item(1,3); }
+	#middle-main    { @include zen-grid-item(2,1, $zen-float-direction, $zen-column-count); }
+	#middle-sidebar { @include zen-grid-item(1,3, $zen-float-direction, $zen-column-count); }
 	
 	#middle-middle {
 		$zen-column-count: 2;
 
-		#middle-first  { @include zen-grid-item(1,1); }
-		#middle-second  { @include zen-grid-item(1,2); }
+		#middle-first  { @include zen-grid-item(1,1, $zen-float-direction, $zen-column-count); }
+		#middle-second  { @include zen-grid-item(1,2, $zen-float-direction, $zen-column-count); }
 	}
 }
 
