@@ -61,7 +61,7 @@ if (!defined('E_USER_DEPRECATED')) {
 /**
  * phpCAS version. accessible for the user by phpCAS::getVersion().
  */
-define('PHPCAS_VERSION', '1.3.4+');
+define('PHPCAS_VERSION', '1.3.5+');
 
 /**
  * @addtogroup public
@@ -219,6 +219,7 @@ define("PHPCAS_LANG_GERMAN", 'CAS_Languages_German');
 define("PHPCAS_LANG_JAPANESE", 'CAS_Languages_Japanese');
 define("PHPCAS_LANG_SPANISH", 'CAS_Languages_Spanish');
 define("PHPCAS_LANG_CATALAN", 'CAS_Languages_Catalan');
+define("PHPCAS_LANG_CHINESE_SIMPLIFIED", 'CAS_Languages_ChineseSimplified');
 
 /** @} */
 

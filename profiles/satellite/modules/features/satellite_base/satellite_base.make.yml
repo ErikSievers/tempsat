@@ -19,7 +19,7 @@ projects:
   ccl:
     version: '1.6'
   colorbox:
-    version: '2.12'
+    version: '2.13'
   features_override:
     version: '2.0-rc3'
   imagecache_token:
@@ -31,7 +31,7 @@ projects:
   manualcrop:
     version: '1.6'
   metatag:
-    version: '1.21'
+    version: '1.22'
   service_links:
     version: '2.3'
   transliteration:

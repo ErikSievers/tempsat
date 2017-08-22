@@ -57,6 +57,9 @@ function esn_wysiwyg_wysiwyg_default_profiles() {
           'Smiley' => 1,
           'Maximize' => 1,
         ),
+        'a11ychecker' => array(
+          'A11ychecker' => 1,
+        ),
         'imce' => array(
           'imce' => 1,
         ),

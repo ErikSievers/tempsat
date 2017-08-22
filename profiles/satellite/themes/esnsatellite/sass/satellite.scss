@@ -60,6 +60,13 @@ td.multi-day {
 			a { color: #FFF; }
 		}
 	}
+
+	&.esn-blockcolor-dark-blue {
+		div.mini-day-on {
+			background: $esn-dark-blue;
+			a { color: #FFF; }
+		}
+	}
 }
 
 /* 

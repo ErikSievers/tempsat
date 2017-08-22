@@ -55,7 +55,7 @@ projects:
     subdir: features
     download:
       type: git
-      url:  git@git.esn.org:satellite/esn_mobile_api.git
+      url:  git@git.esn.org:satellite/4/esn_mobile_api.git
       branch:       7.x-1.x
       full_version: 7.x-1.x-dev
 
@@ -74,7 +74,7 @@ projects:
     subdir: features
     download:
       type: git
-      url:  git@git.esn.org:satellite/satellite_faq.git
+      url:  git@git.esn.org:satellite/4/satellite_faq.git
       branch:       7.x-1.x
       full_version: 7.x-1.x-dev
 
@@ -84,7 +84,7 @@ projects:
     subdir: features
     download:
       type: git
-      url:  git@git.esn.org:satellite/satellite_blog.git
+      url:  git@git.esn.org:satellite/4/satellite_blog.git
       branch:       dev
       full_version: 7.x-1.x-dev
 
@@ -94,7 +94,7 @@ projects:
     subdir: features
     download:
       type: git
-      url:  git@git.esn.org:satellite/satellite_dev_settings.git
+      url:  git@git.esn.org:satellite/4/satellite_dev_settings.git
       branch:       7.x-1.x
       full_version: 7.x-1.x-dev
 
@@ -104,19 +104,9 @@ projects:
     subdir: features
     download:
       type: git
-      url:  git@git.esn.org:satellite/events.git
-      tag:       7.1.2
-      full_version: 7.x-1.2
-
-  satellite_faq:
-  # FAQ field for events (and other content types)
-    type:   module
-    subdir: features
-    download:
-      type: git
-      url:  git@git.esn.org:satellite/satellite_faq.git
-      branch:       7.x-1.x
-      full_version: 7.x-1.x-dev
+      url:  git@git.esn.org:satellite/4/events.git
+      tag:       7.1.3
+      full_version: 7.x-1.3
 
   satellite_news:
   # Satellite News
@@ -124,7 +114,7 @@ projects:
     subdir: features
     download:
       type: git
-      url:  git@git.esn.org:satellite/news.git
+      url:  git@git.esn.org:satellite/4/news.git
       tag:       7.1.1
       full_version: 7.x-1.1
 
@@ -134,7 +124,7 @@ projects:
     subdir: features
     download:
       type: git
-      url:  git@git.esn.org:satellite/pages.git
+      url:  git@git.esn.org:satellite/4/pages.git
       tag:       7.1.0
       full_version: 7.x-1.0
 
@@ -144,7 +134,7 @@ projects:
     subdir: features
     download:
       type: git
-      url:  git@git.esn.org:satellite/partners.git
+      url:  git@git.esn.org:satellite/4/partners.git
       tag:       7.1.1
       full_version: 7.x-1.1
 
@@ -154,7 +144,7 @@ projects:
     subdir: features
     download:
       type: git
-      url:  git@git.esn.org:satellite/satellite_partners_external.git
+      url:  git@git.esn.org:satellite/4/satellite_partners_external.git
       branch:       7.x-1.x
       full_version: 7.x-1.x-dev
 
@@ -164,7 +154,7 @@ projects:
     subdir: features
     download:
       type: git
-      url:  git@git.esn.org:satellite/satellite_team.git
+      url:  git@git.esn.org:satellite/4/satellite_team.git
       branch:       7.x-1.x
       full_version: 7.x-1.x-dev
 
@@ -226,12 +216,12 @@ projects:
   textformatter:
     version:  '1.4'
   webform:
-    version:  '4.14'
+    version:  '4.15'
   weight:
     version:  '2.5'
   # WYSIWYG improvements
   imce:
-    version: '1.10'
+    version: '1.11'
   imce_wysiwyg:
     version: '1.0'
   linkit:

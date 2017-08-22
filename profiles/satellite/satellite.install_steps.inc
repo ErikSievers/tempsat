@@ -368,7 +368,9 @@ function satellite_configuration($form, &$form_state) {
   $form['default_content']['enable_content'] = array(
     '#type' => 'checkbox',
     '#title' => st('Add dummy content.'),
-    '#default_value' => TRUE,
+    '#default_value' => FALSE,
+    '#disabled' => TRUE,
+    '#description' => st('Default contents are not available in this version.'),
   );
   
   $form['submit'] = array(
