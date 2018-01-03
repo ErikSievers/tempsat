@@ -179,17 +179,19 @@ projects:
   # feature_set:
   #   version:  '1.1'
   feeds:
-    version:  '2.0-beta3'
+    version:  '2.0-beta4'
   feeds_xpathparser:
     version:  '1.1'
   field_group:
-    version:  '1.5'
+    version:  '1.6'
   file_resup:
     version: '1.4'
+  fpa:
+    version: '2.6'
   google_analytics:
     version: '2.1'
   imagecache_actions:
-    version:  '1.7'
+    version:  '1.8'
   job_scheduler:
     version:  '2.0-alpha3'
   menu_block:
@@ -208,6 +210,8 @@ projects:
     version:  '1.13'
   paranoia:
     version:  '1.0'
+  readonlymode:
+    version: '1.2'
   seckit:
     version:  '1.5'
   security_review:
@@ -217,7 +221,7 @@ projects:
   textformatter:
     version:  '1.4'
   webform:
-    version:  '4.15'
+    version:  '4.16'
   weight:
     version:  '2.5'
   # WYSIWYG improvements

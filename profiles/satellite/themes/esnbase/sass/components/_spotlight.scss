@@ -131,6 +131,7 @@ Lorem ipsum dolor
 		&.esn-blockcolor-purple .flexslider { background-color: $esn-pink; }
 		&.esn-blockcolor-green .flexslider  { background-color: $esn-green; }
 		&.esn-blockcolor-orange .flexslider { background-color: $esn-orange; }
+		&.esn-blockcolor-dark-blue .flexslider { background-color: $esn-dark-blue; }
 
 
 		@include breakpoint(mobile-landscape) {
@@ -174,6 +175,7 @@ Lorem ipsum dolor
 			&.esn-blockcolor-purple .group-image:after { border-bottom-color: $esn-pink; }
 			&.esn-blockcolor-green .group-image:after  { border-bottom-color: $esn-green; }
 			&.esn-blockcolor-orange .group-image:after { border-bottom-color: $esn-orange; }
+			&.esn-blockcolor-dark-blue .group-image:after { border-bottom-color: $esn-dark-blue; }
 		}
 
 		@include breakpoint(tablet-portrait) {

@@ -38,3 +38,16 @@ function satellite_settings_update_7001() {
     return t('Please go to <a href="!url">!url</a> to enable this Satellite as Mobile API data service.', array('!url' => url('admin/settings/satellite/galaxy')));
   }
 }
+
+/**
+ * Add ITcom Vice-Chairs as admins
+ */
+function satellite_settings_update_7002() {
+  $roles = variable_get('cas_roles_relations', array());
+  if (isset($roles['administrator'])){
+    $pattern = $roles['administrator'];
+    $pattern = str_ireplace(ESN_ROLE_ITCHAIR, ESN_ROLE_ITCHAIR . '|' . ESN_ROLE_ITViceCHAIR, $pattern);
+    $roles['administrator']= $pattern;
+    variable_set('cas_roles_relations', $roles);
+  }
+}

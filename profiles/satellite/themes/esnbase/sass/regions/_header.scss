@@ -364,6 +364,13 @@ body.custom-logo {
 			background: rgba(0,0,0,0.2);
 		}
 	}
+
+	.esn-blockcolor-dark-blue {
+		ul li.sfHover, ul li:hover, ul ul { background: $esn-dark-blue; }
+		ul ul li:hover {
+			background: rgba(0,0,0,0.2);
+		}
+	}
 }
 
 #nav-secondary {

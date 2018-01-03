@@ -17,6 +17,7 @@ function _satellite_soicalmedia_types() {
       'flickr' => 'Flickr',
       'vimeo' => 'Vimeo',
       'instagram'  => 'Instagram',
+      'linkedin' => 'LinkedIn'
     );
   return $socialmedia;
 } 

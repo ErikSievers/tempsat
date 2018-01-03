@@ -491,7 +491,7 @@ class Crypt_RSA
      * @return Crypt_RSA
      * @access public
      */
-    function Crypt_RSA()
+    function __construct()
     {
         if (!class_exists('Math_BigInteger')) {
             include_once 'Math/BigInteger.php';
@@ -560,6 +560,17 @@ class Crypt_RSA
         $this->hashName = 'sha1';
         $this->mgfHash = new Crypt_Hash('sha1');
         $this->mgfHLen = $this->mgfHash->getLength();
+    }
+
+    /**
+     * PHP4 compatible Default Constructor.
+     *
+     * @see self::__construct()
+     * @access public
+     */
+    function Crypt_RSA()
+    {
+        $this->__construct();
     }
 
     /**
@@ -1650,6 +1661,15 @@ class Crypt_RSA
         }
 
         if ($components === false) {
+            $this->comment = null;
+            $this->modulus = null;
+            $this->k = null;
+            $this->exponent = null;
+            $this->primes = null;
+            $this->exponents = null;
+            $this->coefficients = null;
+            $this->publicExponent = null;
+
             return false;
         }
 
@@ -2492,7 +2512,7 @@ class Crypt_RSA
         $db = $maskedDB ^ $dbMask;
         $lHash2 = substr($db, 0, $this->hLen);
         $m = substr($db, $this->hLen);
-        if ($lHash != $lHash2) {
+        if (!$this->_equals($lHash, $lHash2)) {
             user_error('Decryption error');
             return false;
         }

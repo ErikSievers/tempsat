@@ -84,7 +84,7 @@ function _esn_galaxy_api_save_sections($local = FALSE) {
 function _esn_galaxy_api_download_sections($local = FALSE) {
 
   if (!$local) {
-    $xml = @simplexml_load_file('http://galaxy.esn.org/sections/xml');
+    $xml = @simplexml_load_file('https://accounts.esn.org/sections/xml');
   }
   if (!$xml) {
     watchdog('esn_galaxy_api', 'The list of ESN sections could not be fetched from Galaxy! The backup was used.', array(), WATCHDOG_WARNING);
@@ -151,7 +151,7 @@ function _esn_galaxy_api_save_countries($local = FALSE) {
 function _esn_galaxy_api_download_countries($local = FALSE) {
 
   if (!$local) {
-    $xml = @simplexml_load_file('http://galaxy.esn.org/countries/xml');
+    $xml = @simplexml_load_file('https://accounts.esn.org/countries/xml');
   }
   if (!$xml) {
     watchdog('esn_galaxy_api', 'The list of ESN countries could not be fetched from Galaxy! The backup was used.', array(), WATCHDOG_WARNING);

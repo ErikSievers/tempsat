@@ -2,7 +2,7 @@
 
 define('SATELLITE_CONFIG_VAR', 'satellite_config');
 
-include_once 'satellite_settings.esn_cas_regex.class';
+include_once 'satellite_settings.esn_cas_regex.php';
 
 function _satellite_settings_site_url() {
   $site_url = &drupal_static(__FUNCTION__);

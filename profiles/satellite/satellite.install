@@ -270,3 +270,10 @@ function satellite_update_7015() {
 function satellite_update_7016() {
   variable_set('maintenance_theme', 'install');
 }
+
+/**
+ * Enable Readonlymode module
+ */
+function satellite_update_7017() {
+  module_enable(array('readonlymode'), TRUE);
+}

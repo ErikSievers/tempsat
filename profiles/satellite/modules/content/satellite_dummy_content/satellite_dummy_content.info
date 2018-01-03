@@ -12,7 +12,7 @@ features[feeds_importer][] = default_news
 features[feeds_importer][] = default_pages
 features[feeds_importer][] = default_partners
 
-; Information added by drush on 2017-08-22
-version = "7.x-4.6.8"
+; Information added by drush on 2018-01-03
+version = "7.x-4.6.9"
 project = "satellite"
-datestamp = "1503427252"
+datestamp = "1515001546"

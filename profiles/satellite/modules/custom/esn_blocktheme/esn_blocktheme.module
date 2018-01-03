@@ -92,12 +92,7 @@ function _esn_blocktheme_get_admin_form(&$form, &$form_state, $module = null, $d
     '#type' => 'select',
     '#title' => t('Color'),
     '#default_value' => array($default['color']),
-    '#options' => array(
-      'blue' => t('Blue'),
-      'purple' => t('Pink'),
-      'green' => t('Green'),
-      'orange' => t('Orange'),
-    )
+    '#options' => esn_blocktheme_esn_colors(),
   );
   $form['esn_blocktheme']['esn_blocktheme_icon'] = array(
     '#type' => 'select',
@@ -295,7 +290,16 @@ function esn_blocktheme_paint_by_number($module, $delta) {
   }
   
   $color = hexdec(substr($hash, -2)) % 4;
-  $colors = array('blue', 'purple', 'green', 'orange');
+  $colors = array_keys(esn_blocktheme_esn_colors());
   return $colors[$color];
 }
 
+function esn_blocktheme_esn_colors() {
+  return array(
+    'blue' => t('Blue'),
+    'purple' => t('Pink'),
+    'green' => t('Green'),
+    'orange' => t('Orange'),
+    'dark-blue' => t('Dark blue')
+  );
+}

@@ -203,6 +203,12 @@ Lorem ipsum dolor
 		div.block-header:after { border-top-color: $esn-green; }
 		.block-content a { color: $esn-green; }
 	}
+
+	&.esn-blockcolor-dark-blue {
+		div.block-header h2 { background: $esn-dark-blue; }
+		div.block-header:after { border-top-color: $esn-dark-blue; }
+		.block-content a { color: $esn-dark-blue; }
+	}
 }
 
 /* 

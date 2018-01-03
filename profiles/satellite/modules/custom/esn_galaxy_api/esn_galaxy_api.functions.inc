@@ -119,7 +119,7 @@ function esn_galaxy_api_country_name($cc) {
  * @TODO: make stricter after the sectioncodes are normalized.
  */
 function esn_galaxy_api_sectioncode_format($sc) {
-  return preg_match('/^[A-Z]{2}-[1-9A-Z]{3,4}-[1-9A-Z]{3,4}$/', $sc);
+  return preg_match('/^[A-Z]{2}-[1-9A-Z]{2,4}-[1-9A-Z]{3,4}$/', $sc);
 }
 
 /**

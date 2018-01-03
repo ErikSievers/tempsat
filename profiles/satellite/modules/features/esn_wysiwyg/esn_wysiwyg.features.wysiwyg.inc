@@ -10,15 +10,11 @@
 function esn_wysiwyg_wysiwyg_default_profiles() {
   $profiles = array();
 
-  // Exported profile: rich_text
+  // Exported profile: rich_text.
   $profiles['rich_text'] = array(
     'format' => 'rich_text',
     'editor' => 'ckeditor',
     'settings' => array(
-      'default' => 1,
-      'user_choose' => 0,
-      'show_toggle' => 1,
-      'add_to_summaries' => 1,
       'theme' => '',
       'language' => 'en',
       'buttons' => array(
@@ -83,6 +79,14 @@ function esn_wysiwyg_wysiwyg_default_profiles() {
       'advanced__active_tab' => 'edit-paste',
       'forcePasteAsPlainText' => 0,
     ),
+    'preferences' => array(
+      'add_to_summaries' => 1,
+      'default' => 1,
+      'show_toggle' => 1,
+      'user_choose' => 0,
+      'version' => '4.4.3.fd4f17c',
+    ),
+    'name' => 'formatrich_text',
   );
 
   return $profiles;

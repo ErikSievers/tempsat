@@ -243,7 +243,7 @@ class Math_BigInteger
      * @return Math_BigInteger
      * @access public
      */
-    function Math_BigInteger($x = 0, $base = 10)
+    function __construct($x = 0, $base = 10)
     {
         if (!defined('MATH_BIGINTEGER_MODE')) {
             switch (true) {
@@ -360,8 +360,12 @@ class Math_BigInteger
             case 256:
                 switch (MATH_BIGINTEGER_MODE) {
                     case MATH_BIGINTEGER_MODE_GMP:
-                        $sign = $this->is_negative ? '-' : '';
-                        $this->value = gmp_init($sign . '0x' . bin2hex($x));
+                        $this->value = function_exists('gmp_import') ?
+                            gmp_import($x) :
+                            gmp_init('0x' . bin2hex($x));
+                        if ($this->is_negative) {
+                            $this->value = gmp_neg($this->value);
+                        }
                         break;
                     case MATH_BIGINTEGER_MODE_BCMATH:
                         // round $len to the nearest 4 (thanks, DavidMJ!)
@@ -501,6 +505,19 @@ class Math_BigInteger
     }
 
     /**
+     * PHP4 compatible Default Constructor.
+     *
+     * @see self::__construct()
+     * @param $x base-10 number or base-$base number if $base set.
+     * @param int $base
+     * @access public
+     */
+    function Math_BigInteger($x = 0, $base = 10)
+    {
+        $this->__construct($x, $base);
+    }
+
+    /**
      * Converts a BigInteger to a byte string (eg. base-256).
      *
      * Negative numbers are saved as positive numbers, unless $twos_compliment is set to true, at which point, they're
@@ -550,9 +567,13 @@ class Math_BigInteger
                     return $this->precision > 0 ? str_repeat(chr(0), ($this->precision + 1) >> 3) : '';
                 }
 
-                $temp = gmp_strval(gmp_abs($this->value), 16);
-                $temp = (strlen($temp) & 1) ? '0' . $temp : $temp;
-                $temp = pack('H*', $temp);
+                if (function_exists('gmp_export')) {
+                    $temp = gmp_export($this->value);
+                } else {
+                    $temp = gmp_strval(gmp_abs($this->value), 16);
+                    $temp = (strlen($temp) & 1) ? '0' . $temp : $temp;
+                    $temp = pack('H*', $temp);
+                }
 
                 return $this->precision > 0 ?
                     substr(str_pad($temp, $this->precision >> 3, chr(0), STR_PAD_LEFT), -($this->precision >> 3)) :
@@ -2924,7 +2945,7 @@ class Math_BigInteger
         // (will always result in a smaller number.  ie. ~1 isn't 1111 1110 - it's 0)
         $temp = $this->toBytes();
         if ($temp == '') {
-            return '';
+            return $this->_normalize(new Math_BigInteger());
         }
         $pre_msb = decbin(ord($temp[0]));
         $temp = ~$temp;
@@ -3471,7 +3492,7 @@ class Math_BigInteger
                     break;
                 }
             }
-            $s = 26 * $i + $j - 1;
+            $s = 26 * $i + $j;
             $r->_rshift($s);
         }
 
