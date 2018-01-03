@@ -56,8 +56,8 @@ projects:
     download:
       type: git
       url:  git@git.esn.org:satellite/4/esn_mobile_api.git
-      tag:       7.x-1.1
-      full_version: '7.x-1.1'
+      tag:       7.x-1.2
+      full_version: '7.x-1.2'
 
   esn_wysiwyg:
     type:   module
