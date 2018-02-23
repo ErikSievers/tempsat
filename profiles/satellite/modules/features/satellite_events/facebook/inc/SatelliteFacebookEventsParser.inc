@@ -4,6 +4,13 @@
  * ESN Satellite Facebook Events feeds parser class.
  */
 
+/**
+ * Callback for array_walk().
+ */
+function _satellite_events_facebook_country_to_code_strtolower(&$word) {
+  $word = drupal_strtolower($word);
+}
+
 class FacebookImage {
   /** @var \stdClass */
   private $raw;
@@ -34,11 +41,38 @@ class FacebookLocation {
   }
 
   public function getCountry() {
-    return isset($this->raw->city) ? $this->raw->country : '';
+    return isset($this->raw->country) ? $this->raw->country : '';
+  }
+
+  public function getCountryCode() {
+    $country = $this->getCountry();
+    include_once DRUPAL_ROOT . '/includes/locale.inc';
+    static $countries = array();
+
+    if (empty($countries)) {
+      $countries = country_get_list();
+      array_walk($countries, '_satellite_events_facebook_country_to_code_strtolower');
+      $countries = array_flip($countries);
+    }
+
+    // If it's already a valid country code, leave it alone.
+    if (in_array($country, $countries)) {
+      return $countries[$country];
+    }
+
+    // Trim whitespace, set to lowercase.
+    $country = t(drupal_strtolower(trim($country)));
+    if (isset($countries[$country])) {
+      return $countries[$country];
+    }
+    else {
+      // If country name cannot be found, return nothing.
+      return '';
+    }
   }
 
   public function getStreet() {
-    return isset($this->raw->city) ? $this->raw->street : '';
+    return isset($this->raw->street) ? $this->raw->street : '';
   }
 
   public function getZipCode() {
@@ -158,6 +192,7 @@ class SatelliteFacebookEventsParser extends FeedsParser {
           'place_city' => $location->getCity(),
           'place_zip' => $location->getZipCode(),
           'place_country' => $location->getCountry(),
+          'place_country_code' => $location->getCountryCode(),
           'link' => $this->getEventUrl($entry),
           'default_value_1' => $this->getDefaultFieldValue(1),
           'default_value_2' => $this->getDefaultFieldValue(1),
@@ -208,17 +243,20 @@ class SatelliteFacebookEventsParser extends FeedsParser {
           'name' => t('Name of the event location'),
         ],
         'place_street' => [
-          'name' => t('Event location: street'),
+          'name' => t('Event location: Street'),
           'description' => t('Street and house number of the event location'),
         ],
         'place_city' => [
-          'name' => t('Event location: city'),
+          'name' => t('Event location: City'),
         ],
         'place_zip' => [
-          'name' => t('Event location: zip code'),
+          'name' => t('Event location: Zip code'),
         ],
         'place_country' => [
-          'name' => t('Event location: country'),
+          'name' => t('Event location: Country'),
+        ],
+        'place_country_code' => [
+          'name' => t('Event location: Country (ISO Code)'),
         ],
         'default_value_1' => [
           'name' => t('Default value 1'),
