@@ -38,7 +38,7 @@ features[variable][] = cas_user_register
 features[variable][] = cas_version
 suggests[] = remote_stream_wrapper
 
-; Information added by drush on 2017-12-28
+; Information added by drush on 2018-03-28
 version = "7.x-1.x-dev"
 project = "esn_cas"
-datestamp = "1514477675"
+datestamp = "1522269702"

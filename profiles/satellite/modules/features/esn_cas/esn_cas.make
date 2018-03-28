@@ -3,7 +3,7 @@ core = 7.x
 
 ;Modules
 projects[cas][subdir] = contrib
-projects[cas][version] = 1.6
+projects[cas][version] = 1.7
 ;projects[cas][download][type] = git
 ;projects[cas][download][url] = "http://git.drupal.org/project/cas.git"
 ;projects[cas][download][branch] = 7.x-1.x

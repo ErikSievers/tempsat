@@ -97,8 +97,12 @@ class SatelliteFacebookEventsParser extends FeedsParser {
     return 200;
   }
 
-  private function getDefaultFieldValue($index) {
+  public static function getDefaultFieldValue($index) {
     return variable_get("satellite_events_fb_default_$index", NULL);
+  }
+
+  public static function updateDefaultFieldValue($index, $value = NULL) {
+    variable_set("satellite_events_fb_default_$index", $value);
   }
 
   private function getValue($entry, $key, $default = '') {
@@ -261,31 +265,31 @@ class SatelliteFacebookEventsParser extends FeedsParser {
         'default_value_1' => [
           'name' => t('Default value 1'),
           'description' => t('Provides a static default value which can be assigned to a target.\nValue: <strong>@value</strong>', [
-            '@value' => $this->getDefaultFieldValue(1),
+            '@value' => self::getDefaultFieldValue(1),
           ])
         ],
         'default_value_2' => [
           'name' => t('Default value 2'),
           'description' => t('Provides a static default value which can be assigned to a target.\nValue: <strong>@value</strong>', [
-            '@value' => $this->getDefaultFieldValue(2),
+            '@value' => self::getDefaultFieldValue(2),
           ])
         ],
         'default_value_3' => [
           'name' => t('Default value 3'),
           'description' => t('Provides a static default value which can be assigned to a target.\nValue: <strong>@value</strong>', [
-            '@value' => $this->getDefaultFieldValue(3),
+            '@value' => self::getDefaultFieldValue(3),
           ])
         ],
         'default_value_4' => [
           'name' => t('Default value 4'),
           'description' => t('Provides a static default value which can be assigned to a target.\nValue: <strong>@value</strong>', [
-            '@value' => $this->getDefaultFieldValue(4),
+            '@value' => self::getDefaultFieldValue(4),
           ])
         ],
         'default_value_5' => [
           'name' => t('Default value 5'),
           'description' => t('Provides a static default value which can be assigned to a target.\nValue: <strong>@value</strong>', [
-            '@value' => $this->getDefaultFieldValue(5),
+            '@value' => self::getDefaultFieldValue(5),
           ])
         ],
         'link' => [

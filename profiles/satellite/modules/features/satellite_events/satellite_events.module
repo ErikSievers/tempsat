@@ -35,3 +35,59 @@ function satellite_events_views_default_views_alter(&$views) {
 
   }
 }
+
+/**
+ * Implements hook_menu.
+ */
+function satellite_events_menu() {
+
+  $items['admin/settings/satellite/events'] = array(
+    'title' => t('Satellite Events'),
+    'description' => t('Configure the callhome feature.'),
+    'type' => MENU_NORMAL_ITEM,
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('satellite_events_settings'),
+    'access arguments' => array('administer satellite settings'),
+    'weight' => 0,
+  );
+  return $items;
+}
+
+/**
+ * Configuration form callback
+ */
+function satellite_events_settings($form, &$form_state) {
+  $form['events'] = array(
+    '#type' => 'container',
+  );
+  $info_message = "<div class='description'><p>Here you can configure some specific settinigs for the event content type. What can be configured depends on additional features enabled.</p></div>";
+  $form['events']['info'] = array(
+    '#markup' => t($info_message),
+  );
+
+
+  $form['callhome']['actions'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'class' => array('form-actions'),
+    ),
+  );
+
+  $actions = array('save'=> FALSE);
+  drupal_alter('satellite_events_settings', $form, $form_state, $actions);
+
+  $form['callhome']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+    '#disabled' => !$actions['save'],
+  );
+
+  return $form;
+}
+
+/**
+ * submit callback
+ */
+function satellite_events_settings_submit($form, &$form_state) {
+  module_invoke_all('satellite_events_settings_save', $form, $form_state);
+}

@@ -9,7 +9,7 @@ dependencies[] = views_content
 features[features_api][] = api:2
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2016-10-05
+; Information added by drush on 2018-03-28
 version = "7.x-1.x-dev"
 project = "esn_layout"
-datestamp = "1475667991"
+datestamp = "1522271032"

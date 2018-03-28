@@ -8,7 +8,7 @@ dependencies[] = esn_api_tools
 files[] = esn_galaxy_api.module
 files[] = esn_galaxy_api.functions.inc
 
-; Information added by drush on 2017-08-25
+; Information added by drush on 2018-03-28
 version = "7.x-2.0"
 project = "esn_galaxy_api"
-datestamp = "1503694809"
+datestamp = "1522265454"
