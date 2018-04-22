@@ -24,11 +24,11 @@ projects:
   strongarm:
     version: '2.0'
   views:
-    version: '3.18'
+    version: '3.20'
   date:
     version: '2.10'
   ds:
-    version: '2.14'
+    version: '2.15'
   entitycache:
     version: '1.x-dev'
   superfish:

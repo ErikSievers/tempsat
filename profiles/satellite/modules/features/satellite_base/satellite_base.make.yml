@@ -31,7 +31,7 @@ projects:
   manualcrop:
     version: '1.7'
   metatag:
-    version: '1.22'
+    version: '1.25'
   service_links:
     version: '2.3'
   transliteration:

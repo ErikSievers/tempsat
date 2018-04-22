@@ -206,7 +206,7 @@ projects:
   options_element:
     version:  '1.12'
   override_node_options:
-    version:  '1.13'
+    version:  '1.14'
   paranoia:
     version:  '1.7'
   readonlymode:
@@ -220,7 +220,7 @@ projects:
   textformatter:
     version:  '1.4'
   webform:
-    version:  '4.16'
+    version:  '4.17'
   weight:
     version:  '2.5'
   # WYSIWYG improvements
