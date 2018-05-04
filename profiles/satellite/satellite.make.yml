@@ -185,7 +185,7 @@ projects:
   field_group:
     version:  '1.6'
   file_resup:
-    version: '1.4'
+    version: '1.5'
   fpa:
     version: '2.6'
   google_analytics:

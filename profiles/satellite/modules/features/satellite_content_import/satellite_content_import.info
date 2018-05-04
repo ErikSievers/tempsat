@@ -13,7 +13,7 @@ features[feeds_importer][] = satellite_news_import
 features[feeds_importer][] = satellite_pages_import
 features[feeds_importer][] = satellite_partners_import
 
-; Information added by drush on 2018-04-10
-version = "7.x-4.6.11"
+; Information added by drush on 2018-05-04
+version = "7.x-4.6.12"
 project = "satellite"
-datestamp = "1523333556"
+datestamp = "1525444696"
