@@ -210,26 +210,27 @@ function esn_galaxy_api_schema() {
  *           The phase in which requirements are checked
  */
 function esn_galaxy_api_requirements($phase) {
-  $requirements = array();
+  $requirements = [];
   // Ensure translations don't break during installation.
   $t = get_t();
   $phpversion = phpversion();
 
   // Test PHP version
-  $requirements['esn_galaxy_php'] = array(
+  $php = array(
     'title' => $t('ESN Galaxy API (PHP)'),
     'value' => ($phase == 'runtime') ? l($phpversion, 'admin/reports/status/php') : $phpversion,
   );
   if (version_compare($phpversion, GALAXY_API_MINIMUM_PHP) < 0) {
-    $requirements['esn_galaxy_php']['description'] = $t('Your PHP installation is too old. ESN Galaxy API requires at least PHP %version.', array('%version' => GALAXY_API_MINIMUM_PHP));
-    $requirements['esn_galaxy_php']['severity'] = REQUIREMENT_ERROR;
+    $php['description'] = $t('Your PHP installation is too old. ESN Galaxy API requires at least PHP %version.', array('%version' => GALAXY_API_MINIMUM_PHP));
+    $php['severity'] = REQUIREMENT_ERROR;
   }
+  $mysql = FALSE; // Only used in install
 
-  // Test MySQL version
   if ($phase != 'install') {
     try {
       $db = Database::getConnection();
       switch (strtolower($db->databaseType())) {
+        // Test MySQL version
         case 'mysql':
           $version = explode('-', $db->version());
           unset($version[1]);
@@ -253,13 +254,19 @@ function esn_galaxy_api_requirements($phase) {
             $mysql['severity'] = REQUIREMENT_ERROR;
             $mysql['description'] = $t('Your MySQL server is too old. Please update to MySQL 5.4 or newer! Recommended version is 5.5.3 or newer.');
           }
-          $requirements['esn_galaxy_mysql'] = $mysql;
+          $requirements[] = $mysql;
           break;
       }
     } catch (Exception $ex) {
     }
   }
-  return $requirements;
+
+  $requirements = [
+    'esn_galaxy_php' => $php,
+    'esn_galaxy_mysql' => $mysql,
+  ];
+
+  return array_filter($requirements);
 }
 
 /**

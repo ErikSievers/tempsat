@@ -87,7 +87,7 @@ features[weight][] = blog
 features_exclude[dependencies][features] = features
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2017-07-02
+; Information added by drush on 2019-02-21
 version = "7.x-1.x-dev"
 project = "satellite_blog"
-datestamp = "1499018891"
+datestamp = "1550710014"

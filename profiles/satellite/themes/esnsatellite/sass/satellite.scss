@@ -128,19 +128,35 @@ td.multi-day {
 	}
 }
 
-/* 
+/* Notification Manager Styles
 -------------------------------------------------------------- */
+.messages {
+  h3 {
+    margin-top: 0;
+    font-size: 1.08em;
+  }
+}
 
+.nightmode {
+  #page,
+  #header,
+  #title,
+  #content,
+  #middle {
+    color: #888;
+    background-color: #333;
+  }
+}
 
-/* 
--------------------------------------------------------------- */
-
-
-/* 
--------------------------------------------------------------- */
-
-
-/* 
--------------------------------------------------------------- */
-
-
+.nightmode {
+  .more-link a {
+    background-color: #333 !important;
+  }
+  .calendar-calendar,
+  .calendar-legend,
+  .calendar-legend {
+    th, td {
+      background-color: #333 !important;
+    }
+  }
+}

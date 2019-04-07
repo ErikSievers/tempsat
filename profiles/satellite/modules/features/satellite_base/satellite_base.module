@@ -108,21 +108,3 @@ function satellite_base_block_save($delta = '', $edit = array()) {
     }
   }
 }
-
-/**
- *  Revert feature: Enable service links and metatag integration
- */
-function satellite_base_update_7001() {
-  $modules = array('service_links', 'metatag');
-  module_enable($modules, true);
-  esn_base_features_revert(array(
-    'satellite_base'
-  ));
-}
-
-/**
- * Enable Imagecache Token and Transliteration
- */
-function satellite_base_update_7002() {
-  module_enable(array('imagecache_token', 'transliteration'));
-}

@@ -1,6 +1,42 @@
 <?php
 
+define('SATELLITE_BASE_VERSION', '4.6');
+
+function satellite_register_autoloader() {
+  static $registered = FALSE;
+  $autoloader = DRUPAL_ROOT . '/vendor/autoload.php';
+
+  if (!$registered) {
+    if (!file_exists($autoloader)) {
+      $message = t('Autoloader not found: @file', array('@file' => $autoloader));
+      watchdog('satellite', $message, WATCHDOG_CRITICAL);
+    }
+    $registered = TRUE;
+  }
+
+  return require $autoloader;
+}
+
 include_once 'satellite.api.inc';
+
+function satellite_menu() {
+  $items = [];
+
+  $items['admin/settings/satellite/notifications/update'] = array(
+    'title'            => 'Galaxy integration',
+    'description'      => 'Configure your country, section, and permissions',
+    'page callback'    => 'satellite_notifications_update',
+    'access arguments' => array('administer satellite settings'),
+    'type'             => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+function satellite_notifications_update() {
+  \ESN\Satellite\Notifications\NotificationManager::update();
+  drupal_goto('admin/reports/status');
+}
 
 function satellite_install_tasks_alter(&$tasks, $install_state) {
   // Hide the profile and language selection
@@ -11,6 +47,35 @@ function satellite_install_tasks_alter(&$tasks, $install_state) {
   // change the theme
   _satellite_set_theme('install');
   
+}
+
+function satellite_cron() {
+  \ESN\Satellite\Notifications\NotificationManager::update();
+}
+
+function satellite_init() {
+  satellite_register_autoloader();
+  // Don't execute the Notification manager during site installation as it might not been fully initialized yet.
+  if (FALSE === variable_get('satellite_notification_initializing', FALSE)) {
+    $manager = \ESN\Satellite\Notifications\NotificationManager::cache(NULL, TRUE);
+    if ($manager) {
+      $manager->renderMessages();
+    }
+  }
+}
+
+function satellite_preprocess_html(&$variables) {
+  $manager = \ESN\Satellite\Notifications\NotificationManager::cache(NULL, TRUE);
+  if ($manager) {
+    $classes = [];
+    foreach ($manager->getMessages() as $message) {
+      $class = $message->getBodyClass();
+      if (!empty($class)) {
+        array_push($classes, $class);
+      }
+    }
+    $variables['classes_array'] = array_merge($variables['classes_array'], $classes);
+  }
 }
 
 function esn_set_en_default_lang(&$install_state) {
@@ -33,7 +98,6 @@ function _satellite_set_theme($target_theme) {
     _drupal_maintenance_theme();
   }
 }
-
 
 /**
  * Returns a filtered list of _country_get_predefined_list().

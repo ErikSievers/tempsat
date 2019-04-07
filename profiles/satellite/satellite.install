@@ -3,6 +3,11 @@
 /**
  * Minimum supported version of PHP.
  */
+
+use ESN\Satellite\Notifications\NotificationManager;
+use ESN\Satellite\Requirements\ComposerPackageInfo;
+use ESN\Satellite\Requirements\ComposerRequirements;
+
 define('SATELLITE_MINIMUM_PHP', '5.3.2');
 
 include_once 'satellite.install_steps.inc';
@@ -11,6 +16,9 @@ include_once 'satellite.install_steps.inc';
  * Implements hook_install().
  */
 function satellite_install() {
+  // Disable notification manager during site installation
+  variable_set('satellite_notification_initializing', TRUE);
+
   // set the satellite theme
   satellite_install_set_theme();
 
@@ -80,29 +88,6 @@ function satellite_install_tasks(&$install_state) {
   );
 
   return $tasks;
-}
-
-/**
- * Implements hok_requirements
- * @param $phase
- *           The phase in which requirements are checked
- */
-function satellite_requirements($phase){
-  $requirements = array();
-  // Ensure translations don't break during installation.
-  $t = get_t();
-  $phpversion = phpversion();
-
-  // Test PHP version
-  $requirements['satellite_php'] = array(
-    'title' => $t('ESN Satellite (PHP)'),
-    'value' => ($phase == 'runtime') ? l($phpversion, 'admin/reports/status/php') : $phpversion,
-  );
-  if (version_compare($phpversion, SATELLITE_MINIMUM_PHP) < 0) {
-    $requirements['esn_galaxy_php']['description'] = $t('Your PHP installation is too old. Satellite requires at least PHP %version.', array('%version' => SATELLITE_MINIMUM_PHP));
-    $requirements['esn_galaxy_php']['severity'] = REQUIREMENT_ERROR;
-  }
-  return $requirements;
 }
 
 /**
@@ -276,4 +261,23 @@ function satellite_update_7016() {
  */
 function satellite_update_7017() {
   module_enable(array('readonlymode'), TRUE);
+}
+
+/**
+ * Initialize Notification Manager, downloading messages from ITcom
+ */
+function satellite_update_7018() {
+  satellite_register_autoloader();
+  if (($satellite_messages = getenv('SATELLITE_MESSAGES'))) {
+    $satellite_messages = url($satellite_messages, ['absolute' => TRUE]);
+    variable_set('satellite_notification_messages_url', $satellite_messages);
+  }
+  NotificationManager::update();
+}
+
+/**
+ * Install Antibot
+ */
+function satellite_update_7019() {
+  module_enable(array('antibot'), TRUE);
 }

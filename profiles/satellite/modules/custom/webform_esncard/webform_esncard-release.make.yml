@@ -20,4 +20,4 @@ projects:
       full_version: 7.x-1.1
 
   webform:
-    version: '4.17'
+    version: '4.19'

@@ -1,8 +1,32 @@
 <?php
 
+
+define('ESN_GALAXY_API_WATCHDOG', 'Galaxy API');
+require_once 'inc/ESNEntity.php';
+require_once 'inc/ESNCountry.php';
+require_once 'inc/ESNSection.php';
 require_once 'esn_galaxy_api.api.esn_country.inc';
 require_once 'esn_galaxy_api.api.esn_section.inc';
 require_once 'esn_galaxy_api.functions.inc';
+
+/**
+ * Loads a new JsonMapper instance
+ *
+ * @return JsonMapper|bool
+ */
+function esn_galaxy_api_load_jsonmapper($map_private_protected = FALSE) {
+  if (!class_exists('JsonMapper')) {
+    watchdog(ESN_GALAXY_API_WATCHDOG, 'The JsonMapper library is missing. ESN Countries and Sections cannot be imported!', WATCHDOG_ERROR);
+    return FALSE;
+  }
+  libraries_load('jsonmapper');
+  $mapper = new JsonMapper();
+  if ($map_private_protected) {
+    $mapper->bIgnoreVisibility = TRUE;
+  }
+
+  return $mapper;
+}
 
 /**
  * Implements hook_entity_info()

@@ -220,6 +220,9 @@ function entitycache_user_login(&$edit, $account) {
  *
  * @see https://www.drupal.org/node/2441965#comment-10558568
  */
+if (!interface_exists('EntityCacheEntityControllerInterface')) {
+  require_once __DIR__ . '/includes/entitycache.entitycacheentitycontrollerinterface.inc';
+}
 if (!class_exists('EntityCacheControllerHelper')) {
   require_once __DIR__ . '/includes/entitycache.entitycachecontrollerhelper.inc';
 }

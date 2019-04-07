@@ -161,11 +161,26 @@ td.multi-day a {
   font-size: 0.8em;
 }
 
-/* 
--------------------------------------------------------------- */
-/* 
--------------------------------------------------------------- */
-/* 
--------------------------------------------------------------- */
-/* 
--------------------------------------------------------------- */
+/* Manually added styles because compass was not available */
+.messages h3 {
+  margin-top: 0;
+  font-size: 1.08em;
+}
+
+.nightmode #page,
+.nightmode #header,
+.nightmode #title,
+.nightmode #content,
+.nightmode #middle {
+  color: #888;
+  background-color: #333;
+}
+
+.nightmode .more-link a,
+.nightmode .calendar-calendar th,
+.nightmode .calendar-calendar td,
+.nightmode .calendar-legend th,
+.nightmode .calendar-legend td {
+  background-color: #333 !important;
+}
+

@@ -25,14 +25,16 @@ class GitCommitStamp
     public $time;
     public $offset;
 
-    public function unserialize($data)
-    {
-	assert(preg_match('/^(.+?)\s+<(.+?)>\s+(\d+)\s+([+-]\d{4})$/', $data, $m));
-	$this->name = $m[1];
-	$this->email = $m[2];
-	$this->time = intval($m[3]);
-	$off = intval($m[4]);
-	$this->offset = ($off/100) * 3600 + ($off%100) * 60;
+    public function unserialize($data) {
+      static $pattern = '/^(.+?)\s+<(.+?)>\s+(\d+)\s+([+-]\d{4})$/';
+      if (assert(preg_match($pattern, $data, $m))) {
+        preg_match($pattern, $data, $m);
+        $this->name = $m[1];
+        $this->email = $m[2];
+        $this->time = intval($m[3]);
+        $off = intval($m[4]);
+        $this->offset = ($off / 100) * 3600 + ($off % 100) * 60;
+      }
     }
 
     public function serialize()

@@ -1,5 +1,7 @@
 <?php
 
+use ESN\Satellite\Notifications\NotificationManager;
+
 include_once 'satellite.api.inc';
 
 define('SATELLITE_THEME', 'esnsatellite');
@@ -381,6 +383,7 @@ function satellite_configuration($form, &$form_state) {
 
   return $form;
 }
+
 /**
  * The Satellite configuration form validation.
  */
@@ -437,6 +440,9 @@ function satellite_final_install() {
   $operations[] = array('satellite_add_contact_form', array());
 
   $optional_features = array();
+  if ('DEV' === ($satellite_mode = getenv('SATELLITE_MODE'))) {
+    $optional_features[] = 'satellite_dev_settings';
+  }
   if (variable_get('satellite_optional_feature_events_registration', false)) {
     $optional_features[] = 'satellite_events_registration';
   }
@@ -469,8 +475,9 @@ function satellite_final_install() {
   }
 
   $operations[] = array('satellite_preconfigure_eu_cookie_compliance', array(FALSE));
+  $operations[] = array('satellite_update_notifications', array());
   $operations[] = array('satellite_cleanup_after_install', array());
-  
+
   $batch = array(
     'title' => st('Satellite Installation'),
     'init_message' => st('Starting setup'),
@@ -715,11 +722,20 @@ function satellite_preconfigure_eu_cookie_compliance($is_update = FALSE) {
   ));
 }
 
+function satellite_update_notifications() {
+  if (($satellite_messages = getenv('SATELLITE_MESSAGES'))) {
+    $satellite_messages = url($satellite_messages, ['absolute' => TRUE]);
+    variable_set('satellite_notification_messages_url', $satellite_messages);
+    NotificationManager::update();
+  }
+}
+
 function satellite_cleanup_after_install(&$context) {
   _satellite_update_usermail_templates('register_no_approval_required_body', true);
   _satellite_update_usermail_templates('register_admin_created_body', true);
   _satellite_update_usermail_templates('status_activated_body', true);
   variable_del('satellite_optional_feature_blog');
   variable_del('satellite_install_default_content');
+  variable_del('satellite_notification_initializing');
   drupal_set_message(st('Cleaned up installation information.'));
 }

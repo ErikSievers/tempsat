@@ -181,7 +181,7 @@ function esnbase_preprocess_page(&$variables, $hook) {
   // WHY??
 
 	
-	if (arg(0) == 'node') {
+	if (arg(0) == 'node' && isset($variables['page']['content']['system_main']['nodes'])) {
 		$variables['node_content'] =& $variables['page']['content']['system_main']['nodes'][arg(1)];
 	}
 	

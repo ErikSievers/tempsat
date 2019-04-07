@@ -4,6 +4,7 @@ package = Performance and scalability
 core = 7.x
 php = 5.3
 
+files[] = includes/entitycache.entitycacheentitycontrollerinterface.inc
 files[] = includes/entitycache.entitycachecontrollerhelper.inc
 files[] = includes/entitycache.comment.inc
 files[] = includes/entitycache.defaultentitycontroller.inc
@@ -16,9 +17,8 @@ files[] = entitycache.test
 
 dependencies[] = system (>=7.36)
 
-; Information added by Drupal.org packaging script on 2016-08-15
-version = "7.x-1.5+3-dev"
+; Information added by Drupal.org packaging script on 2018-12-21
+version = "7.x-1.5+5-dev"
 core = "7.x"
 project = "entitycache"
-datestamp = "1471299240"
-
+datestamp = "1545401891"

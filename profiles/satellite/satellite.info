@@ -32,6 +32,7 @@ dependencies[] = imce
 dependencies[] = imce_wysiwyg
 
 ;-- Security options
+dependencies[] = antibot
 ; dependencies[] = paranoia
 ; dependencies[] = seckit
 ; dependencies[] = security_review
@@ -68,7 +69,7 @@ dependencies[] = views_ui
 dependencies[] = weight
 
 
-; Information added by drush on 2018-05-04
-version = "7.x-4.6.12"
+; Information added by drush on 2019-04-07
+version = "7.x-4.6.13"
 project = "satellite"
-datestamp = "1525444696"
+datestamp = "1554660284"
