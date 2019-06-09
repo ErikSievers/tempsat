@@ -1,6 +1,8 @@
 <?php
 
-define('SATELLITE_BASE_VERSION', '4.6');
+use ESN\Satellite\Notifications\NotificationManager;
+
+require_once 'satellite.const.inc';
 
 function satellite_register_autoloader() {
   static $registered = FALSE;
@@ -57,7 +59,7 @@ function satellite_init() {
   satellite_register_autoloader();
   // Don't execute the Notification manager during site installation as it might not been fully initialized yet.
   if (FALSE === variable_get('satellite_notification_initializing', FALSE)) {
-    $manager = \ESN\Satellite\Notifications\NotificationManager::cache(NULL, TRUE);
+    $manager = NotificationManager::load();
     if ($manager) {
       $manager->renderMessages();
     }
@@ -65,7 +67,7 @@ function satellite_init() {
 }
 
 function satellite_preprocess_html(&$variables) {
-  $manager = \ESN\Satellite\Notifications\NotificationManager::cache(NULL, TRUE);
+  $manager = NotificationManager::load();
   if ($manager) {
     $classes = [];
     foreach ($manager->getMessages() as $message) {

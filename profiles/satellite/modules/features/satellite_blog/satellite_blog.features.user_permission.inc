@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * satellite_blog.features.user_permission.inc

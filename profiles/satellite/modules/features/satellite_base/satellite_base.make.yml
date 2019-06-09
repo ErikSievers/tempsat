@@ -23,7 +23,7 @@ projects:
   features_override:
     version: '2.0-rc3'
   imagecache_token:
-    version: '1.0-rc3'
+    version: '1.0'
   jquery_update:
     version: '2.7'
   link:

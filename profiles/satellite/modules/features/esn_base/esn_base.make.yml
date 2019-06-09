@@ -24,7 +24,7 @@ projects:
   strongarm:
     version: '2.0'
   views:
-    version: '3.22'
+    version: '3.23'
   date:
     version: '2.10'
   ds:
@@ -68,7 +68,7 @@ projects:
     subdir: ""
   adminimal_theme:
     type: theme
-    version: '1.25'
+    version: '1.26'
     subdir: ""
   esn_cas:
     type: module

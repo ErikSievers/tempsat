@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * satellite_blog.views_default.inc

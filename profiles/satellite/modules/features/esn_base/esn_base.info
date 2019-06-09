@@ -57,7 +57,7 @@ features[variable][] = superfish_style_1
 features[variable][] = superfish_type_1
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2019-04-04
+; Information added by drush on 2019-06-07
 version = "7.x-1.x-dev"
 project = "esn_base"
-datestamp = "1554409906"
+datestamp = "1559915456"

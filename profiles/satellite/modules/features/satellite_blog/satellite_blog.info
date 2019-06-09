@@ -3,6 +3,7 @@ description = A blog for your section.
 core = 7.x
 package = ESN Satellite
 version = 7.x-1.0-dev
+project = satellite_blog
 dependencies[] = colorbox
 dependencies[] = comment
 dependencies[] = esn_base
@@ -10,6 +11,8 @@ dependencies[] = override_node_options
 dependencies[] = realname
 dependencies[] = satellite_base
 dependencies[] = weight
+_info_file_ctime = 1550710014
+datestamp = 1550710014
 features[ctools][] = ds:ds:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
@@ -87,7 +90,7 @@ features[weight][] = blog
 features_exclude[dependencies][features] = features
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2019-02-21
+; Information added by drush on 2019-04-25
 version = "7.x-1.x-dev"
 project = "satellite_blog"
-datestamp = "1550710014"
+datestamp = "1556186249"

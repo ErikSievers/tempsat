@@ -10,6 +10,12 @@ use PharIo\Version\VersionConstraintParser;
 
 class Message implements \JsonSerializable {
 
+  /** @var int Message ID */
+  private $id;
+
+  /** @var \DateObject Time when this message has been imported */
+  private $imported;
+
   /** @var string */
   private $title;
 
@@ -158,5 +164,85 @@ class Message implements \JsonSerializable {
    */
   public function setBodyClass($body_class) {
     $this->body_class = $body_class;
+  }
+
+  /**
+   * @param \DateObject|null $time Time when this message has been imported
+   */
+  public function save($time = NULL) {
+    if (!$this->id && $time) {
+      $this->imported = $time;
+    }
+
+    try {
+      db_insert(SATELLITE_NOTIFICATIONS_TABLE)
+        ->fields([
+          'title' => $this->title,
+          'content' => $this->content,
+          'type' => isset($this->type) ? $this->type : 'status',
+          'display_from' => $this->display->getFrom()->getTimestamp(),
+          'display_to' => $this->display->getTo()->getTimestamp(),
+          'version' => isset($this->version) ? $this->version->asString() : NULL,
+          'body_class' => $this->body_class,
+          'inject_css' => $this->inject_css,
+          'conditions' => isset($this->conditions) ? $this->conditions->jsonSerialize() : NULL,
+          'imported' => $this->imported->getTimestamp(),
+        ])
+        ->execute();
+    } catch (\Exception $ex) {
+      watchdog('satellite',
+        'Notification message @title could not be saved.',
+        ['@title' => $this->getTitle()],
+        'error'
+      );
+    }
+  }
+
+  /**
+   * Load all messages from storage
+   *
+   * @return Message[]
+   */
+  public static function loadAll() {
+    $messages = &drupal_static(__CLASS__, NULL);
+    if (!$messages && db_table_exists(SATELLITE_NOTIFICATIONS_TABLE)) {
+      $messages = [];
+      $query = db_select(SATELLITE_NOTIFICATIONS_TABLE, 'm')
+        ->fields('m')
+        ->execute();
+      $version = new VersionConstraintParser();
+      $getDate = function ($timestamp) {
+        $dt = new \DateTime();
+        $dt->setTimestamp($timestamp);
+        return $dt;
+      };
+      foreach ($query->fetchAllAssoc('mid') as $mid => $row) {
+        $display = new MessageDisplayPeriod();
+        $display->setFrom($row->display_from);
+        $display->setTo($row->display_to);
+
+        $message = new Message();
+        $message->id = $mid;
+        $message->title = $row->title;
+        $message->content = $row->content;
+        $message->type = $row->type;
+        $message->display = $display;
+        $message->version = isset($row->version) ? $version->parse($row->version) : NULL;
+        if ($row->body_class) {
+          $message->setBodyClass($row->body_class);
+        }
+        if ($row->inject_css) {
+          $message->setInjectCss($row->inject_css);
+        }
+        $message->conditions = new ConditionParser($row->conditions);
+        $message->imported = $getDate($row->imported);
+
+        $messages[] = $message;
+      }
+    } else {
+      $messages = [];
+    }
+
+    return $messages;
   }
 }

@@ -58,4 +58,18 @@ class MessageDisplayPeriod implements \JsonSerializable {
     $today = new \DateObject('today');
     return $this->from <= $today && $this->to >= $today;
   }
+
+  /**
+   * @return \DateObject
+   */
+  public function getFrom() {
+    return $this->from;
+  }
+
+  /**
+   * @return \DateObject
+   */
+  public function getTo() {
+    return $this->to;
+  }
 }

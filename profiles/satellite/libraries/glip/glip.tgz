@@ -19,26 +19,26 @@
 <title>Sign in · GitLab</title>
 <meta content="Erasmus Student Network GitLab repository" name="description">
 <link rel="shortcut icon" type="image/png" href="/assets/favicon-7901bd695fb93edb07975966062049829afb56cf11511236e61bcf425070e36e.png" id="favicon" data-original-href="/assets/favicon-7901bd695fb93edb07975966062049829afb56cf11511236e61bcf425070e36e.png" />
-<link rel="stylesheet" media="all" href="/assets/application-3cbf1ae156fa85f16d4ca01321e0965db8cfb9239404aaf52c3cebfc5b4493fb.css" />
-<link rel="stylesheet" media="print" href="/assets/print-c8ff536271f8974b8a9a5f75c0ca25d2b8c1dceb4cff3c01d1603862a0bdcbfc.css" />
+<link rel="stylesheet" media="all" href="/assets/application-38981e26a24308976f3a29d6e5e2beef57c7acda3ad0d5e7f6f149d58fd09d3d.css" />
+<link rel="stylesheet" media="print" href="/assets/print-74c3df10dad473d66660c828e3aa54ca3bfeac6d8bb708643331403fe7211e60.css" />
 
 
 
 <link rel="stylesheet" media="all" href="/assets/highlight/themes/white-a165d47ce52cf24c29686366976ae691bd9addb9641a6abeb3ba6d1823b89aa8.css" />
 <script>
 //<![CDATA[
-window.gon={};gon.api_version="v4";gon.default_avatar_url="https://git.esn.org/assets/no_avatar-849f9c04a3a0d0cea2424ae97b27447dc64a7dbfae83c036c45b403392f0e8ba.png";gon.max_file_size=50;gon.asset_host=null;gon.webpack_public_path="/assets/webpack/";gon.relative_url_root="";gon.shortcuts_path="/help/shortcuts";gon.user_color_scheme="white";gon.gitlab_url="https://git.esn.org";gon.revision="86f0b5d";gon.gitlab_logo="/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png";gon.sprite_icons="/assets/icons-24aaa921aa9e411162e6913688816c79861d0de4bee876cf6fc4c794be34ee91.svg";gon.sprite_file_icons="/assets/file_icons-7262fc6897e02f1ceaf8de43dc33afa5e4f9a2067f4f68ef77dcc87946575e9e.svg";gon.emoji_sprites_css_path="/assets/emoji_sprites-289eccffb1183c188b630297431be837765d9ff4aed6130cf738586fb307c170.css";gon.test_env=false;gon.suggested_label_colors=["#0033CC","#428BCA","#44AD8E","#A8D695","#5CB85C","#69D100","#004E00","#34495E","#7F8C8D","#A295D6","#5843AD","#8E44AD","#FFECDB","#AD4363","#D10069","#CC0033","#FF0000","#D9534F","#D1D100","#F0AD4E","#AD8D43"];gon.first_day_of_week=0;gon.ee=false;
+window.gon={};gon.api_version="v4";gon.default_avatar_url="https://git.esn.org/assets/no_avatar-849f9c04a3a0d0cea2424ae97b27447dc64a7dbfae83c036c45b403392f0e8ba.png";gon.max_file_size=50;gon.asset_host=null;gon.webpack_public_path="/assets/webpack/";gon.relative_url_root="";gon.shortcuts_path="/help/shortcuts";gon.user_color_scheme="white";gon.gitlab_url="https://git.esn.org";gon.revision="62c464651d2";gon.gitlab_logo="/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png";gon.sprite_icons="/assets/icons-b2073af7ca0641787eb4596951b695079519da1937a262a886bb12c2b0fac181.svg";gon.sprite_file_icons="/assets/file_icons-7262fc6897e02f1ceaf8de43dc33afa5e4f9a2067f4f68ef77dcc87946575e9e.svg";gon.emoji_sprites_css_path="/assets/emoji_sprites-289eccffb1183c188b630297431be837765d9ff4aed6130cf738586fb307c170.css";gon.test_env=false;gon.suggested_label_colors=["#0033CC","#428BCA","#44AD8E","#A8D695","#5CB85C","#69D100","#004E00","#34495E","#7F8C8D","#A295D6","#5843AD","#8E44AD","#FFECDB","#AD4363","#D10069","#CC0033","#FF0000","#D9534F","#D1D100","#F0AD4E","#AD8D43"];gon.first_day_of_week=0;gon.ee=false;
 //]]>
 </script>
 
 
-<script src="/assets/webpack/runtime.f4be8219.bundle.js" defer="defer"></script>
-<script src="/assets/webpack/main.70309c7d.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons~pages.ldap.omniauth_callbacks~pages.omniauth_callbacks~pages.sessions~pages.sessions.new.3ad531f1.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/pages.sessions.new.38c70182.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/runtime.1f581ba6.bundle.js" defer="defer"></script>
+<script src="/assets/webpack/main.2f7fae40.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons~pages.ldap.omniauth_callbacks~pages.omniauth_callbacks~pages.sessions~pages.sessions.new.e8265136.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/pages.sessions.new.7e97e57d.chunk.js" defer="defer"></script>
 
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="G3YHzZjzcRiy4rWqCg91YFu8yo+ofAkTGuwf/pE/qfZZ4xlGxMX3cBnElVNtO2FQe3bLbAbiKExqx/CNI+c39g==" />
+<meta name="csrf-token" content="Q6dN356lU7Ztmvc5UznoPtbM9gKSnBD+KxTFnE6vMaczvmiBqcB36mC2NT4QXT6m9eFryy+qW1Sg/oFTi3Ntaw==" />
 <meta content="origin-when-cross-origin" name="referrer">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 <meta content="#474D57" name="theme-color">
@@ -102,7 +102,7 @@ Erasmus Student Network GitLab repository
 <div class="tab-content">
 <div class="login-box tab-pane active" id="login-pane" role="tabpanel">
 <div class="login-body">
-<form class="new_user gl-show-field-errors" aria-live="assertive" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="AYfYKJjBog8ayiYa908gP7UHtWr/TLB6epcVQOOqpjhDEsajxPckZ7HsBuOQezQPlc20iVHSkSUKvPozUXI4OA==" /><div class="form-group">
+<form class="new_user gl-show-field-errors" aria-live="assertive" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="i3s1yitWtHEPyTlfwa5kYqAwUXJgQhGUdZN621b7LCj7YhCUHDOQLQLl+1iCyrL6gx3Mu910Wj7+eT4Ukydw5A==" /><div class="form-group">
 <label for="user_login" class="label-bold">Username or email</label>
 <input class="form-control top qa-login-field" autofocus="autofocus" autocapitalize="off" autocorrect="off" required="required" title="This field is required." type="text" name="user[login]" id="user_login" />
 </div>
