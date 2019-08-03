@@ -61,6 +61,10 @@
 			<?php print render($title_suffix); ?>
 			<div class="block-arrow"></div>
 		</div>
+  <?php else: ?>
+    <div class="block-header-notitle">
+      <?php print render($title_suffix); ?>
+    </div> 
 	<?php endif; ?>
 		
 	<div class="block-content">

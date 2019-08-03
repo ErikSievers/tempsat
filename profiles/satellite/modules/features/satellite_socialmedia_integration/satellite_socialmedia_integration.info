@@ -28,7 +28,7 @@ features[variable][] = service_links_pb_countlayout
 features[variable][] = service_links_tw_data_count
 project path = profiles/satellite/modules/features
 
-; Information added by drush on 2019-06-09
-version = "7.x-4.6.14"
+; Information added by drush on 2019-08-03
+version = "7.x-4.7.0"
 project = "satellite"
-datestamp = "1560106816"
+datestamp = "1564845794"

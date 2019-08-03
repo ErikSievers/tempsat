@@ -7,7 +7,7 @@ dependencies[] = esn_galaxy_api
 
 files[] = satellite_settings.esn_cas_regex.php
 
-; Information added by drush on 2019-06-09
-version = "7.x-4.6.14"
+; Information added by drush on 2019-08-03
+version = "7.x-4.7.0"
 project = "satellite"
-datestamp = "1560106816"
+datestamp = "1564845794"

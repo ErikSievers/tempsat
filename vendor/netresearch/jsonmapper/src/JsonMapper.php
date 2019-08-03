@@ -202,6 +202,9 @@ class JsonMapper
                 );
             }
 
+            $type = $this->getFullNamespace($type, $strNs);
+            $type = $this->getMappedType($type, $jvalue);
+
             if ($type === null || $type === 'mixed') {
                 //no given type - simply set the json data
                 $this->setProperty($object, $accessor, $jvalue);
@@ -210,6 +213,13 @@ class JsonMapper
                 $this->setProperty($object, $accessor, $jvalue);
                 continue;
             } else if ($this->isSimpleType($type)) {
+                if ($type === 'string' && is_object($jvalue)) {
+                    throw new JsonMapper_Exception(
+                        'JSON property "' . $key . '" in class "'
+                        . $strClassName . '" is an object and'
+                        . ' cannot be converted to a string'
+                    );
+                }
                 settype($jvalue, $type);
                 $this->setProperty($object, $accessor, $jvalue);
                 continue;
@@ -231,16 +241,12 @@ class JsonMapper
                 $subtype = substr($type, 0, -2);
             } else if (substr($type, -1) == ']') {
                 list($proptype, $subtype) = explode('[', substr($type, 0, -1));
-                if (!$this->isSimpleType($proptype)) {
-                    $proptype = $this->getFullNamespace($proptype, $strNs);
-                }
                 if ($proptype == 'array') {
                     $array = array();
                 } else {
                     $array = $this->createInstance($proptype, false, $jvalue);
                 }
             } else {
-                $type = $this->getFullNamespace($type, $strNs);
                 if (is_a($type, 'ArrayObject', true)) {
                     $array = $this->createInstance($type, false, $jvalue);
                 }
@@ -255,12 +261,8 @@ class JsonMapper
                 }
 
                 $cleanSubtype = $this->removeNullable($subtype);
-                if (!$this->isSimpleType($cleanSubtype)
-                    && $cleanSubtype !== null
-                ) {
-                    $subtype = $this->getFullNamespace($cleanSubtype, $strNs);
-                }
-                $child = $this->mapArray($jvalue, $array, $subtype);
+                $subtype = $this->getFullNamespace($cleanSubtype, $strNs);
+                $child = $this->mapArray($jvalue, $array, $subtype, $key);
             } else if ($this->isFlatType(gettype($jvalue))) {
                 //use constructor parameter if we have a class
                 // but only a flat type (i.e. string, int)
@@ -270,10 +272,8 @@ class JsonMapper
                         . gettype($jvalue) . ' given'
                     );
                 }
-                $type = $this->getFullNamespace($type, $strNs);
                 $child = $this->createInstance($type, true, $jvalue);
             } else {
-                $type = $this->getFullNamespace($type, $strNs);
                 $child = $this->createInstance($type, false, $jvalue);
                 $this->map($jvalue, $child);
             }
@@ -297,13 +297,18 @@ class JsonMapper
      */
     protected function getFullNamespace($type, $strNs)
     {
-        if ($type !== '' && $type{0} != '\\') {
-            //create a full qualified namespace
-            if ($strNs != '') {
-                $type = '\\' . $strNs . '\\' . $type;
-            }
+        if ($type === null || $type === '' || $type{0} == '\\'
+            || $strNs == ''
+        ) {
+            return $type;
         }
-        return $type;
+        list($first) = explode('[', $type, 2);
+        if ($this->isSimpleType($first) || $first === 'mixed') {
+            return $type;
+        }
+
+        //create a full qualified namespace
+        return '\\' . $strNs . '\\' . $type;
     }
 
     /**
@@ -337,19 +342,22 @@ class JsonMapper
     /**
      * Map an array
      *
-     * @param array  $json  JSON array structure from json_decode()
-     * @param mixed  $array Array or ArrayObject that gets filled with
-     *                      data from $json
-     * @param string $class Class name for children objects.
-     *                      All children will get mapped onto this type.
-     *                      Supports class names and simple types
-     *                      like "string" and nullability "string|null".
-     *                      Pass "null" to not convert any values
+     * @param array  $json       JSON array structure from json_decode()
+     * @param mixed  $array      Array or ArrayObject that gets filled with
+     *                           data from $json
+     * @param string $class      Class name for children objects.
+     *                           All children will get mapped onto this type.
+     *                           Supports class names and simple types
+     *                           like "string" and nullability "string|null".
+     *                           Pass "null" to not convert any values
+     * @param string $parent_key Defines the key this array belongs to
+     *                           in order to aid debugging.
      *
      * @return mixed Mapped $array is returned
      */
-    public function mapArray($json, $array, $class = null)
+    public function mapArray($json, $array, $class = null, $parent_key = '')
     {
+        $class = $this->getMappedType($class);
         foreach ($json as $key => $jvalue) {
             if ($class === null) {
                 $array[$key] = $jvalue;
@@ -374,6 +382,13 @@ class JsonMapper
                         );
                     }
                 }
+            } else if ($this->isFlatType($class)) {
+                throw new JsonMapper_Exception(
+                    'JSON property "' . ($parent_key ? $parent_key : '?') . '"'
+                    . ' is an array of type "' . $class . '"'
+                    . ' but contained a value of type'
+                    . ' "' . gettype($jvalue) . '"'
+                );
             } else if (is_a($class, 'ArrayObject', true)) {
                 $array[$key] = $this->mapArray(
                     $jvalue,
@@ -427,6 +442,14 @@ class JsonMapper
                 $annotations = $this->parseAnnotations($docblock);
 
                 if (!isset($annotations['param'][0])) {
+                    // If there is no annotations (higher priority) inspect
+                    // if there's a scalar type being defined
+                    if (PHP_MAJOR_VERSION >= 7) {
+                        $ptype = $rparams[0]->getType();
+                        if ($ptype !== null) {
+                            return array(true, $rmeth, $ptype . $nullability);
+                        }
+                    }
                     return array(true, $rmeth, null);
                 }
                 list($type) = explode(' ', trim($annotations['param'][0]));
@@ -435,11 +458,17 @@ class JsonMapper
         }
 
         //now try to set the property directly
-        if ($rc->hasProperty($name)) {
-            $rprop = $rc->getProperty($name);
-        } else {
+        //we have to look it up in the class hierarchy
+        $class = $rc;
+        $rprop = null;
+        do {
+            if ($class->hasProperty($name)) {
+                $rprop = $class->getProperty($name);
+            }
+        } while ($rprop === null && $class = $class->getParentClass());
+
+        if ($rprop === null) {
             //case-insensitive property matching
-            $rprop = null;
             foreach ($rc->getProperties() as $p) {
                 if ((strcasecmp($p->name, $name) === 0)) {
                     $rprop = $p;
@@ -543,18 +572,42 @@ class JsonMapper
     public function createInstance(
         $class, $useParameter = false, $jvalue = null
     ) {
-        if (isset($this->classMap[$class])) {
-            if (is_callable($mapper = $this->classMap[$class])) {
-                $class = $mapper($class, $jvalue);
-            } else {
-                $class = $this->classMap[$class];
-            }
-        }
         if ($useParameter) {
             return new $class($jvalue);
         } else {
             return (new ReflectionClass($class))->newInstanceWithoutConstructor();
         }
+    }
+
+    /**
+     * Get the mapped class/type name for this class.
+     * Returns the incoming classname if not mapped.
+     *
+     * @param string $type   Type name to map
+     * @param mixed  $jvalue Constructor parameter (the json value)
+     *
+     * @return string The mapped type/class name
+     */
+    protected function getMappedType($type, $jvalue = null)
+    {
+        if (isset($this->classMap[$type])) {
+            $target = $this->classMap[$type];
+        } else if ($type !== '' && $type[0] == '\\'
+            && isset($this->classMap[substr($type, 1)])
+        ) {
+            $target = $this->classMap[substr($type, 1)];
+        } else {
+            $target = null;
+        }
+
+        if ($target) {
+            if (is_callable($target)) {
+                $type = $target($type, $jvalue);
+            } else {
+                $type = $target;
+            }
+        }
+        return $type;
     }
 
     /**

@@ -27,18 +27,36 @@ function satellite_base_requirements($phase){
     'title' => $t('ESN Satellite (PHP)'),
     'value' => ($phase == 'runtime') ? l($phpversion, 'admin/reports/status/php') : $phpversion,
   ];
-  if (version_compare($phpversion, '7.0') < 0) {
-    $requirements['satellite_php']['description'] = format_string('<p style="text-indent: 0;margin-left: 35px;">After <strong>July 31<sup>st</sup> 2019 Satellite 4 requires PHP 7.1.</strong> You are currently using PHP !php. Please upgrade your server or web hosting soon!<br />The <em><a href="https://it.esn.org/" target="_blank">IT committee of ESN International</a></em></p>', ['!php' => PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION . '.' . PHP_RELEASE_VERSION]);
-    $requirements['satellite_php']['severity'] = REQUIREMENT_WARNING;
-  } elseif (version_compare($phpversion, '7.2') >0) {
-    $requirements['satellite_php']['description'] = format_string('<p style="text-indent: 0;margin-left: 35px;"><strong>Satellite 4.6 is not tested for PHP 7.2 or newer.</strong></p>', ['!php' => PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION . '.' . PHP_RELEASE_VERSION]);
-    $requirements['satellite_php']['severity'] = REQUIREMENT_WARNING;
-  }
 
+  $versionMinimumFailed = version_compare($phpversion, SATELLITE_MINIMUM_PHP, '<');
+  $versionRecommendedFailed = version_compare($phpversion, SATELLITE_RECOMMENDED_PHP, '<');
+  if ($versionRecommendedFailed) {
+    $itcomLink = $t(ESN_ITCOM_LINK);
+    $upgradeMessage = $t('<strong>Your PHP installation is too old.</strong> Please upgrade your server or web hosting <strong>before updating to Satellite %satellite!</strong>!');
+    $upgradeSoonMessage = $t('Please upgrade your server or web hosting soon!');
+    $description = $t(SATELLITE_PHP_VERSION_MESSAGE);
 
-  if (version_compare($phpversion, SATELLITE_MINIMUM_PHP) < 0) {
-    $requirements['esn_galaxy_php']['description'] = $t('Your PHP installation is too old. Satellite requires at least PHP %version.', array('%version' => SATELLITE_MINIMUM_PHP));
-    $requirements['esn_galaxy_php']['severity'] = REQUIREMENT_ERROR;
+    if ($versionMinimumFailed) {
+      $description .= ' ' . $upgradeMessage;
+      $requirements['satellite_php']['severity'] = REQUIREMENT_ERROR;
+    } else {
+      $description .= ' ' . $upgradeSoonMessage;
+      $requirements['satellite_php']['severity'] = REQUIREMENT_WARNING;
+    }
+    $description = "<p style=\"text-indent: 0;margin-left: 1rem;\">$description<br />$itcomLink</p>";
+    $requirements['satellite_php']['description'] = format_string($description,
+      [
+        '%php' => PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION . '.' . PHP_RELEASE_VERSION,
+        '%version' => SATELLITE_MINIMUM_PHP,
+        '%recommended' => SATELLITE_RECOMMENDED_PHP,
+        '%satellite' => SATELLITE_BASE_VERSION,
+      ]);
+  } elseif (version_compare($phpversion, '7.3.0', '>=')) { // see https://www.drupal.org/project/date/issues/3070835
+    $requirements['satellite_php']['description'] = t("Your PHP version (%php) isn't supported because some contributed modules are not yet compatible with PHP 7.3.x.",
+      [
+        '%php' => PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION . '.' . PHP_RELEASE_VERSION,
+      ]);
+    $requirements['satellite_php']['severity'] = REQUIREMENT_ERROR;
   }
 
   // JSON Mapper

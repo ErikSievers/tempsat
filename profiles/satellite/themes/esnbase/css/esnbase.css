@@ -2451,7 +2451,7 @@ Lorem ipsum dolor
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_spotlight\.scss}line{font-family:\0000358}}
 #spotlight #block-views-spotlight-block .group-content {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(200, 200, 200, 0.8); 
   padding: 15px 20px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4438,6 +4438,37 @@ a.ckeditor_links {
 a.ckeditor_links:hover {
   text-decoration: none;
   background: #00aef0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_blocks\.scss}line{font-family:\00003178}}
+.esn-blocks .block.esn-blockcolor-darkBlue div.block-header h2 {
+  background: #2E3192;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_blocks\.scss}line{font-family:\00003179}}
+.esn-blocks .block.esn-blockcolor-darkBlue div.block-header:after {
+  border-top-color: #2E3192;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_blocks\.scss}line{font-family:\00003180}}
+.esn-blocks .block.esn-blockcolor-darkBlue .block-content a {
+  color: #2E3192;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_spotlight\.scss}line{font-family:\00003127}}
+#spotlight #block-views-spotlight-block.esn-blockcolor-darkBlue .flexslider {
+  background-color: #2E3192;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_spotlight\.scss}line{font-family:\00003170}}
+  #spotlight #block-views-spotlight-block.esn-blockcolor-darkBlue .group-image:after {
+    border-bottom-color: #2E3192;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/esnbase\/sass\/regions\/_header\.scss}line{font-family:\00003324}}
+#nav-primary .esn-blockcolor-darkBlue ul li.sfHover, #nav-primary .esn-blockcolor-darkBlue ul li:hover, #nav-primary .esn-blockcolor-darkBlue ul ul {
+  background: #2E3192;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/esn\/projects\/esn\/satellite\/profiles\/satellite\/themes\/esnbase\/sass\/regions\/_header\.scss}line{font-family:\00003325}}
+#nav-primary .esn-blockcolor-darkBlue ul ul li:hover {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 /* 

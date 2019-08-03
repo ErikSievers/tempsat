@@ -38,7 +38,7 @@ window.gon={};gon.api_version="v4";gon.default_avatar_url="https://git.esn.org/a
 <script src="/assets/webpack/pages.sessions.new.7e97e57d.chunk.js" defer="defer"></script>
 
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="Q6dN356lU7Ztmvc5UznoPtbM9gKSnBD+KxTFnE6vMaczvmiBqcB36mC2NT4QXT6m9eFryy+qW1Sg/oFTi3Ntaw==" />
+<meta name="csrf-token" content="Krqg8x9WLeZRTm4mFkYMEWfVl4JCn+ooRhXCIfejuSzl3VJPUtzkcCR72Xw0d+ifkxpo8sSGuY7w7rrIeboI+Q==" />
 <meta content="origin-when-cross-origin" name="referrer">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 <meta content="#474D57" name="theme-color">
@@ -89,7 +89,7 @@ window.gon={};gon.api_version="v4";gon.default_avatar_url="https://git.esn.org/a
 Erasmus Student Network GitLab repository
 </h1>
 
-<p data-sourcepos="1:1-2:74" dir="auto">This site contains all the source code of the sites managed by Erasmus Student Network AISBL.&#x000A;Log in with you ESN Galaxy account in order to participate in the project.</p>&#x000A;<p data-sourcepos="4:1-4:50" dir="auto">This website is maintained by the ESN ITCommittee.</p>
+<p data-sourcepos="1:1-2:74" dir="auto">This site contains all the source code of the sites managed by Erasmus Student Network AISBL.&#x000A;Log in with you ESN Galaxy account in order to participate in the project.</p>&#x000A;<p data-sourcepos="4:1-4:51" dir="auto">This website is maintained by the ESN IT Committee.</p>
 </div>
 <div class="col-sm-5 new-session-forms-container">
 <div id="signin-container">
@@ -102,7 +102,7 @@ Erasmus Student Network GitLab repository
 <div class="tab-content">
 <div class="login-box tab-pane active" id="login-pane" role="tabpanel">
 <div class="login-body">
-<form class="new_user gl-show-field-errors" aria-live="assertive" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="i3s1yitWtHEPyTlfwa5kYqAwUXJgQhGUdZN621b7LCj7YhCUHDOQLQLl+1iCyrL6gx3Mu910Wj7+eT4Ukydw5A==" /><div class="form-group">
+<form class="new_user gl-show-field-errors" aria-live="assertive" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="6OuPNatRjFWMobAktT3Td6kXfFLDE/RvDumcC5lUaGAnjH2J5ttFw/mUB36XDDf5XdiDIkUKp8m4EuTiF03ZtQ==" /><div class="form-group">
 <label for="user_login" class="label-bold">Username or email</label>
 <input class="form-control top qa-login-field" autofocus="autofocus" autocapitalize="off" autocorrect="off" required="required" title="This field is required." type="text" name="user[login]" id="user_login" />
 </div>

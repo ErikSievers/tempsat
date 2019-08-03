@@ -10,7 +10,7 @@ core: 7.x
 projects:
   wysiwyg:
     subdir: contrib
-    version: '2.5'
+    version: '2.6'
 
 # Libraries
 libraries:
