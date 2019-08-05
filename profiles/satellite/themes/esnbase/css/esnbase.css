@@ -1844,7 +1844,7 @@ table tbody tr td {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_block-satellite-base-login\.scss}line{font-family:\000033}}
-#block-satellite-base-login a {
+#block-satellite-base-login .block-content a {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -1856,15 +1856,15 @@ table tbody tr td {
   opacity: 0.2;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_block-satellite-base-login\.scss}line{font-family:\0000314}}
-#block-satellite-base-login a:hover {
+#block-satellite-base-login .block-content a:hover {
   opacity: 0.6;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_block-satellite-base-login\.scss}line{font-family:\0000318}}
-#header #block-satellite-base-login a {
+#header #block-satellite-base-login .block-content a {
   width: 20px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_block-satellite-base-login\.scss}line{font-family:\0000322}}
-#footer #block-satellite-base-login a {
+#footer #block-satellite-base-login .block-content a {
   height: 36px;
   width: 36px;
   background-image: url("../img/icon_user_white.png");
@@ -1875,7 +1875,7 @@ table tbody tr td {
   opacity: 0.1;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_block-satellite-base-login\.scss}line{font-family:\0000331}}
-#footer #block-satellite-base-login a:hover {
+#footer #block-satellite-base-login .block-content a:hover {
   opacity: 0.6;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_block-satellite-base-login\.scss}line{font-family:\0000337}}

@@ -38,7 +38,7 @@ window.gon={};gon.api_version="v4";gon.default_avatar_url="https://git.esn.org/a
 <script src="/assets/webpack/pages.sessions.new.7e97e57d.chunk.js" defer="defer"></script>
 
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="Krqg8x9WLeZRTm4mFkYMEWfVl4JCn+ooRhXCIfejuSzl3VJPUtzkcCR72Xw0d+ifkxpo8sSGuY7w7rrIeboI+Q==" />
+<meta name="csrf-token" content="/7TcIbSnRRSe4mEqERZTDcvlmz95OQGLU4ExZI2ZleMpdMcGtc1kvRQCiBCONMwx3f88lKP21gNjXz5wZBPygA==" />
 <meta content="origin-when-cross-origin" name="referrer">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 <meta content="#474D57" name="theme-color">
@@ -102,7 +102,7 @@ Erasmus Student Network GitLab repository
 <div class="tab-content">
 <div class="login-box tab-pane active" id="login-pane" role="tabpanel">
 <div class="login-body">
-<form class="new_user gl-show-field-errors" aria-live="assertive" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="6OuPNatRjFWMobAktT3Td6kXfFLDE/RvDumcC5lUaGAnjH2J5ttFw/mUB36XDDf5XdiDIkUKp8m4EuTiF03ZtQ==" /><div class="form-group">
+<form class="new_user gl-show-field-errors" aria-live="assertive" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="uivGx4aCqOAo/jwccq7GML268G2p6EfgmSj6C8HtBdVs693gh+iJSaIe1SbtjFkMq6BXxnMnkGip9vUfKGditg==" /><div class="form-group">
 <label for="user_login" class="label-bold">Username or email</label>
 <input class="form-control top qa-login-field" autofocus="autofocus" autocapitalize="off" autocorrect="off" required="required" title="This field is required." type="text" name="user[login]" id="user_login" />
 </div>

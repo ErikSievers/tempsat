@@ -85,7 +85,7 @@ project = "satellite"
 datestamp = "1387825419"
 
 
-; Information added by drush on 2019-08-03
-version = "7.x-4.7.0"
+; Information added by drush on 2019-08-05
+version = "7.x-4.7.1"
 project = "satellite"
-datestamp = "1564845794"
+datestamp = "1565013687"

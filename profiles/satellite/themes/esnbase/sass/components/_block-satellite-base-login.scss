@@ -1,6 +1,6 @@
 #block-satellite-base-login {
 
-	a {
+  a {
 		display: inline-block;
 		width: 30px;
 		height: 30px;
@@ -15,11 +15,11 @@
 			opacity: 0.6;
 		}
 
-		#header & {
+		#header .block-content & {
 			width: 20px;
 		}
 
-		#footer & {
+		#footer .block-content & { // mfrieling: not sure if this works, cannot compile with Ruby & compass anymore
 			height: 36px;
 			width: 36px;
 			background-image: url('../img/icon_user_white.png');
