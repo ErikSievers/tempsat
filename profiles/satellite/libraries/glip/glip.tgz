@@ -19,26 +19,26 @@
 <title>Sign in · GitLab</title>
 <meta content="Erasmus Student Network GitLab repository" name="description">
 <link rel="shortcut icon" type="image/png" href="/assets/favicon-7901bd695fb93edb07975966062049829afb56cf11511236e61bcf425070e36e.png" id="favicon" data-original-href="/assets/favicon-7901bd695fb93edb07975966062049829afb56cf11511236e61bcf425070e36e.png" />
-<link rel="stylesheet" media="all" href="/assets/application-38981e26a24308976f3a29d6e5e2beef57c7acda3ad0d5e7f6f149d58fd09d3d.css" />
+<link rel="stylesheet" media="all" href="/assets/application-3407a4fd892e9d5024f3096605eb1e25cad75a8bf847d26740a1e6a77e45b087.css" />
 <link rel="stylesheet" media="print" href="/assets/print-74c3df10dad473d66660c828e3aa54ca3bfeac6d8bb708643331403fe7211e60.css" />
 
 
-
-<link rel="stylesheet" media="all" href="/assets/highlight/themes/white-a165d47ce52cf24c29686366976ae691bd9addb9641a6abeb3ba6d1823b89aa8.css" />
+<link rel="stylesheet" media="all" href="/assets/highlight/themes/white-3144068cf4f603d290f553b653926358ddcd02493b9728f62417682657fc58c0.css" />
 <script>
 //<![CDATA[
-window.gon={};gon.api_version="v4";gon.default_avatar_url="https://git.esn.org/assets/no_avatar-849f9c04a3a0d0cea2424ae97b27447dc64a7dbfae83c036c45b403392f0e8ba.png";gon.max_file_size=50;gon.asset_host=null;gon.webpack_public_path="/assets/webpack/";gon.relative_url_root="";gon.shortcuts_path="/help/shortcuts";gon.user_color_scheme="white";gon.gitlab_url="https://git.esn.org";gon.revision="62c464651d2";gon.gitlab_logo="/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png";gon.sprite_icons="/assets/icons-b2073af7ca0641787eb4596951b695079519da1937a262a886bb12c2b0fac181.svg";gon.sprite_file_icons="/assets/file_icons-7262fc6897e02f1ceaf8de43dc33afa5e4f9a2067f4f68ef77dcc87946575e9e.svg";gon.emoji_sprites_css_path="/assets/emoji_sprites-289eccffb1183c188b630297431be837765d9ff4aed6130cf738586fb307c170.css";gon.test_env=false;gon.suggested_label_colors=["#0033CC","#428BCA","#44AD8E","#A8D695","#5CB85C","#69D100","#004E00","#34495E","#7F8C8D","#A295D6","#5843AD","#8E44AD","#FFECDB","#AD4363","#D10069","#CC0033","#FF0000","#D9534F","#D1D100","#F0AD4E","#AD8D43"];gon.first_day_of_week=0;gon.ee=false;
+window.gon={};gon.api_version="v4";gon.default_avatar_url="https://git.esn.org/assets/no_avatar-849f9c04a3a0d0cea2424ae97b27447dc64a7dbfae83c036c45b403392f0e8ba.png";gon.max_file_size=50;gon.asset_host=null;gon.webpack_public_path="/assets/webpack/";gon.relative_url_root="";gon.shortcuts_path="/help/shortcuts";gon.user_color_scheme="white";gon.gitlab_url="https://git.esn.org";gon.revision="393a5bdafa2";gon.gitlab_logo="/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png";gon.sprite_icons="/assets/icons-0049ce48cb63125d77ce72ebf500b3d7dfc2d2806c05510c08d92c677c53d361.svg";gon.sprite_file_icons="/assets/file_icons-7262fc6897e02f1ceaf8de43dc33afa5e4f9a2067f4f68ef77dcc87946575e9e.svg";gon.emoji_sprites_css_path="/assets/emoji_sprites-289eccffb1183c188b630297431be837765d9ff4aed6130cf738586fb307c170.css";gon.test_env=false;gon.suggested_label_colors={"#0033CC":"UA blue","#428BCA":"Moderate blue","#44AD8E":"Lime green","#A8D695":"Feijoa","#5CB85C":"Slightly desaturated green","#69D100":"Bright green","#004E00":"Very dark lime green","#34495E":"Very dark desaturated blue","#7F8C8D":"Dark grayish cyan","#A295D6":"Slightly desaturated blue","#5843AD":"Dark moderate blue","#8E44AD":"Dark moderate violet","#FFECDB":"Very pale orange","#AD4363":"Dark moderate pink","#D10069":"Strong pink","#CC0033":"Strong red","#FF0000":"Pure red","#D9534F":"Soft red","#D1D100":"Strong yellow","#F0AD4E":"Soft orange","#AD8D43":"Dark moderate orange"};gon.first_day_of_week=0;gon.ee=false;gon.features={"suppressAjaxNavigationErrors":true,"gfmGrafanaIntegration":false};
 //]]>
 </script>
 
 
-<script src="/assets/webpack/runtime.1f581ba6.bundle.js" defer="defer"></script>
-<script src="/assets/webpack/main.2f7fae40.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/commons~pages.ldap.omniauth_callbacks~pages.omniauth_callbacks~pages.sessions~pages.sessions.new.e8265136.chunk.js" defer="defer"></script>
-<script src="/assets/webpack/pages.sessions.new.7e97e57d.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/runtime.7c7b62b1.bundle.js" defer="defer"></script>
+<script src="/assets/webpack/main.b5cfaf04.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons~pages.ldap.omniauth_callbacks~pages.omniauth_callbacks~pages.sessions~pages.sessions.new.357ab81b.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/pages.sessions.new.fbc60106.chunk.js" defer="defer"></script>
 
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="/7TcIbSnRRSe4mEqERZTDcvlmz95OQGLU4ExZI2ZleMpdMcGtc1kvRQCiBCONMwx3f88lKP21gNjXz5wZBPygA==" />
+<meta name="csrf-token" content="OppxMXN+dfl/n6hcsjZEmZ5DJdLJfNiRnpfXMcpFGq6bneNLNjiJaaDJMWFX8rFAewLAV9SISBic0BNEj1KB9Q==" />
+
 <meta content="origin-when-cross-origin" name="referrer">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 <meta content="#474D57" name="theme-color">
@@ -52,10 +52,19 @@ window.gon={};gon.api_version="v4";gon.default_avatar_url="https://git.esn.org/a
 
 
 
+
 </head>
 
-<body class="ui-indigo login-page application navless qa-login-page" data-page="sessions:new">
+<body class="application gl-browser-generic gl-platform-other login-page navless ui-indigo" data-page="sessions:new" data-qa-selector="login_page">
 
+<script>
+//<![CDATA[
+gl = window.gl || {};
+gl.client = {"isGeneric":true,"isOther":true};
+
+
+//]]>
+</script>
 <div class="page-wrap">
 <header class="navbar fixed-top navbar-empty">
 <svg width="24" height="24" class="tanuki-logo" viewBox="0 0 36 36">
@@ -75,53 +84,59 @@ window.gon={};gon.api_version="v4";gon.default_avatar_url="https://git.esn.org/a
 </div>
 <div class="container navless-container">
 <div class="content">
-<div class="flash-container flash-container-page">
-<div class="flash-alert">
-<div class="container-fluid container-limited  ">
+<div class="flash-container flash-container-page sticky">
+<div class="flash-content flash-alert rounded">
 <span>You need to sign in or sign up before continuing.</span>
+<div class="close-icon-wrapper js-close-icon">
+<svg class="s16 close-icon"><use xlink:href="/assets/icons-0049ce48cb63125d77ce72ebf500b3d7dfc2d2806c05510c08d92c677c53d361.svg#close"></use></svg>
 </div>
 </div>
 </div>
 
-<div class="row append-bottom-15">
-<div class="col-sm-7 brand-holder">
-<h1>
+<div class="row mt-3">
+<div class="col-sm-12">
+<h1 class="mb-3 font-weight-normal">
 Erasmus Student Network GitLab repository
 </h1>
+</div>
+</div>
+<div class="row mb-3">
+<div class="col-sm-7 order-12 order-sm-1 brand-holder">
 
 <p data-sourcepos="1:1-2:74" dir="auto">This site contains all the source code of the sites managed by Erasmus Student Network AISBL.&#x000A;Log in with you ESN Galaxy account in order to participate in the project.</p>&#x000A;<p data-sourcepos="4:1-4:51" dir="auto">This website is maintained by the ESN IT Committee.</p>
+
 </div>
-<div class="col-sm-5 new-session-forms-container">
+<div class="col-sm-5 order-1 order-sm-12 new-session-forms-container">
 <div id="signin-container">
 <ul class="nav-links new-session-tabs nav-tabs nav" role="tablist">
 <li class="nav-item" role="presentation">
-<a class="nav-link qa-sign-in-tab active" data-toggle="tab" href="#login-pane" role="tab">Sign in</a>
+<a class="nav-link active" data-qa-selector="sign_in_tab" data-toggle="tab" href="#login-pane" role="tab">Sign in</a>
 </li>
 </ul>
 
 <div class="tab-content">
 <div class="login-box tab-pane active" id="login-pane" role="tabpanel">
 <div class="login-body">
-<form class="new_user gl-show-field-errors" aria-live="assertive" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="uivGx4aCqOAo/jwccq7GML268G2p6EfgmSj6C8HtBdVs693gh+iJSaIe1SbtjFkMq6BXxnMnkGip9vUfKGditg==" /><div class="form-group">
+<form class="new_user gl-show-field-errors" id="new_user" aria-live="assertive" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="J4rveh5qeYj4V5Ws5QhA4N3u/sxfrZn1P89plrxX12qGjX0AWyyFGCcBDJEAzLU5OK8bSUJZCXw9iK3j+UBMMQ==" /><div class="form-group">
 <label for="user_login" class="label-bold">Username or email</label>
-<input class="form-control top qa-login-field" autofocus="autofocus" autocapitalize="off" autocorrect="off" required="required" title="This field is required." type="text" name="user[login]" id="user_login" />
+<input class="form-control top" autofocus="autofocus" autocapitalize="off" autocorrect="off" required="required" title="This field is required." data-qa-selector="login_field" type="text" name="user[login]" id="user_login" />
 </div>
 <div class="form-group">
 <label class="label-bold" for="user_password">Password</label>
-<input class="form-control bottom qa-password-field" required="required" title="This field is required." type="password" name="user[password]" id="user_password" />
+<input class="form-control bottom" required="required" title="This field is required." data-qa-selector="password_field" type="password" name="user[password]" id="user_password" />
 </div>
 <div class="remember-me">
 <label for="user_remember_me">
 <input name="user[remember_me]" type="hidden" value="0" /><input class="remember-me-checkbox" type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
 <span>Remember me</span>
 </label>
-<div class="float-right forgot-password">
+<div class="float-right">
 <a href="/users/password/new">Forgot your password?</a>
 </div>
 </div>
 <div></div>
 <div class="submit-container move-submit-down">
-<input type="submit" name="commit" value="Sign in" class="btn btn-success qa-sign-in-button" data-disable-with="Sign in" />
+<input type="submit" name="commit" value="Sign in" class="btn btn-success" data-qa-selector="sign_in_button" data-disable-with="Sign in" />
 </div>
 </form>
 </div>

@@ -69,7 +69,7 @@ dependencies[] = views_ui
 dependencies[] = weight
 
 
-; Information added by drush on 2019-08-05
-version = "7.x-4.7.1"
+; Information added by drush on 2019-12-26
+version = "7.x-4.7.2"
 project = "satellite"
-datestamp = "1565013687"
+datestamp = "1577376337"

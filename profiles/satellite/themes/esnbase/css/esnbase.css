@@ -835,7 +835,7 @@ tbody {
 EXAMPLE.css
 Lorem ipsum dolor
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_blocks\.scss}line{font-family:\0000312}}
 .esn-blocks .block {
@@ -1212,7 +1212,7 @@ Lorem ipsum dolor
   color: #2e3192;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_blocks\.scss}line{font-family:\00003217}}
 #footer .esn-blocks .block {
@@ -1242,15 +1242,15 @@ Lorem ipsum dolor
   display: none;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 /* --------------------------------------------------------------
 EXAMPLE.css
 Lorem ipsum dolor
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_fields\.scss}line{font-family:\0000316}}
 .group-details {
@@ -1280,7 +1280,7 @@ Lorem ipsum dolor
   list-style: square;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_fields\.scss}line{font-family:\0000354}}
 .field-name-field-image-gallery {
@@ -1306,7 +1306,7 @@ Lorem ipsum dolor
   opacity: 0.7;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_fields\.scss}line{font-family:\0000384}}
 .field-name-field-faq {
@@ -1346,7 +1346,7 @@ Lorem ipsum dolor
   font-style: italic;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_fields\.scss}line{font-family:\00003128}}
 .faq-list-item .faq-question {
@@ -1367,13 +1367,13 @@ Lorem ipsum dolor
   display: block;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 /* --------------------------------------------------------------
 FORMS
@@ -1399,7 +1399,7 @@ fieldset legend a {
   margin-left: 5px;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_forms\.scss}line{font-family:\0000344}}
 .form-item {
@@ -1446,7 +1446,7 @@ fieldset legend a {
   line-height: normal;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_forms\.scss}line{font-family:\0000390}}
 #main .form-checkboxes .form-item,
@@ -1462,7 +1462,7 @@ fieldset legend a {
   margin-left: 1.8em;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_forms\.scss}line{font-family:\00003105}}
 .form-text, .form-textarea, .form-select {
@@ -1496,9 +1496,9 @@ input[disabled], input[readonly] {
   background-color: #eee;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_forms\.scss}line{font-family:\00003161}}
 .form-submit {
@@ -1583,7 +1583,7 @@ ul.cas-links a:hover {
   background: #333;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_forms\.scss}line{font-family:\00003263}}
 .container-inline div, .container-inline label {
@@ -1604,7 +1604,7 @@ a.button {
   margin: 0;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_forms\.scss}line{font-family:\00003289}}
 html.js input.form-autocomplete {
@@ -1618,7 +1618,7 @@ html.js input.throbbing {
   background-image: url(../img/throbber.gif);
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_forms\.scss}line{font-family:\00003304}}
 .resizable-textarea .grippie {
@@ -1631,9 +1631,9 @@ html.js input.throbbing {
   opacity: 1;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_forms\.scss}line{font-family:\00003324}}
 div.form-item div.password-suggestions {
@@ -1643,7 +1643,7 @@ div.form-item div.password-suggestions {
   padding: 10px 20px;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_forms\.scss}line{font-family:\00003336}}
 span.marker {
@@ -1652,7 +1652,7 @@ span.marker {
   font-weight: bold;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_forms\.scss}line{font-family:\00003347}}
 #main .filter-wrapper {
@@ -1694,21 +1694,21 @@ span.marker {
   color: #bbb;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_general\.scss}line{font-family:\000031}}
 p {
@@ -1746,7 +1746,7 @@ a:hover {
   background-color: rgba(246, 94, 94, 0.07);
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/base\/_tables\.scss}line{font-family:\000034}}
 table {
@@ -1897,7 +1897,7 @@ body.logged-in #block-satellite-base-login {
 EXAMPLE.css
 Lorem ipsum dolor
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_comments\.scss}line{font-family:\0000318}}
 #comments h2.title {
@@ -2092,23 +2092,23 @@ div#comment-form .form-actions #edit-preview {
   margin-left: 10px;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_field-file\.scss}line{font-family:\000034}}
 .field-type-file {
@@ -2185,7 +2185,7 @@ div#comment-form .form-actions #edit-preview {
   background-image: url("../img/files/x-office-document.png");
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_mobile-navigation\.scss}line{font-family:\000036}}
 *,
@@ -2288,7 +2288,7 @@ div#comment-form .form-actions #edit-preview {
   transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_mobile-navigation\.scss}line{font-family:\00003105}}
 .st-effect-3.st-menu-open .st-pusher {
@@ -2314,7 +2314,7 @@ div#comment-form .form-actions #edit-preview {
   display: none;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_mobile-navigation\.scss}line{font-family:\00003128}}
 .st-menu {
@@ -2407,7 +2407,7 @@ div#comment-form .form-actions #edit-preview {
 EXAMPLE.css
 Lorem ipsum dolor
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_spotlight\.scss}line{font-family:\0000313}}
 #spotlight {
@@ -2451,7 +2451,7 @@ Lorem ipsum dolor
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/components\/_spotlight\.scss}line{font-family:\0000358}}
 #spotlight #block-views-spotlight-block .group-content {
-  color: rgba(200, 200, 200, 0.8); 
+  color: #ffffff;
   padding: 15px 20px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2619,21 +2619,21 @@ Lorem ipsum dolor
   }
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 /* --------------------------------------------------------------
 EXAMPLE.css
@@ -2751,23 +2751,23 @@ Lorem ipsum dolor
   font-weight: bold;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 /* --------------------------------------------------------------
 EXAMPLE.css
@@ -3427,23 +3427,23 @@ body.nav-l #nav-primary .sf-menu li:hover > ul, body.nav-l #nav-primary .sf-menu
   }
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 /* --------------------------------------------------------------
 EXAMPLE.css
 Lorem ipsum dolor
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/regions\/_nodes\.scss}line{font-family:\0000313}}
 article header .avatar {
@@ -3470,29 +3470,29 @@ article header .submitted .date {
   display: inline-block;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 /* --------------------------------------------------------------
 EXAMPLE.css
 Lorem ipsum dolor
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/regions\/_page\.scss}line{font-family:\0000311}}
 html {
@@ -3523,28 +3523,28 @@ body {
   position: relative;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/regions\/_page\.scss}line{font-family:\0000342}}
 #content #content-block {
   padding: 20px 20px 40px 20px;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 /* --------------------------------------------------------------
 EXAMPLE.css
@@ -3615,7 +3615,7 @@ nav.breadcrumb ol li a:hover {
   font-family: "Open Sans Light", "Roboto Light", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/regions\/_title\.scss}line{font-family:\0000389}}
 #title-image img {
@@ -3628,23 +3628,23 @@ nav.breadcrumb ol li a:hover {
   }
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/regions\/_userbar\.scss}line{font-family:\000031}}
 #userbar {
@@ -3835,7 +3835,7 @@ nav.breadcrumb ol li a:hover {
   margin-botom: 15px;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 /* CONFIG
 -------------------------------------------------------------- */
@@ -4012,15 +4012,15 @@ div.styleguide {
 EXAMPLE.css
 Lorem ipsum dolor
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/system\/_maintenance\.scss}line{font-family:\000032}}
 html.maintenance-page {
@@ -4409,18 +4409,18 @@ body.fade-effect #maintenance-message {
 EXAMPLE.css
 Lorem ipsum dolor
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/dev\/_temp\.scss}line{font-family:\0000337}}
 .field-name-field-image img {
   display: block;
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/trinitec\/Documents\/esn\/satellite4\/build\/dev\/profiles\/satellite\/themes\/esnbase\/sass\/dev\/_temp\.scss}line{font-family:\0000345}}
 a.ckeditor_links {
@@ -4471,15 +4471,15 @@ a.ckeditor_links:hover {
   background: rgba(0, 0, 0, 0.2);
 }
 
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */
-/* 
+/*
 -------------------------------------------------------------- */

@@ -17,7 +17,7 @@ projects:
     subdir: contrib/gis
     version: '1.3'
   ccl:
-    version: '1.6'
+    version: '1.7'
   colorbox:
     version: '2.13'
   features_override:
@@ -27,11 +27,11 @@ projects:
   jquery_update:
     version: '2.7'
   link:
-    version: '1.6'
+    version: '1.7'
   manualcrop:
     version: '1.7'
   metatag:
-    version: '1.25'
+    version: '1.26'
   service_links:
     version: '2.4'
   transliteration:
