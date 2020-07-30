@@ -179,6 +179,9 @@ function esn_api_tools_decrypt($key, $data) {
 }
 
 function _esn_api_tools_crypt($key, $data, $encrypt = true){
+  if (!class_exists('Crypt_RSA')) {
+    include_once 'Crypt/RSA.php';
+  }
   $rsa = new Crypt_RSA();
   $rsa->loadKey($key);
   $rsa->setEncryptionMode(CRYPT_RSA_ENCRYPTION_PKCS1);
